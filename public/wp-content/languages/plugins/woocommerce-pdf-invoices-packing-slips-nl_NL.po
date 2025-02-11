@@ -1,0 +1,3181 @@
+# Translation of Plugins - PDF Invoices &amp; Packing Slips for WooCommerce - Stable (latest release) in Dutch
+# This file is distributed under the same license as the Plugins - PDF Invoices &amp; Packing Slips for WooCommerce - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-01-20 21:41:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: nl\n"
+"Project-Id-Version: Plugins - PDF Invoices &amp; Packing Slips for WooCommerce - Stable (latest release)\n"
+
+#. translators: %s: tax category code
+#: ubl/Settings/TaxesSettings.php:382
+msgid "Only use with tax category code %s"
+msgstr "Alleen te gebruiken met belastingcategoriecode %s"
+
+#: ubl/Settings/TaxesSettings.php:371
+msgid "France domestic Credit Notes without VAT, due to supplier forfeit of VAT for discount"
+msgstr "Frankrijk binnenlandse credit notities zonder BTW, omdat leverancier BTW verbeurt voor korting"
+
+#: ubl/Settings/TaxesSettings.php:370
+msgid "France domestic VAT franchise in base"
+msgstr "Frankrijk binnenlandse BTW franchise in basis"
+
+#: ubl/Settings/TaxesSettings.php:369
+msgid "Not subject to VAT"
+msgstr "Niet BTW plichtig"
+
+#: ubl/Settings/TaxesSettings.php:368
+msgid "Collectors items and antiques VAT scheme."
+msgstr "BTW regeling voor verzamelaar items en antiek."
+
+#: ubl/Settings/TaxesSettings.php:367
+msgid "Intra-community supply"
+msgstr "Intra-community toevoer"
+
+#: ubl/Settings/TaxesSettings.php:366
+msgid "Works of art VAT scheme."
+msgstr "BTW regeling voor kunstwerken."
+
+#: ubl/Settings/TaxesSettings.php:365
+msgid "Export outside the EU"
+msgstr "Export buiten de EU"
+
+#: ubl/Settings/TaxesSettings.php:364
+msgid "Second hand goods VAT scheme."
+msgstr "BTW regeling voor tweedehands goederen."
+
+#: ubl/Settings/TaxesSettings.php:363
+msgid "Travel agents VAT scheme."
+msgstr "BTW regeling voor reisbureaus."
+
+#: ubl/Settings/TaxesSettings.php:362
+msgid "Reverse charge"
+msgstr "Omgekeerde lading"
+
+#: ubl/Settings/TaxesSettings.php:361
+msgid "Exempt based on article 309 of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 309 van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:360
+msgid "Exempt based on article 151, section 1 (e) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 151, sectie 1 (e) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:359
+msgid "Exempt based on article 151, section 1 (d) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 151, sectie 1 (d) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:358
+msgid "Exempt based on article 151, section 1 (c) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 151, sectie 1 (c) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:357
+msgid "Exempt based on article 151, section 1 (b) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 151, sectie 1 (b) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:356
+msgid "Exempt based on article 151, section 1 (aa) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 151, sectie 1 (aa) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:355
+msgid "Exempt based on article 151, section 1 (a) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 151, sectie 1 (a) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:354
+msgid "Exempt based on article 148, section (g) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (g) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:353
+msgid "Exempt based on article 148, section (f) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (f) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:352
+msgid "Exempt based on article 148, section (e) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (e) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:351
+msgid "Exempt based on article 148, section (d) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (d) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:350
+msgid "Exempt based on article 148, section (c) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (c) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:349
+msgid "Exempt based on article 148, section (b) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (b) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:348
+msgid "Exempt based on article 148, section (a) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148, sectie (a) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:347
+msgid "Exempt based on article 148 of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 148 van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:346
+msgid "Exempt based on article 143, section 1 (l) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (l) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:345
+msgid "Exempt based on article 143, section 1 (k) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (k) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:344
+msgid "Exempt based on article 143, section 1 (j) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (j) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:343
+msgid "Exempt based on article 143, section 1 (i) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (i) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:342
+msgid "Exempt based on article 143, section 1 (h) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (h) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:341
+msgid "Exempt based on article 143, section 1 (g) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (g) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:340
+msgid "Exempt based on article 143, section 1 (fa) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (f bis) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:339
+msgid "Exempt based on article 143, section 1 (f) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (f) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:338
+msgid "Exempt based on article 143, section 1 (e) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (e) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:337
+msgid "Exempt based on article 143, section 1 (d) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (d) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:336
+msgid "Exempt based on article 143, section 1 (c) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (c) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:335
+msgid "Exempt based on article 143, section 1 (b) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (b) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:334
+msgid "Exempt based on article 143, section 1 (a) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143, sectie 1 (a) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:333
+msgid "Exempt based on article 143 of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 143 van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:332
+msgid "Exempt based on article 132, section 1 (q) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (q) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:331
+msgid "Exempt based on article 132, section 1 (p) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (p) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:330
+msgid "Exempt based on article 132, section 1 (o) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (o) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:329
+msgid "Exempt based on article 132, section 1 (n) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (n) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:328
+msgid "Exempt based on article 132, section 1 (m) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (m) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:327
+msgid "Exempt based on article 132, section 1 (l) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (l) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:326
+msgid "Exempt based on article 132, section 1 (k) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (k) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:325
+msgid "Exempt based on article 132, section 1 (j) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (j) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:324
+msgid "Exempt based on article 132, section 1 (i) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (i) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:323
+msgid "Exempt based on article 132, section 1 (h) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (h) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:322
+msgid "Exempt based on article 132, section 1 (g) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (g) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:321
+msgid "Exempt based on article 132, section 1 (f) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (f) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:320
+msgid "Exempt based on article 132, section 1 (e) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (e) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:319
+msgid "Exempt based on article 132, section 1 (d) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (d) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:318
+msgid "Exempt based on article 132, section 1 (c) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (c) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:317
+msgid "Exempt based on article 132, section 1 (b) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (b) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:316
+msgid "Exempt based on article 132, section 1 (a) of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132, sectie 1 (a) van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:315
+msgid "Exempt based on article 132 of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 132 van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:314
+msgid "Exempt based on article 79, point c of Council Directive 2006/112/EC"
+msgstr "Vrijgesteld op basis van artikel 79, onder c), van richtlijn 2006/112/EG van de raad"
+
+#: ubl/Settings/TaxesSettings.php:305
+msgid "Tax for production, services and importation in Ceuta and Melilla"
+msgstr "Belasting voor productie, diensten en import in Ceuta en Melilla"
+
+#: ubl/Settings/TaxesSettings.php:304
+msgid "Canary Islands general indirect tax"
+msgstr "Canarische eilanden algemene indirecte belasting"
+
+#: ubl/Settings/TaxesSettings.php:303
+msgid "VAT exempt for EEA intra-community supply of goods and services"
+msgstr "Vrijstelling van BTW voor leveringen van goederen en diensten binnen de EER (community )"
+
+#: ubl/Settings/TaxesSettings.php:302
+msgid "Value Added Tax (VAT) margin scheme - collector's items and antiques"
+msgstr "Margeregeling voor belasting over de toegevoegde waarde (BTW) - Verzamelobjecten en antiek"
+
+#: ubl/Settings/TaxesSettings.php:301
+msgid "Value Added Tax (VAT) margin scheme - works of art"
+msgstr "Margeregeling voor belasting over de toegevoegde waarde (BTW) - Kunstwerken"
+
+#: ubl/Settings/TaxesSettings.php:298
+msgid "Value Added Tax (VAT) margin scheme - second-hand goods"
+msgstr "Margeregeling belasting over de toegevoegde waarde (BTW) - Tweedehands goederen"
+
+#: ubl/Settings/TaxesSettings.php:296
+msgid "Value Added Tax (VAT) margin scheme - travel agents"
+msgstr "Margeregeling belasting over de toegevoegde waarde (BTW) - Reisbureaus"
+
+#: ubl/Settings/TaxesSettings.php:293
+msgid "VAT Reverse Charge"
+msgstr "BTW verleggingsregeling"
+
+#: ubl/Settings/TaxesSettings.php:202
+msgid "None"
+msgstr "Geen"
+
+#: ubl/Settings/TaxesSettings.php:57
+msgid "Remarks"
+msgstr "Opmerkingen"
+
+#: ubl/Settings/TaxesSettings.php:56
+msgid "Reason"
+msgstr "Reden"
+
+#: ubl/Settings/TaxesSettings.php:53
+msgid "Rate"
+msgstr "Waardeer"
+
+#: ubl/Settings/TaxesSettings.php:49
+msgid "Country code"
+msgstr "Landcode"
+
+#: includes/Settings/SettingsUbl.php:63
+msgid "Each rate line allows you to configure the tax scheme, category, and reason. If these values are set to \"Default,\" they will automatically inherit the settings selected in the \"Tax class default\" dropdowns at the bottom of the table."
+msgstr "Bij elke tariefregel kun je het belastingstelsel, de categorie en de reden configureren. Als deze waarden zijn ingesteld op \"Standaard\", erven ze automatisch de instellingen die zijn geselecteerd in de \"Belastingklasse standaard\" dropdowns aan de onderkant van de tabel."
+
+#: includes/Settings/SettingsUbl.php:63
+msgid "Note"
+msgstr "Opmerking"
+
+#: includes/Settings/SettingsDebug.php:886
+msgid "Enable this option to log dynamic strings that could not be translated. This can help you identify which strings need to be registered for translation."
+msgstr "Schakel deze optie in om dynamische strings te loggen die niet vertaald konden worden. Dit kan je helpen om te bepalen welke strings geregistreerd moeten worden voor vertaling."
+
+#: includes/Settings/SettingsDebug.php:880
+msgid "Log missing translations"
+msgstr "Log ontbrekende vertalingen"
+
+#. translators: %1$s: opening link tag, %2$s: closing link tag
+#: includes/Documents/Invoice.php:611
+msgid "Install extensions to support country-specific e-invoicing formats. See the latest %1$ssupported formats%2$s."
+msgstr "Installeer extensies voor ondersteuning van landspecifieke e-facturering formats. Bekijk de nieuwste %1$s ondersteunde formats%2$s."
+
+#: includes/Assets.php:301
+msgid "unsaved"
+msgstr "niet opgeslagen"
+
+#: includes/Assets.php:300
+msgid "New"
+msgstr "Nieuw"
+
+#: includes/Assets.php:299 ubl/Settings/TaxesSettings.php:108
+#: ubl/Settings/TaxesSettings.php:112 ubl/Settings/TaxesSettings.php:116
+#: ubl/Settings/TaxesSettings.php:147 ubl/Settings/TaxesSettings.php:153
+#: ubl/Settings/TaxesSettings.php:159
+msgid "Code"
+msgstr "Code"
+
+#: woocommerce-pdf-invoices-packingslips.php:482
+msgid "Schedule the action now"
+msgstr "Plan de actie nu"
+
+#: woocommerce-pdf-invoices-packingslips.php:481
+msgid "The year-end is approaching, and we noticed that your PDF Invoices & Packing Slips for WooCommerce plugin doesn't have the scheduled action to reset invoice numbers annually, even though you've explicitly enabled this setting in the document options. Click the button below to schedule the action before the year ends."
+msgstr "Het einde van het jaar nadert, en we hebben gemerkt dat je PDF Invoices & Packing Slips for WooCommerce plugin niet de geplande actie heeft om factuurnummers jaarlijks te resetten, zelfs als je deze instelling expliciet hebt ingeschakeld in de documentopties. Klik op de knop hieronder om de actie te plannen voordat het jaar eindigt."
+
+#: includes/Settings/SettingsUbl.php:62
+msgid "To ensure compliance with e-invoicing requirements, please complete the Taxes Classification. This information is essential for accurately generating legally compliant invoices."
+msgstr "Om ervoor te zorgen dat je voldoet aan de vereisten voor e-facturering, vul je de belasting classificatie in. Deze informatie is essentieel voor het nauwkeurig genereren van facturen die aan de wettelijke eisen voldoen."
+
+#. translators: 1. open anchor tag, 2. close anchor tag
+#: includes/Settings/SettingsDocuments.php:78
+msgid "Looking for more documents? Learn more %1$shere%2$s."
+msgstr "Op zoek naar meer documenten? Meer informatie %1$shier%2$s."
+
+#: includes/Settings.php:173
+msgid "Taxes"
+msgstr "Belastingen"
+
+#: includes/Documents/Invoice.php:484
+msgid "The search process may be slower on non-HPOS stores. For a more efficient search, you can utilize the <a href=\"https://woocommerce.com/document/high-performance-order-storage/\" target=\"_blank\">HPOS</a> feature to search for orders by invoice numbers using the search type selector. Additionally, it allows you to search for multiple orders using a comma-separated list of invoice numbers."
+msgstr "Het zoekproces kan langzamer zijn op non HPOS winkels. Voor een efficiëntere zoekopdracht kun je de <a href=\"https://woocommerce.com/document/high-performance-order-storage/\" target=\"_blank\">HPOS</a> functie gebruiken om naar bestellingen te zoeken op factuurnummers met behulp van de zoektype selector. Daarnaast stelt het je in staat om naar meerdere bestellingen te zoeken met een door komma's gescheiden lijst van factuurnummers."
+
+#: includes/Compatibility/ThirdPartyPlugins.php:391
+msgid "Invoice numbers"
+msgstr "Factuurnummers"
+
+#. translators: 1: opening anchor tag, 2: closing anchor tag
+#: includes/Settings/SettingsDebug.php:1029
+msgid "See: %1$sIncreasing the WordPress Memory Limit%2$s"
+msgstr "Zie: %1$sHet verhogen van de WordPress geheugengrens%2$s"
+
+#. translators: <a> tags
+#: includes/Settings/SettingsDebug.php:1027
+msgid "Recommended: 128MB (especially for plugin-heavy setups)"
+msgstr "Aanbevolen: 128MB (vooral voor plugin intensievere configuraties)"
+
+#: views/upgrade-table.php:23
+msgid "Plus Bundle"
+msgstr "Plus bundel"
+
+#: views/advanced-tools.php:63
+msgid "Clean up the released semaphore locks from the database. These locks prevent simultaneous document generation requests, ensuring correct document numbering. Once released, they are safe to remove."
+msgstr "Ruim de vrijgegeven semafoor vergrendelingen op uit de database. Deze sloten voorkomen gelijktijdige aanvragen voor het genereren van documenten en zorgen voor een correcte documentnummering. Eenmaal vrijgegeven kunnen ze veilig verwijderd worden."
+
+#: includes/Settings/SettingsGeneral.php:350
+msgid "Extension"
+msgstr "Extensie"
+
+#: includes/Settings/SettingsGeneral.php:210
+msgid "Mandatory for certain UBL formats."
+msgstr "Verplicht voor bepaalde UBL formats."
+
+#: includes/Settings/SettingsGeneral.php:203
+msgid "Shop Phone Number"
+msgstr "Telefoonnummer winkel"
+
+#. translators: 1: Plugin name, 2: Open anchor tag, 3: Close anchor tag
+#: includes/Settings/SettingsDebug.php:1143
+msgid "Your server does not meet the requirements for %1$s. Please check the %2$sStatus page%3$s for more information."
+msgstr "Je server voldoet niet aan de vereisten voor %1$s. Kijk op de %2$sStatuspagina%3$s voor meer informatie."
+
+#: includes/Settings/SettingsDebug.php:974
+msgid "7.4 or superior"
+msgstr "7,4 of hoger"
+
+#: includes/Settings.php:1094
+msgid "Additional settings"
+msgstr "Extra instellingen"
+
+#: includes/Main.php:1291 includes/Main.php:1322
+msgid "User"
+msgstr "Gebruiker"
+
+#: includes/Documents/Invoice.php:686
+msgid "Admin"
+msgstr "Beheerder"
+
+#: includes/Documents/Invoice.php:672 includes/Documents/PackingSlip.php:237
+msgid "Document details"
+msgstr "Documentgegevens"
+
+#: includes/Documents/Invoice.php:640
+msgid "Embed the encrypted PDF invoice file within the UBL document. Note that this option may not be supported by all UBL formats."
+msgstr "Het gecodeerde PDF factuurbestand insluiten in het UBL-document. Let op: deze optie wordt mogelijk niet door alle UBL formats ondersteund."
+
+#: includes/Documents/Invoice.php:607
+msgid "UBL 2.1"
+msgstr "UBL 2.1"
+
+#: includes/Documents/Invoice.php:600
+msgid "Format"
+msgstr "Format"
+
+#: views/upgrade-table.php:157
+msgid "Buy now"
+msgstr "Koop nu"
+
+#: views/upgrade-table.php:141
+msgid "Visit shop"
+msgstr "Bezoek winkel"
+
+#: views/upgrade-table.php:140
+msgid "Wow! It looks like you own all of our recommendations. Check out our shop for even more plugins."
+msgstr "Wauw! Het lijkt erop dat je al onze aanbevelingen bezit. Kijk in onze winkel voor nog meer plugins."
+
+#: views/upgrade-table.php:137
+msgid "You might also like these plugins..."
+msgstr "Je vindt deze plugins misschien ook leuk..."
+
+#. translators: 1: number of released legacy semaphore locks
+#: views/advanced-tools.php:134
+msgid "There is %s released legacy semaphore lock in the database."
+msgid_plural "There are %s released legacy semaphore locks in the database."
+msgstr[0] "Er is %s vrijgegeven legacy semafoor vergrendeling in de database."
+msgstr[1] "Er zijn %s vrijgegeven legacy semafoor vergrendelingen in de database."
+
+#: views/advanced-tools.php:124
+msgid "Remove released legacy locks"
+msgstr "Oudere vergrendelingen verwijderen"
+
+#: views/advanced-tools.php:121
+msgid "Clean up the released legacy semaphore locks from the database."
+msgstr "Schoon de vrijgegeven legacy semafoor vergrendelingen op uit de database."
+
+#: views/advanced-tools.php:120
+msgid "Remove released legacy semaphore locks"
+msgstr "Vrijgegeven legacy semafoor vergrendelingen verwijderen"
+
+#. translators: 1: next run date
+#: views/advanced-tools.php:105
+msgid "The next cleanup action is scheduled to run on %s."
+msgstr "De volgende opruimactie uitvoeren staat gepland op %s."
+
+#: views/advanced-tools.php:91
+msgid "There are no released semaphore locks in the database."
+msgstr "Er zijn geen vrijgegeven semafoor vergrendelingen in de database."
+
+#. translators: 1: number of released semaphore locks
+#: views/advanced-tools.php:78
+msgid "There is %s released semaphore lock in the database."
+msgid_plural "There are %s released semaphore locks in the database."
+msgstr[0] "Er is %s vrijgegeven semafoor vergrendeling in de database."
+msgstr[1] "Er zijn %s vrijgegeven semafoor vergrendelingen in de database."
+
+#: views/advanced-tools.php:66
+msgid "Remove released locks"
+msgstr "Vrijgegeven vergrendelingen verwijderen"
+
+#: views/advanced-tools.php:62
+msgid "Remove released semaphore locks"
+msgstr "Verwijderen vrijgegeven semafoor vergrendelingen"
+
+#: includes/Settings/SettingsUpgrade.php:169
+msgid "Integrates seamlessly with WooCommerce to add a shopping cart to your menu."
+msgstr "Integreert naadloos met WooCommerce om een winkelwagen toe te voegen aan je menu."
+
+#: includes/Settings/SettingsUpgrade.php:168
+msgid "Menu Cart Pro"
+msgstr "Menu winkelwagen Pro"
+
+#: includes/Settings/SettingsUpgrade.php:162
+msgid "This plugin lets you quickly print a list of your WooCommerce orders. Great for order picking."
+msgstr "Met deze plugin kun je snel een lijst afdrukken van je WooCommerce bestellingen. Geweldig voor het verzamelen van bestellingen."
+
+#: includes/Settings/SettingsUpgrade.php:161
+msgid "WooCommerce Print Order List"
+msgstr "WooCommerce Print Order List"
+
+#: includes/Settings/SettingsUpgrade.php:155
+msgid "Generate barcodes (ZATCA, QR-codes, C128, EAN-13 and more) for your orders, products and even invoices & packing slips."
+msgstr "Genereer barcodes (ZATCA, QR codes, C128, EAN-13 en meer) voor je bestellingen, producten en zelfs facturen & pakbonnen."
+
+#: includes/Settings/SettingsUpgrade.php:154
+msgid "WooCommerce Ultimate Barcodes"
+msgstr "WooCommerce Ultimate Barcodes"
+
+#: includes/Settings/SettingsUpgrade.php:148
+msgid "A plugin to automatically print completed orders via PrintNode."
+msgstr "Een plugin om afgeronde bestellingen automatisch af te drukken via PrintNode."
+
+#: includes/Settings/SettingsUpgrade.php:147
+msgid "WooCommerce Automatic Printing - PrintNode"
+msgstr "WooCommerce automatisch afdrukken - PrintNode"
+
+#: includes/Settings/SettingsUpgrade.php:141
+msgid "Print out address labels for selected orders straight from WooCommerce."
+msgstr "Druk adreslabels af voor geselecteerde bestellingen, rechtstreeks vanuit WooCommerce."
+
+#: includes/Settings/SettingsUpgrade.php:140
+msgid "WooCommerce Print Address Labels"
+msgstr "WooCommerce adres labels afdrukken"
+
+#: includes/Settings/SettingsUpgrade.php:134
+msgid "Automatically schedule and send Reminder Emails for WooCommerce orders."
+msgstr "Automatisch e-mails inplannen en verzenden voor WooCommerce bestellingen."
+
+#: includes/Settings/SettingsUpgrade.php:133
+msgid "WooCommerce Smart Reminder Emails"
+msgstr "WooCommerce Smart Reminder Emails"
+
+#: includes/Settings/SettingsDebug.php:271
+msgid "Released legacy semaphore locks have been cleaned up!"
+msgstr "De vrijgegeven oude semafoor vergrendelingen zijn opgeschoond!"
+
+#: includes/Settings/SettingsDebug.php:263
+msgid "Released semaphore locks have been cleaned up!"
+msgstr "De semafoor vergrendelingen zijn opgeschoond!"
+
+#. translators: number of days
+#: includes/Documents/Invoice.php:337
+msgid "%s days"
+msgstr "%s dagen"
+
+#: includes/Documents/OrderDocumentMethods.php:1342
+msgid "Reason for refund:"
+msgstr "Reden voor restitutie:"
+
+#: includes/Settings/SettingsDebug.php:1063
+msgid "ImageMagick library, integrated via the IMagick PHP extension for advanced image processing capabilities"
+msgstr "ImageMagick bibliotheek, geïntegreerd via de IMagick PHP extensie voor geavanceerde afbeelding verwerkingsmogelijkheden"
+
+#: includes/Settings/SettingsDebug.php:1060
+msgid "Required for IMagick"
+msgstr "Vereist voor IMagick"
+
+#: includes/Settings/SettingsDebug.php:1049
+msgid "To compress and decompress font and image data"
+msgstr "Lettertype- en afbeeldinggegevens comprimeren en decomprimeren"
+
+#: includes/Settings/SettingsDebug.php:1046
+msgid "fileinfo disabled"
+msgstr "bestandsinfo uitgeschakeld"
+
+#: includes/Settings/SettingsDebug.php:1043
+msgid "Necessary to verify the MIME type of local images."
+msgstr "Nodig om het MIME type van lokale afbeeldingen te controleren."
+
+#: includes/Settings/SettingsDebug.php:862
+msgid "Embed images only if you are experiencing issues with them loading in your PDF. Please note that this option can significantly increase the file size."
+msgstr "Insluiten afbeeldingen alleen als je problemen ondervindt met het laden ervan in je PDF. Let op dat deze optie de grootte van het bestand aanzienlijk kan vergroten."
+
+#: includes/Settings/SettingsDebug.php:856
+msgid "Embed Images"
+msgstr "Afbeeldingen insluiten"
+
+#. translators: document title
+#: includes/Main.php:1329
+msgid "PDF %s deleted."
+msgstr "PDF %s verwijderd."
+
+#: views/advanced-tools.php:281 views/advanced-tools.php:330
+msgid "Date type:"
+msgstr "Datumtype:"
+
+#: views/advanced-tools.php:245
+msgid "Document date"
+msgstr "Document datum"
+
+#: views/advanced-tools.php:244
+msgid "Order date paid"
+msgstr "Datum bestelling betaald"
+
+#: views/advanced-tools.php:243
+msgid "Order date completed"
+msgstr "Datum bestelling afgerond"
+
+#: views/advanced-tools.php:242
+msgid "Order date modified"
+msgstr "Datum bestelling gewijzigd"
+
+#: views/advanced-tools.php:241
+msgid "Order date created"
+msgstr "Datum bestelling aangemaakt"
+
+#: includes/Settings/SettingsDebug.php:585
+msgid "Unexpected results from the orders query."
+msgstr "Onverwachte resultaten van de query voor bestellingen."
+
+#: includes/Settings/SettingsDebug.php:570
+msgid "Wrong date type selected."
+msgstr "Verkeerd datumtype geselecteerd."
+
+#: includes/Settings/SettingsDebug.php:279
+msgid "Extensions' license cache cleared successfully!"
+msgstr "Licentie cache van extensies succesvol gewist!"
+
+#: views/advanced-tools.php:226
+msgid "Clear licenses cache"
+msgstr "Wis de cache van licenties"
+
+#: views/advanced-tools.php:223
+msgid "This will clear all extensions' license caching. This could be required to update the license status in the Upgrade tab or for new Cloud Storage activations (Professional extension)."
+msgstr "Dit zal alle licentie caching van extensies wissen. Dit kan nodig zijn om de licentie status te updaten in de tab Upgraden of voor nieuwe activeringen van Cloudopslag (Professionele extensie)."
+
+#: views/advanced-tools.php:222
+msgid "Clear extensions license caching"
+msgstr "Wis de cache van de extensie licenties"
+
+#. translators: 1. open anchor tag, 2. close anchor tag
+#: includes/Settings/SettingsUpgrade.php:34
+msgid "Kindly be aware that the extensions' license data is currently stored in cache, impeding the instant update of the information displayed below. To access the latest details, we recommend clearing the cache %1$shere%2$s."
+msgstr "Let op dat de licentiegegevens van de extensies momenteel in de cache worden opgeslagen, waardoor de directe update van de onderstaande informatie wordt belemmerd. Om de meest recente gegevens te bekijken, raden we aan om de cache %1$s hier %2$s te wissen."
+
+#. translators: &debug=true
+#: includes/Settings/SettingsDebug.php:818
+msgid "You can also add %s to the URL to apply this on a per-order basis."
+msgstr "Je kunt ook %s aan de URL toevoegen om dit op per bestelling basis toe te passen."
+
+#. translators: PHP version
+#: woocommerce-pdf-invoices-packingslips.php:239
+msgid "PDF Invoices & Packing Slips for WooCommerce requires PHP %s or higher."
+msgstr "PDF Invoices & Packing Slips for WooCommerce vereist PHP %s of hoger."
+
+#. translators: 1. open anchor tag, 2. close anchor tag, 3. Woo version
+#: woocommerce-pdf-invoices-packingslips.php:194
+msgid "PDF Invoices & Packing Slips for WooCommerce requires %1$sWooCommerce%2$s version %3$s or higher to be installed & activated!"
+msgstr "PDF Invoices & Packing Slips for WooCommerce vereist %1$sWooCommerce%2$s versie %3$s of hoger om te worden geïnstalleerd & geactiveerd!"
+
+#: includes/Documents/OrderDocument.php:935 languages/strings.php:6
+msgid "Payment Date:"
+msgstr "Betaaldatum:"
+
+#: languages/strings.php:5
+msgid "Payment date"
+msgstr "Betaaldatum"
+
+#: includes/Settings/SettingsGeneral.php:184
+#: includes/Settings/SettingsGeneral.php:197
+msgid "Required for UBL output format.<br>You can display this number on the invoice from the document settings."
+msgstr "Vereist voor UBL uitvoer format.<br>Je kunt dit nummer op de factuur weergeven vanuit de documentinstellingen."
+
+#. translators: 1. open anchor tag, 2. close anchor tag
+#: includes/Settings/SettingsGeneral.php:44
+msgid "Requires the %1$sProfessional extension%2$s."
+msgstr "Vereist de %1$sProfessional extensie%2$s."
+
+#: includes/Settings/SettingsDebug.php:910
+msgid "Our plugin uses a semaphore class that prevents race conditions in multiple places in the code. Enable this setting only if you are having issues with document numbers, yearly reset or documents being assigned to the wrong order."
+msgstr "Onze plugin gebruikt een semafoor klasse die op meerdere plaatsen in de code race condities voorkomt. Schakel deze instelling alleen in als je problemen hebt met documentnummers, jaarlijkse reset of documenten die aan de verkeerde bestelling worden toegewezen."
+
+#: includes/Settings/SettingsDebug.php:904
+msgid "Enable semaphore logs"
+msgstr "Logs van semaforen inschakelen"
+
+#: views/promo.php:27
+msgid "Last chance to use your Black Friday discount!"
+msgstr "Laatste kans om je Black Friday korting te gebruiken!"
+
+#: views/advanced-tools.php:352
+msgid "Delete documents"
+msgstr "Verwijderen documenten"
+
+#: views/advanced-tools.php:325
+msgid "All"
+msgstr "Alle"
+
+#: views/advanced-tools.php:314
+msgid "This tool will delete existing documents within the selected order date range."
+msgstr "Dit gereedschap verwijdert bestaande documenten binnen het geselecteerde bestel datum bereik."
+
+#: views/advanced-tools.php:313
+msgid "Delete existing documents"
+msgstr "Verwijder bestaande documenten"
+
+#: views/advanced-tools.php:303
+msgid "Renumber documents"
+msgstr "Hernummer documenten"
+
+#: views/advanced-tools.php:297 views/advanced-tools.php:346
+msgid "To:"
+msgstr "Aan:"
+
+#: views/advanced-tools.php:294 views/advanced-tools.php:298
+#: views/advanced-tools.php:343 views/advanced-tools.php:347
+msgid "(as: yyyy-mm-dd)"
+msgstr "(als: yyyy-mm-dd)"
+
+#: views/advanced-tools.php:293 views/advanced-tools.php:342
+msgid "From:"
+msgstr "Vanaf:"
+
+#: views/advanced-tools.php:273 views/advanced-tools.php:321
+msgid "Select"
+msgstr "Selecteer"
+
+#: views/advanced-tools.php:270 views/advanced-tools.php:318
+msgid "Document type:"
+msgstr "Document type:"
+
+#. translators: step-by-step instructions
+#: views/advanced-tools.php:262
+msgid "Set the <strong>next document number</strong> setting %s to the number you want to use for the first document. "
+msgstr "Stel de <strong>volgende document nummer</strong> instelling %s in op het nummer dat je voor het eerste document wilt gebruiken. "
+
+#: views/advanced-tools.php:257
+msgid "This tool will renumber existing documents within the selected order date range, while keeping the assigned document date."
+msgstr "Dit gereedschap hernummert bestaande documenten binnen het geselecteerde bestel datum bereik, terwijl de toegewezen document datum behouden blijft."
+
+#: views/advanced-tools.php:256
+msgid "Renumber existing documents"
+msgstr "Hernummer bestaande documenten"
+
+#: views/advanced-tools.php:251
+msgid "<strong>DANGER ZONE:</strong> Create a backup before using these tools, the actions they perform are irreversible!"
+msgstr "<strong>GEVAARZONE:</strong> Maak een back-up voordat je deze gereedschap gebruikt, de acties die ze uitvoeren zijn onomkeerbaar!"
+
+#: views/advanced-status.php:202
+msgid "Path"
+msgstr "Pad"
+
+#. translators: 1. open anchor tag, 2. close anchor tag
+#: views/advanced-status.php:123
+msgid "Scheduled action not found. Please reschedule it %1$shere%2$s."
+msgstr "Geplande actie niet gevonden. Plan het opnieuw %1$shier%2$s."
+
+#: views/advanced-numbers.php:44
+msgid "Please select a number store!"
+msgstr "Selecteer een nummer winkel!"
+
+#: views/advanced-numbers.php:37
+msgid "Search number"
+msgstr "Zoek nummer"
+
+#: views/advanced-numbers.php:34
+msgid "Numbers may have been assigned to orders before this."
+msgstr "Het kan zijn dat er al eerder nummers aan bestellingen zijn toegewezen."
+
+#. translators: chose table title
+#: views/advanced-numbers.php:29
+msgid "Below is a list of all the document numbers generated since the last reset (which happens when you set the <strong>next %s number</strong> value in the settings)."
+msgstr "Hieronder vind je een lijst met alle document nummers die zijn gegenereerd sinds de laatste reset (wat gebeurt als je de waarde <strong>volgende %s nummer</strong> in de instellingen instelt)."
+
+#: views/advanced-numbers.php:22
+msgid "This document is currently using the main invoice number sequence."
+msgstr "Dit document gebruikt momenteel de hoofdfactuur nummer string."
+
+#: views/advanced-numbers.php:5
+msgid "Choose a number store"
+msgstr "Kies een nummer winkel"
+
+#: includes/Tables/NumberStoreListTable.php:124
+msgid "Order Status"
+msgstr "Bestelling status"
+
+#: includes/Tables/NumberStoreListTable.php:123
+msgid "Order"
+msgstr "Bestelling"
+
+#: includes/Tables/NumberStoreListTable.php:121
+msgid "Calculated"
+msgstr "Berekend"
+
+#: includes/Tables/NumberStoreListTable.php:120
+msgid "Type"
+msgstr "Type"
+
+#: includes/Tables/NumberStoreListTable.php:119
+msgid "Number"
+msgstr "Nummer"
+
+#: includes/Tables/NumberStoreListTable.php:96
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: includes/Tables/NumberStoreListTable.php:80
+msgid "Refund:"
+msgstr "Terugbetaling:"
+
+#: includes/Settings/SettingsUpgrade.php:67
+msgid "Handle document translations with WPML, Polylang, Weglot, TranslatePress or GTranslate."
+msgstr "Verwerk document vertalingen met WPML, Polylang, Weglot, TranslatePress of GTranslate."
+
+#: includes/Settings/SettingsUpgrade.php:46
+msgid "Proforma Invoice, Credit Note & Receipt"
+msgstr "Proforma factuur, credit nota & ontvangstbewijs"
+
+#: includes/Settings/SettingsDebug.php:922
+msgid "Enables the danger zone tools. The actions performed by these tools are irreversible!"
+msgstr "Schakelt de gevaarzone gereedschappen in. De acties uitgevoerd door deze gereedschappen zijn onomkeerbaar!"
+
+#: includes/Settings/SettingsDebug.php:916
+msgid "Enable danger zone tools"
+msgstr "Schakel gevarenzone gereedschap in"
+
+#: includes/Settings/SettingsDebug.php:539
+msgid "documents renumbered."
+msgstr "documenten opnieuw genummerd."
+
+#: includes/Settings/SettingsDebug.php:539
+msgid "documents deleted."
+msgstr "document verwijderd."
+
+#: includes/Settings/SettingsDebug.php:527
+msgid "One or more request parameters missing."
+msgstr "Een of meer aanvraag parameters ontbreken."
+
+#: includes/Settings/SettingsDebug.php:1164
+msgid "Numbers"
+msgstr "Nummers"
+
+#: includes/Documents/Invoice.php:330
+msgid "Display due date"
+msgstr "Geef de vervaldatum weer"
+
+#: includes/Documents/Invoice.php:694 includes/Settings.php:180
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+#: includes/Documents/OrderDocument.php:916 includes/Main.php:1722
+msgid "Due Date:"
+msgstr "Einddatum:"
+
+#. translators: 1. open anchor tag, 2. close anchor tag
+#: includes/Assets.php:275
+msgid "<strong>Enabled</strong>: %1$sclick here%2$s to start using the tools."
+msgstr "<strong>Ingeschakeld</strong>: %1$sklik hier%2$s om het gereedschap te gaan gebruiken."
+
+#: includes/Assets.php:270
+msgid "Please select a document type"
+msgstr "Selecteer een document type"
+
+#. translators: legacy addon name
+#: woocommerce-pdf-invoices-packingslips.php:566
+msgid "While updating the PDF Invoices & Packing Slips for WooCommerce plugin we've noticed our legacy %s add-on was active on your site. This functionality is now incorporated into the core plugin. We've deactivated the add-on for you, and you are free to uninstall it."
+msgstr "Tijdens het updaten van de PDF facturen & pakbonnen voor WooCommerce plugin hebben we bericht ontvangen dat onze verouderde %s add-on actief was op je site. Deze functionaliteit is nu opgenomen in de core plugin. We hebben de add-on voor je gedeactiveerd en je bent gratis in staat om deze te verwijderen."
+
+#: ubl/Settings/TaxesSettings.php:306
+msgid "Services outside scope of tax"
+msgstr "Diensten buiten het toepassingsgebied van de belasting"
+
+#: ubl/Settings/TaxesSettings.php:300
+msgid "Higher rate"
+msgstr "Hoger tarief"
+
+#: ubl/Settings/TaxesSettings.php:299
+msgid "Free export item, tax not charged"
+msgstr "Gratis export item, belasting niet in rekening gebracht"
+
+#: ubl/Settings/TaxesSettings.php:297
+msgid "Exempt from tax"
+msgstr "Vrijgesteld van belasting"
+
+#: ubl/Settings/TaxesSettings.php:295
+msgid "Duty paid by supplier"
+msgstr "Door leverancier betaalde rechten"
+
+#: ubl/Settings/TaxesSettings.php:294
+msgid "Transferred (VAT)"
+msgstr "Overgedragen (BTW)"
+
+#: ubl/Settings/TaxesSettings.php:292
+msgid "Value Added Tax (VAT) due from a previous invoice"
+msgstr "Belasting over de toegevoegde waarde (BTW) die verschuldigd is van een vorige factuur"
+
+#: ubl/Settings/TaxesSettings.php:291
+msgid "Value Added Tax (VAT) not now due for payment"
+msgstr "Belasting toegevoegde waarde (BTW) die nu niet hoeft te worden betaald"
+
+#: ubl/Settings/TaxesSettings.php:290
+msgid "Exempt for resale"
+msgstr "Vrijgesteld voor wederverkoop"
+
+#: ubl/Settings/TaxesSettings.php:288
+msgid "Mixed tax rate"
+msgstr "Gemengd belastingtarief"
+
+#: ubl/Settings/TaxesSettings.php:308
+msgid "Zero rated goods"
+msgstr "Nul gewaardeerde goederen"
+
+#: ubl/Settings/TaxesSettings.php:289
+msgid "Lower rate"
+msgstr "Lager tarief"
+
+#: ubl/Settings/TaxesSettings.php:307
+msgid "Standard rate"
+msgstr "Standaardtarief"
+
+#: ubl/Settings/TaxesSettings.php:282
+msgid "Valuation deposit"
+msgstr "Waarde borg"
+
+#: ubl/Settings/TaxesSettings.php:281
+msgid "Tonnage taxes"
+msgstr "Tonnage belasting"
+
+#: ubl/Settings/TaxesSettings.php:280
+msgid "Turnover tax"
+msgstr "Omzetbelasting"
+
+#: ubl/Settings/TaxesSettings.php:278
+msgid "Alcohol mark tax"
+msgstr "Alcohol merk belasting"
+
+#: ubl/Settings/TaxesSettings.php:277
+msgid "Shifted wage tax"
+msgstr "Verschoven loonbelasting"
+
+#: ubl/Settings/TaxesSettings.php:276
+msgid "Surtax"
+msgstr "Toeslag belasting"
+
+#: ubl/Settings/TaxesSettings.php:275
+msgid "Suspended duty"
+msgstr "Geschorste plicht"
+
+#: ubl/Settings/TaxesSettings.php:274
+msgid "State/provincial sales tax"
+msgstr "Verkoopbelasting van staat/provincie"
+
+#: ubl/Settings/TaxesSettings.php:273
+msgid "Shifted social securities"
+msgstr "Verschoven sociale zekerheden"
+
+#: ubl/Settings/TaxesSettings.php:272
+msgid "Special construction tax"
+msgstr "Speciale bouwbelasting"
+
+#: ubl/Settings/TaxesSettings.php:271
+msgid "Preference duty"
+msgstr "Preferentie plicht"
+
+#: ubl/Settings/TaxesSettings.php:270
+msgid "Provisional duty cash"
+msgstr "Voorlopige plicht contant"
+
+#: ubl/Settings/TaxesSettings.php:269
+msgid "Provisional duty bond"
+msgstr "Voorlopige douaneverplichting"
+
+#: ubl/Settings/TaxesSettings.php:268
+msgid "Other taxes"
+msgstr "Andere belastingen"
+
+#: ubl/Settings/TaxesSettings.php:267
+msgid "Miscellaneous cash deposit"
+msgstr "Diverse stortingen in contanten"
+
+#: ubl/Settings/TaxesSettings.php:266
+msgid "Monetary compensatory amount"
+msgstr "Geldelijk compensatiebedrag"
+
+#: ubl/Settings/TaxesSettings.php:265
+msgid "Lust tax"
+msgstr "Lust belasting"
+
+#: ubl/Settings/TaxesSettings.php:264
+msgid "Local sales tax"
+msgstr "Lokale omzetbelasting"
+
+#: ubl/Settings/TaxesSettings.php:263
+msgid "Light dues payable"
+msgstr "Verschuldigde lichtbelasting"
+
+#: ubl/Settings/TaxesSettings.php:262
+msgid "Local construction tax"
+msgstr "Lokale bouwbelasting"
+
+#: ubl/Settings/TaxesSettings.php:261
+msgid "Business license fee"
+msgstr "Kosten bedrijfsvergunning"
+
+#: ubl/Settings/TaxesSettings.php:260
+msgid "Individual tax"
+msgstr "Individuele belasting"
+
+#: ubl/Settings/TaxesSettings.php:259
+msgid "Import tax"
+msgstr "Import belasting"
+
+#: ubl/Settings/TaxesSettings.php:258
+msgid "Illuminants tax"
+msgstr "Belasting op verlichtingsmiddelen"
+
+#: ubl/Settings/TaxesSettings.php:257
+msgid "General construction tax"
+msgstr "Algemene bouwbelasting"
+
+#: ubl/Settings/TaxesSettings.php:256
+msgid "Free"
+msgstr "Gratis"
+
+#: ubl/Settings/TaxesSettings.php:255
+msgid "Federal excise tax"
+msgstr "Federale accijns"
+
+#: ubl/Settings/TaxesSettings.php:254
+msgid "Agricultural export rebate"
+msgstr "Landbouw export korting"
+
+#: ubl/Settings/TaxesSettings.php:253
+msgid "Excise duty"
+msgstr "Accijns"
+
+#: ubl/Settings/TaxesSettings.php:252
+msgid "Environmental tax"
+msgstr "Milieubelasting"
+
+#: ubl/Settings/TaxesSettings.php:251
+msgid "Countervailing duty"
+msgstr "Compenserend recht"
+
+#: ubl/Settings/TaxesSettings.php:250
+msgid "Customs duty"
+msgstr "Aangepast"
+
+#: ubl/Settings/TaxesSettings.php:249
+msgid "Commodity specific tax"
+msgstr "Grondstoffen specifieke belasting"
+
+#: ubl/Settings/TaxesSettings.php:248
+msgid "Paper consortium tax (Italy)"
+msgstr "Papier consortium belasting (Italië)"
+
+#: ubl/Settings/TaxesSettings.php:247
+msgid "Car tax"
+msgstr "Autobelasting"
+
+#: ubl/Settings/TaxesSettings.php:246
+msgid "Agricultural levy"
+msgstr "Landbouwheffing"
+
+#: ubl/Settings/TaxesSettings.php:245
+msgid "Stamp duty (Imposta di Bollo)"
+msgstr "Zegelrecht (Imposta di bollo)"
+
+#: ubl/Settings/TaxesSettings.php:244
+msgid "Anti-dumping duty"
+msgstr "Antidumpingrecht"
+
+#: ubl/Settings/TaxesSettings.php:243
+msgid "Special tax"
+msgstr "Speciale belasting"
+
+#: ubl/Settings/TaxesSettings.php:242
+msgid "Mineral oil tax"
+msgstr "Belasting op minerale olie"
+
+#: ubl/Settings/TaxesSettings.php:241
+msgid "Tax on replacement part"
+msgstr "Belasting op vervangend onderdeel"
+
+#: ubl/Settings/TaxesSettings.php:240
+msgid "Canadian provincial sales tax"
+msgstr "Canadese provinciale omzetbelasting"
+
+#: ubl/Settings/TaxesSettings.php:239
+msgid "Quebec sales tax"
+msgstr "Quebec omzetbelasting"
+
+#: ubl/Settings/TaxesSettings.php:238
+msgid "Harmonised sales tax, Canadian"
+msgstr "Geharmoniseerde verkoopbelasting, Canadees"
+
+#: ubl/Settings/TaxesSettings.php:237
+msgid "Coffee tax"
+msgstr "Koffiebelasting"
+
+#: ubl/Settings/TaxesSettings.php:236
+msgid "Energy fee"
+msgstr "Energievergoeding"
+
+#: ubl/Settings/TaxesSettings.php:235
+msgid "Tobacco tax"
+msgstr "Tabaksaccijns"
+
+#: ubl/Settings/TaxesSettings.php:234
+msgid "Provisional countervailing duty bond"
+msgstr "Voorlopige borgtocht voor compenserend recht"
+
+#: ubl/Settings/TaxesSettings.php:233
+msgid "Provisional countervailing duty cash"
+msgstr "Voorlopig compenserend recht contant"
+
+#: ubl/Settings/TaxesSettings.php:232
+msgid "Petroleum tax"
+msgstr "Belasting op aardolie"
+
+#: ubl/Settings/TaxesSettings.php:231
+msgid "Goods and services tax (GST)"
+msgstr "Belasting op goederen en diensten (GST)"
+
+#: ubl/Settings/TaxesSettings.php:230
+msgid "Value added tax (VAT)"
+msgstr "Belasting toegevoegde waarde (BTW)"
+
+#: ubl/Settings/TaxesSettings.php:191
+msgid "Default"
+msgstr "Standaard"
+
+#: ubl/Settings/TaxesSettings.php:138
+msgid "Tax class default"
+msgstr "Standaard belastingklasse"
+
+#: ubl/Settings/TaxesSettings.php:132
+msgid "No taxes found for this class."
+msgstr "Geen belastingen gevonden voor deze klasse."
+
+#: ubl/Settings/TaxesSettings.php:55
+msgid "Tax Category"
+msgstr "Belastingcategorie"
+
+#: ubl/Settings/TaxesSettings.php:54
+msgid "Tax Scheme"
+msgstr "Belastingregeling"
+
+#: ubl/Settings/TaxesSettings.php:52
+msgid "City"
+msgstr "Stad"
+
+#: ubl/Settings/TaxesSettings.php:51
+msgid "Postcode / ZIP"
+msgstr "Postcode"
+
+#: ubl/Settings/TaxesSettings.php:50
+msgid "State code"
+msgstr "Staat/provincie code"
+
+#: ubl/Settings/TaxesSettings.php:24
+msgid "Standard"
+msgstr "Standaard"
+
+#: includes/Settings/SettingsUbl.php:112
+msgid "UBL settings"
+msgstr "UBL instellingen"
+
+#. translators: 1. General Settings, 2. UBL Settings
+#: includes/Settings/SettingsUbl.php:110
+msgid "You've enabled UBL output for a document, but some essential details are missing. Please ensure you've added your VAT and CoC numbers in the %1$s. Also, specify your tax rates in the %2$s."
+msgstr "Je hebt UBL uitvoer ingeschakeld voor een document, maar er ontbreken enkele essentiële details. Zorg ervoor dat je je BTW- en KvK nummers hebt toegevoegd in de %1$s. Geef ook je belastingtarieven op in de %2$s."
+
+#: includes/Settings/SettingsUbl.php:27
+msgid "Taxes classification"
+msgstr "Belastingen classificatie"
+
+#: includes/Settings/SettingsGeneral.php:190
+msgid "Shop Chamber of Commerce Number"
+msgstr "Winkel kamer van koophandel nummer"
+
+#: includes/Settings/SettingsGeneral.php:177
+msgid "Shop VAT Number"
+msgstr "Winkel BTW nummer"
+
+#: includes/Settings/SettingsDebug.php:684
+msgid "UBL Taxes"
+msgstr "UBL belastingen"
+
+#: includes/Documents/Invoice.php:634
+msgid "Include encrypted PDF:"
+msgstr "Inclusief versleutelde PDF:"
+
+#: includes/Assets.php:89
+msgid "You have to select order(s) first!"
+msgstr "Je moet eerst de bestelling(en) selecteren!"
+
+#: includes/Admin.php:702
+msgid "UBL documents require the correspondent PDF to be generated first."
+msgstr "Voor UBL documenten moet eerst de corresponderende PDF worden gegenereerd."
+
+#: includes/Admin.php:495
+msgid "Create UBL"
+msgstr "UBL maken"
+
+#: includes/Settings/SettingsDebug.php:773
+msgid "Custom external URLs not allowed."
+msgstr "Aangepaste externe URL's niet toegestaan."
+
+#: includes/Settings/SettingsDebug.php:760
+msgid "Select a frontend page to be used to redirect users when the document access is denied."
+msgstr "Selecteer een front-end pagina die wordt gebruikt om gebruikers door te sturen als de toegang tot het document wordt geweigerd."
+
+#: includes/Settings/SettingsDebug.php:758
+msgid "Custom page (enter below)"
+msgstr "Aangepaste pagina (hieronder invoeren)"
+
+#: includes/Settings/SettingsDebug.php:757
+msgid "My Account page"
+msgstr "Mijn account pagina"
+
+#: includes/Settings/SettingsDebug.php:756
+msgid "Login page"
+msgstr "Login pagina"
+
+#: includes/Settings/SettingsDebug.php:755
+msgid "Blank page with message (default)"
+msgstr "Blanco pagina met bericht (standaard)"
+
+#: includes/Settings/SettingsDebug.php:747
+msgid "Document access denied redirect page"
+msgstr "Pagina voor omleiden document toegang geweigerd"
+
+#. translators: document type
+#: includes/Documents/Invoice.php:414
+msgid "<strong>Note</strong>: Changes made to the number format will only be reflected on new orders. Also, if you have already created a custom %s number format with a filter, the above settings will be ignored."
+msgstr "<strong>{Opmerking </strong>: wijzigingen in het nummer format worden alleen doorgevoerd bij nieuwe bestellingen. Als je al een aangepast %s nummer format met een filter hebt gemaakt, worden de bovenstaande instellingen genegeerd."
+
+#: includes/Settings/SettingsDebug.php:946
+msgid "Document can be accessed by everyone with the link."
+msgstr "Het document is voor iedereen toegankelijk via de link."
+
+#: includes/Settings/SettingsDebug.php:942
+msgid "Document can be accessed by logged in and guest users."
+msgstr "Het document is toegankelijk voor ingelogde en gastgebruikers."
+
+#: includes/Settings/SettingsDebug.php:938
+msgid "Document can be accessed by logged in users only."
+msgstr "Het document is alleen toegankelijk voor ingelogde gebruikers."
+
+#: includes/Settings/SettingsDebug.php:937
+msgid "Logged in"
+msgstr "Ingelogd"
+
+#: includes/Settings/SettingsDebug.php:730
+#: includes/Settings/SettingsDebug.php:945
+msgid "Full"
+msgstr "Volledig"
+
+#: includes/Settings/SettingsDebug.php:729
+#: includes/Settings/SettingsDebug.php:941
+msgid "Guest"
+msgstr "Gast"
+
+#: includes/Settings/SettingsDebug.php:728
+msgid "Logged in (recommended)"
+msgstr "Ingelogd (aanbevolen)"
+
+#: includes/Settings/SettingsDebug.php:720
+msgid "Document link access type"
+msgstr "Toegangstype document link"
+
+#. translators: settings type
+#: includes/Settings/SettingsDebug.php:513
+msgid "An error occurred when trying to reset the %s settings."
+msgstr "Er is een fout opgetreden bij het opnieuw instellen van de %s instellingen."
+
+#. translators: settings type
+#: includes/Settings/SettingsDebug.php:505
+msgid "%s settings reset successfully!"
+msgstr "%s instellingen met succes gereset!"
+
+#. translators: settings type
+#: includes/Settings/SettingsDebug.php:493
+msgid "%s settings are already reset!"
+msgstr "%s instellingen zijn al gereset!"
+
+#. translators: settings type
+#: includes/Settings/SettingsDebug.php:480
+msgid "%s settings reset not supported!"
+msgstr "%s instellingen resetten niet ondersteund!"
+
+#: includes/Settings/SettingsDebug.php:441
+msgid "Reset settings type is empty!"
+msgstr "Type instellingen resetten is leeg!"
+
+#: views/advanced-numbers.php:39 views/advanced-tools.php:211
+msgid "Reset"
+msgstr "Reset"
+
+#: views/advanced-tools.php:198
+msgid "This will clear all your selected settings data. Please do a backup first using the export tool above."
+msgstr "Hierdoor worden alle geselecteerde instellingen gewist. Maak eerst een back-up met het export gereedschap hierboven."
+
+#: views/advanced-tools.php:197
+msgid "Reset Settings"
+msgstr "Reset instellingen"
+
+#: includes/Main.php:372
+msgid "You do not have sufficient permissions to access this page. Reason: invalid nonce"
+msgstr "Je hebt niet voldoende rechten om deze pagina te openen. Reden: ongeldige nonce"
+
+#: includes/Main.php:366
+msgid "You do not have sufficient permissions to access this page. Reason: empty action"
+msgstr "Je hebt niet voldoende rechten om deze pagina te openen. Reden: lege actie"
+
+#: includes/Main.php:360
+msgid "You do not have sufficient permissions to access this page. Reason: empty access key"
+msgstr "Je hebt niet voldoende rechten om deze pagina te openen. Reden: lege toegangssleutel"
+
+#: includes/Assets.php:269
+msgid "Are you sure you want to reset this settings? This cannot be undone."
+msgstr "Weet je zeker dat je deze instellingen opnieuw wil instellen? Dit kan niet ongedaan worden gemaakt."
+
+#: includes/Admin.php:868
+msgid "Hide details"
+msgstr "Verberg details"
+
+#: includes/Admin.php:867
+msgid "View more details"
+msgstr "Bekijk meer details"
+
+#. translators: 1,2. template paths
+#: includes/Settings/SettingsGeneral.php:79
+msgid "Want to use your own template? Copy all the files from %1$s to your (child) theme in %2$s to customize them"
+msgstr "Wil je je eigen template gebruiken? Kopieer alle bestanden van %1$s naar je (sub)thema in %2$s om ze aan te passen"
+
+#. translators: learn more link
+#: views/upgrade-table.php:73
+msgid "License not yet activated: %s"
+msgstr "Licentie nog niet geactiveerd: %s"
+
+#: views/upgrade-table.php:63 views/upgrade-table.php:155
+msgid "Currently installed"
+msgstr "Momenteel geïnstalleerd"
+
+#: includes/Documents/Invoice.php:478
+msgid "Enable invoice number search in the orders list"
+msgstr "Inschakelen factuurnummer zoeken in de bestellijst"
+
+#: includes/Admin.php:731
+msgid "Invoice created via:"
+msgstr "Factuur aangemaakt via:"
+
+#: includes/Admin.php:728
+msgid "Invoice display date:"
+msgstr "Datum factuurweergave:"
+
+#: includes/Admin.php:725
+msgid "Invoice date:"
+msgstr "Factuur datum:"
+
+#: includes/Admin.php:722
+msgid "Invoice number:"
+msgstr "Factuurnummer:"
+
+#: views/upgrade-table.php:97
+msgid "Upgrade now"
+msgstr "Nu upgraden"
+
+#: views/upgrade-table.php:22
+msgid "Premium Templates"
+msgstr "Premium templates"
+
+#: views/upgrade-table.php:21
+msgid "Professional"
+msgstr "Professioneel"
+
+#: views/upgrade-table.php:14
+msgid "If you have any questions feel free to send us an email at"
+msgstr "Als je vragen hebt, kun je ons een e-mail sturen naar"
+
+#: views/upgrade-table.php:13
+msgid "A quick overview of the features our PDF Invoices & Packing Slips extensions have to offer."
+msgstr "Een kort overzicht van de functies die onze PDF facturen & pakbonnen extensies te bieden hebben."
+
+#: views/upgrade-table.php:11
+msgid "Wait, there is more..."
+msgstr "Wacht, er is meer..."
+
+#: includes/Settings.php:185
+msgid "Upgrade"
+msgstr "Upgraden"
+
+#: includes/Settings/SettingsUpgrade.php:122
+msgid "Easily change the look and feel of your documents by adding some custom CSS."
+msgstr "Verander eenvoudig het uiterlijk van je documenten door CSS toe te voegen."
+
+#: includes/Settings/SettingsUpgrade.php:121
+msgid "Add styling"
+msgstr "Stijl toevoegen"
+
+#: includes/Settings/SettingsUpgrade.php:117
+msgid "Make use of our Business or Modern template designs."
+msgstr "Maak gebruik van onze zakelijke of moderne template ontwerpen."
+
+#: includes/Settings/SettingsUpgrade.php:116
+msgid "Additional PDF templates"
+msgstr "Extra PDF templates"
+
+#: includes/Settings/SettingsUpgrade.php:109
+msgid "Display all sorts of data and apply conditional logic using Custom Blocks."
+msgstr "Toon alle soorten gegevens en voorwaardelijke logica toepassen met behulp van aangepaste blokken."
+
+#: includes/Settings/SettingsUpgrade.php:106
+msgid "Add custom data to your documents"
+msgstr "Aangepaste gegevens toevoegen aan je documenten"
+
+#: includes/Settings/SettingsUpgrade.php:99
+msgid "Fully customize the product table and totals table on your documents."
+msgstr "Pas de producttabel en totalen tabel op je documenten volledig aan."
+
+#: includes/Settings/SettingsUpgrade.php:96
+msgid "PDF Customizer"
+msgstr "PDF customizer"
+
+#: includes/Settings/SettingsUpgrade.php:91
+#: includes/Settings/SettingsUpgrade.php:101
+#: includes/Settings/SettingsUpgrade.php:111 views/upgrade-table.php:74
+msgid "Learn more"
+msgstr "Meer informatie"
+
+#: includes/Settings/SettingsUpgrade.php:89
+msgid "Send a notification email to user specified addresses."
+msgstr "Verstuur een melding e-mail naar door de gebruiker opgegeven adressen."
+
+#: includes/Settings/SettingsUpgrade.php:86
+msgid "Order notification email"
+msgstr "Bestelling melding per e-mail"
+
+#: includes/Settings/SettingsUpgrade.php:82
+msgid "Customize the address format of the billing and shipping addresses."
+msgstr "Pas het adres format van het factuur en verzendadres aan."
+
+#: includes/Settings/SettingsUpgrade.php:81
+msgid "Custom address format"
+msgstr "Aangepast adres format"
+
+#: includes/Settings/SettingsUpgrade.php:77
+msgid "Customize document titles and filenames right in the plugin settings."
+msgstr "Pas document titels en bestand namen rechts in de plugin instellingen aan."
+
+#: includes/Settings/SettingsUpgrade.php:76
+msgid "Custom document titles and filenames"
+msgstr "Aangepaste document titels en bestand namen"
+
+#: includes/Settings/SettingsUpgrade.php:72
+msgid "Add up to three static files to your emails."
+msgstr "Voeg tot drie statische bestanden toe aan je e-mails."
+
+#: includes/Settings/SettingsUpgrade.php:71
+msgid "Attach static files"
+msgstr "Statische bestanden toevoegen"
+
+#: includes/Settings/SettingsUpgrade.php:66
+msgid "Multilingual support"
+msgstr "Meertalige ondersteuning"
+
+#: includes/Settings/SettingsUpgrade.php:62
+msgid "Easily export documents for a specific date range."
+msgstr "Exporteer eenvoudig documenten voor een specifiek datum bereik."
+
+#: includes/Settings/SettingsUpgrade.php:61
+msgid "Bulk export"
+msgstr "Bulk export"
+
+#: includes/Settings/SettingsUpgrade.php:57
+msgid "Automatically upload your documents via FTP/SFTP or to Dropbox."
+msgstr "Automatisch je documenten uploaden via FTP/SFTP of naar Dropbox."
+
+#: includes/Settings/SettingsUpgrade.php:56
+msgid "Cloud storage upload"
+msgstr "Cloud opslag upload"
+
+#: includes/Settings/SettingsUpgrade.php:52
+msgid "Also attach the Packing Slip, Proforma Invoice and Credit Note to any of the outgoing emails."
+msgstr "Voeg ook de pakbon, de proforma factuur en de kredietnota bij de uitgaande e-mails."
+
+#: includes/Settings/SettingsUpgrade.php:51
+msgid "Attach to email"
+msgstr "Aan e-mail toevoegen"
+
+#: includes/Settings/SettingsUpgrade.php:47
+msgid "Update your workflow and handle refunds. Both Proforma & Credit Note documents can either follow the main invoice numbering or have their own separate number sequence."
+msgstr "Update je workflow en behandel terug betalingen. Beide pro forma & creditnota documenten kunnen het hoofd factuur nummering volgen of hun eigen afzonderlijke nummer volgorde hebben."
+
+#: woocommerce-pdf-invoices-packingslips.php:436
+msgid "Download mPDF extension"
+msgstr "Download mPDF extensie"
+
+#: woocommerce-pdf-invoices-packingslips.php:435
+msgid "PDF Invoices & Packing Slips for WooCommerce detected that your current site locale is right-to-left (RTL) which the current PDF engine does not support it. Please consider installing our mPDF extension that is compatible."
+msgstr "PDF Invoices & Packing Slips for WooCommerce detecteerde dat je huidige site locale rechts naar links (RTL) is en dat de huidige PDF engine dit niet ondersteunt. Overweeg om onze mPDF extensie te installeren die wel compatibel is."
+
+#: includes/Documents/Invoice.php:535
+msgid "Adds a link in the order page to allow to remove the printed mark."
+msgstr "Voegt een link toe op de bestelpagina om het verwijderen van de afgedrukte markering toe te staan."
+
+#: includes/Documents/Invoice.php:529
+msgid "Unmark as printed"
+msgstr "Als niet afgedrukt markeren"
+
+#: includes/Documents/Invoice.php:523
+msgid "Allows you to mark the document as printed, manually (in the order page) or automatically (based on the document creation context you have selected)."
+msgstr "Hiermee kun je het document markeren als geprint, handmatig (in de bestelpagina) of automatisch (op basis van de context waarin je het document hebt gemaakt)."
+
+#: includes/Documents/Invoice.php:518
+msgid "On order document data (number and/or date set manually)"
+msgstr "Op de bestelling documenten worden de gegevens (nummer en/of datum) handmatig ingesteld"
+
+#: includes/Documents/Invoice.php:517
+msgid "On email attachment"
+msgstr "Op e-mail bijlage"
+
+#: includes/Documents/Invoice.php:516
+msgid "On my account"
+msgstr "Op mijn rekening"
+
+#: includes/Documents/Invoice.php:515
+msgid "On bulk order action"
+msgstr "Bij bulk bestelactie"
+
+#: includes/Documents/Invoice.php:514
+msgid "On single order action"
+msgstr "Bij een enkele bestelling actie"
+
+#: includes/Documents/Invoice.php:511
+msgid "Manually"
+msgstr "Handmatig"
+
+#: includes/Documents/Invoice.php:503
+msgid "Mark as printed"
+msgstr "Markeer als geprint"
+
+#: includes/Settings/SettingsDebug.php:874
+msgid "Log PDF document creation, deletion, and mark/unmark as printed to order notes."
+msgstr "Log het maken van PDF documenten, verwijdering, en markeer/demarkeer als afgedrukt naar bestelling notities."
+
+#. translators: 1. document type, 2. mark/unmark
+#: includes/Main.php:1561
+msgid "Document of type %1$s for the selected order could not be %2$s as printed."
+msgstr "Het document van het type %1$s voor de geselecteerde volgorde kon niet worden %2$s zoals afgedrukt."
+
+#. translators: 1. document title, 2. creation trigger
+#: includes/Main.php:1368
+msgid "%1$s document unmark printed."
+msgstr "%1$s document markeren ongedaan maken geprint."
+
+#. translators: 1. document title, 2. creation trigger
+#: includes/Main.php:1352
+msgid "%1$s document marked as printed via %2$s."
+msgstr "%1$s document gemarkeerd als geprint via %2$s."
+
+#: includes/Main.php:1346
+msgid "manually"
+msgstr "handmatig"
+
+#: includes/Admin.php:615
+msgid "Unmark"
+msgstr "Markeren ongedaan maken"
+
+#: includes/Admin.php:613
+msgid "Mark printed"
+msgstr "Mark geprint"
+
+#. translators: total scheduled actions
+#: includes/Settings.php:938
+msgid "Only 1 scheduled action should exist for the yearly reset of the numbering system, but %s were found"
+msgstr "Er zou slechts 1 geplande actie moeten bestaan voor de jaarlijkse aanpassing van het nummeringssysteem, maar %s werd gevonden"
+
+#: includes/Settings/SettingsDebug.php:683
+msgid "Debug"
+msgstr "Debug"
+
+#. translators: settings type
+#: includes/Settings/SettingsDebug.php:429
+msgid "The %s settings file you are trying to import is identical to your current settings, therefore, the settings were not imported."
+msgstr "Het %s instellingen bestand dat je probeert te importeren is identiek aan je huidige instellingen, daarom zijn de instellingen niet geïmporteerd."
+
+#. translators: settings type
+#: includes/Settings/SettingsDebug.php:421
+msgid "%s settings imported successfully!"
+msgstr "%s instellingen succesvol geïmporteerd!"
+
+#: includes/Settings/SettingsDebug.php:412
+msgid "Couldn't determine the settings option for the import!"
+msgstr "Kon de instellingen optie voor de import niet bepalen!"
+
+#: includes/Settings/SettingsDebug.php:387
+msgid "The JSON file settings type is not supported on this store!"
+msgstr "Het instelling type JSON bestand wordt niet ondersteund op deze winkel!"
+
+#: includes/Settings/SettingsDebug.php:376
+msgid "The JSON file data is corrupted!"
+msgstr "De JSON bestandsgegevens zijn beschadigd!"
+
+#: includes/Settings/SettingsDebug.php:370
+msgid "JSON file not found!"
+msgstr "JSON bestand niet gevonden!"
+
+#: includes/Settings/SettingsDebug.php:363
+msgid "Failed to get contents from JSON file!"
+msgstr "Mislukt om inhoud van JSON bestand te krijgen!"
+
+#: includes/Settings/SettingsDebug.php:344
+msgid "Exported settings data is empty!"
+msgstr "De geëxporteerde instellingen zijn leeg!"
+
+#: includes/Settings/SettingsDebug.php:307
+msgid "Export settings type is empty!"
+msgstr "Type export instellingen is leeg!"
+
+#: views/advanced-tools.php:187
+msgid "Import"
+msgstr "Importeren"
+
+#: views/advanced-tools.php:182
+msgid "Import plugin settings in JSON format."
+msgstr "Importeer plugin instellingen in JSON format."
+
+#: views/advanced-tools.php:181
+msgid "Import Settings"
+msgstr "Instellingen importeren"
+
+#: views/advanced-tools.php:171
+msgid "Export"
+msgstr "Exporteren"
+
+#: views/advanced-tools.php:158
+msgid "Download plugin settings in JSON format to easily export your current setup."
+msgstr "Download plugin instellingen in JSON format om gemakkelijk je huidige instelling te exporteren."
+
+#: views/advanced-tools.php:157
+msgid "Export Settings"
+msgstr "Instellingen exporteren"
+
+#: views/advanced-tools.php:151
+msgid "Set up your basic invoice workflow via our Wizard."
+msgstr "Stel je basis factuur workflow in via onze wizard."
+
+#: views/advanced-tools.php:50
+msgid "Clean up the PDF files stored in the temporary folder (used for email attachments)."
+msgstr "Ruim de PDF bestanden op die in de tijdelijke map zijn opgeslagen (gebruikt voor e-mailbijlagen)."
+
+#: views/advanced-tools.php:39
+msgid "Reschedule yearly reset"
+msgstr "Jaarlijkse reset herplannen"
+
+#: views/advanced-tools.php:36
+msgid "You seem to have the yearly reset enabled for one of your documents but the action that performs this isn't scheduled yet."
+msgstr "Je lijkt de jaarlijkse reset ingeschakeld te hebben voor een van je documenten, maar de actie die dit uitvoert, is nog niet gepland."
+
+#: views/advanced-tools.php:22
+msgid "If you are experiencing issues with rendering fonts there might have been an issue during installation or upgrade."
+msgstr "Als je problemen ondervindt met het renderen van lettertypen, kan er een probleem zijn geweest tijdens de installatie of upgrade."
+
+#: views/advanced-tools.php:21
+msgid "Reinstall plugin fonts"
+msgstr "Plugin lettertypen opnieuw installeren"
+
+#: views/advanced-tools.php:12
+msgid "Generate temporary directory"
+msgstr "Genereer tijdelijke folder"
+
+#: views/advanced-tools.php:9
+msgid "For security reasons, it is preferable to use a random name for the temporary directory."
+msgstr "Om veiligheidsredenen verdient het de voorkeur een willekeurige naam te gebruiken voor de tijdelijke folder."
+
+#: views/advanced-tools.php:8
+msgid "Generate random temporary directory"
+msgstr "Genereer willekeurige tijdelijke folder"
+
+#: includes/Settings/SettingsDebug.php:1163
+msgid "Tools"
+msgstr "Gereedschappen"
+
+#: includes/Assets.php:268
+msgid "Download"
+msgstr "Download"
+
+#: includes/Assets.php:120
+msgid "Preview"
+msgstr "Voorbeeld"
+
+#: includes/Assets.php:194
+msgid "The number should be smaller than 2147483647. Please note you should add your next document number without prefix, suffix or padding."
+msgstr "Het getal moet kleiner zijn dan 2147483647. Je moet je volgende documentnummer toevoegen zonder voorvoegsel, achtervoegsel of padding."
+
+#. translators: total scheduled actions
+#: views/advanced-status.php:115
+msgid "Only 1 scheduled action should exist, but %s were found"
+msgstr "Er zou slechts 1 geplande actie moeten bestaan, maar er zijn er %s gevonden"
+
+#: views/advanced-status.php:107
+msgid "Scheduled to: %s"
+msgstr "Gepland om: %s"
+
+#: views/advanced-status.php:97
+msgid "Yearly reset action not found"
+msgstr "Jaarlijkse reset actie niet gevonden"
+
+#: views/advanced-status.php:96
+msgid "Required to reset documents numeration"
+msgstr "Vereist om de nummering van documenten opnieuw in te stellen"
+
+#: views/advanced-status.php:73 views/advanced-status.php:131
+msgid "Yearly reset"
+msgstr "Jaarlijkse reset"
+
+#: views/advanced-status.php:72
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: views/advanced-status.php:66
+msgid "Documents status"
+msgstr "Status van de documenten"
+
+#: includes/Settings/SettingsDebug.php:237
+msgid "Yearly reset numbering system rescheduled!"
+msgstr "Jaarlijkse nummering opnieuw gepland!"
+
+#: views/advanced-tools.php:35
+msgid "Reschedule the yearly reset of the numbering system"
+msgstr "De jaarlijkse herziening van het nummeringssysteem opnieuw plannen"
+
+#. translators: %s: Order ID
+#: includes/Main.php:411
+msgid "Could not find the order #%s."
+msgstr "Kon de bestelling #%s niet vinden."
+
+#: includes/Main.php:406
+msgid "You have to save the order before generating a PDF document for it."
+msgstr "Je moet de bestelling opslaan voordat je een PDF ervoor genereert."
+
+#: views/extensions.php:55
+msgid "Get PDF Invoices & Packing Slips for WooCommerce Professional!"
+msgstr "Verkrijg PDF Invoices & Packing Slips for WooCommerce Professional!"
+
+#: views/extensions.php:45
+msgid "Supercharge PDF Invoices & Packing Slips for WooCommerce with the following features:"
+msgstr "Supercharge PDF Invoices & Packing Slips for WooCommerce met de volgende functies:"
+
+#: views/extensions.php:34
+msgid "Get PDF Invoices & Packing Slips for WooCommerce Bundle"
+msgstr "Ontvang PDF Invoices & Packing Slips for WooCommerce bundel"
+
+#: views/extensions.php:14
+msgid "Supercharge PDF Invoices & Packing Slips for WooCommerce with the all our premium extensions:"
+msgstr "Supercharge PDF Invoices & Packing Slips for WooCommerce met al onze premium extensies:"
+
+#: includes/SetupWizard.php:143
+msgid "PDF Invoices & Packing Slips for WooCommerce &rsaquo; Setup Wizard"
+msgstr "PDF Invoices & Packing Slips for WooCommerce &rsaquo; Setup wizard"
+
+#: includes/Admin.php:166
+msgid "New to PDF Invoices & Packing Slips for WooCommerce?"
+msgstr "Nieuw bij PDF Invoices & Packing Slips for WooCommerce?"
+
+#. Plugin Name of the plugin
+#: woocommerce-pdf-invoices-packingslips.php views/settings-page.php:18
+msgid "PDF Invoices & Packing Slips for WooCommerce"
+msgstr "PDF Invoices & Packing Slips for WooCommerce"
+
+#: views/setup-wizard/display-options.php:73
+msgid "Invoice number"
+msgstr "Factuurnummer"
+
+#: views/setup-wizard/display-options.php:52
+msgid "Invoice date"
+msgstr "Factuurdatum"
+
+#: views/setup-wizard/display-options.php:43
+msgid "Phone number"
+msgstr "Telefoonnummer"
+
+#: views/setup-wizard/display-options.php:34
+msgid "Email address"
+msgstr "E-mailadres"
+
+#: views/setup-wizard/display-options.php:13
+msgid "Shipping address"
+msgstr "Verzendadres"
+
+#: includes/Documents/Invoice.php:467
+msgid "Enable invoice date column in the orders list"
+msgstr "Schakel factuurdatum kolom in het bestellingen overzicht in"
+
+#. translators: document type
+#: includes/Documents/Invoice.php:414
+msgid "Number format explained"
+msgstr "Getal format uitgelegd"
+
+#. translators: document type
+#: includes/Documents/Invoice.php:414
+msgid "For more information about setting up the number format and see the available placeholders for the prefix and suffix, check this article:"
+msgstr "Voor meer informatie over het instellen van de getalnotatie en de beschikbare tijdelijke plaatshouder van het voor en achtervoegsel, raadpleeg dit artikel:"
+
+#. translators: document type
+#: includes/Documents/Invoice.php:410
+msgid "Enter the number of digits you want to use as padding. For instance, enter <code>6</code> to display the %s number <code>123</code> as <code>000123</code>, filling it with zeros until the number set as padding is reached."
+msgstr "Voer het aantal digits in dat je als padding wil gebruiken. Voer bijvoorbeeld <code>6</code> in om het %s nummer <code>123</code> weer te geven als <code>000123</code>, waarbij het wordt opgevuld met nullen totdat het als padding ingestelde getal is bereikt."
+
+#: includes/Documents/Invoice.php:399
+msgid "If set, this value will be used as number suffix."
+msgstr "Indien ingesteld, wordt deze waarde gebruikt als nummer achtervoegsel."
+
+#: includes/Documents/Invoice.php:394 includes/Documents/Invoice.php:403
+msgid "Check the Docs article below to see all the available placeholders for prefix/suffix."
+msgstr "Bekijk het documenten artikel hieronder om alle beschikbare plaatshouders voor voorvoegsel/achtervoegsel te zien."
+
+#. translators: 1. document type, 2-3 placeholders
+#: includes/Documents/Invoice.php:392 includes/Documents/Invoice.php:401
+msgid "You can use the %1$s year and/or month with the %2$s or %3$s placeholders respectively."
+msgstr "Je kunt het jaar %1$s en/of de maand gebruiken met de plaatshouders %2$s of %3$s."
+
+#: includes/Documents/Invoice.php:390
+msgid "If set, this value will be used as number prefix."
+msgstr "Indien ingesteld, wordt deze waarde gebruikt als nummer voorvoegsel."
+
+#: includes/Settings/SettingsDebug.php:785
+msgid "Changes the document links to a prettier URL scheme."
+msgstr "Verandert de document links naar een mooier URL schema."
+
+#: includes/Settings/SettingsDebug.php:779
+msgid "Pretty document links"
+msgstr "Mooie document links"
+
+#: includes/Assets.php:183
+msgid "Select a document in the dropdown menu above to edit its settings."
+msgstr "Selecteer een document in het dropdown menu hierboven om de instellingen te bewerken."
+
+#: includes/Assets.php:182
+msgid "Document settings"
+msgstr "Document instellingen"
+
+#: includes/Documents/PackingSlip.php:182
+msgid "Upgrade to our Professional extension to attach packing slips to any email!"
+msgstr "Upgrade naar onze Professional extensie om pakbonnen aan elke e-mail toe te voegen!"
+
+#: includes/Admin.php:885
+msgid "You do not have sufficient permissions to edit this document."
+msgstr "Je hebt niet voldoende rechten om dit document te bewerken."
+
+#: views/settings-page.php:113
+msgid "Show last order"
+msgstr "Toon laatste bestelling"
+
+#: views/settings-page.php:111 views/settings-page.php:114
+msgid "Search for an order"
+msgstr "Zoek naar een bestelling"
+
+#: views/settings-page.php:110
+msgid "Currently showing last order"
+msgstr "Momenteel laatste bestelling weergegeven"
+
+#: views/settings-page.php:108
+msgid "Clear search text"
+msgstr "Zoektekst wissen"
+
+#: views/settings-page.php:107
+msgid "ID, email or name"
+msgstr "ID, e-mail of naam"
+
+#. translators: error message
+#: includes/Settings.php:442
+msgid "Error trying to get orders: %s"
+msgstr "Fout bij het ophalen van bestellingen: %s"
+
+#: includes/Settings.php:435
+msgid "An error occurred when trying to process your request!"
+msgstr "Er is een fout opgetreden bij het verwerken van je aanvraag!"
+
+#: includes/Settings.php:432
+msgid "No order(s) found!"
+msgstr "Geen bestelling(en) gevonden!"
+
+#: includes/Settings.php:424 includes/Tables/NumberStoreListTable.php:122
+msgid "Date"
+msgstr "Datum"
+
+#. translators: error message
+#: includes/Settings.php:350
+msgid "Error trying to generate document: %s"
+msgstr "Fout bij het genereren van document: %s"
+
+#: includes/Settings.php:340
+msgid "No WooCommerce orders found! Please consider adding your first order to see this preview."
+msgstr "Geen WooCommerce bestellingen gevonden! Overweeg om je eerste bestelling toe te voegen om deze voorbeeld te zien."
+
+#. translators: order ID
+#: includes/Settings.php:333
+msgid "Document not available for order #%s, try selecting a different order."
+msgstr "Document niet beschikbaar voor bestelling #%s, probeer een andere bestelling te selecteren."
+
+#: includes/Settings.php:261
+msgid "Object found is not an order!"
+msgstr "Gevonden object is geen bestelling!"
+
+#: includes/Settings.php:258
+msgid "Order not found!"
+msgstr "Bestelling niet gevonden!"
+
+#: includes/Settings/SettingsDebug.php:898
+msgid "Disables the document preview on the plugin settings pages."
+msgstr "Schakelt het documentvoorbeeld op de pagina's van de plugin instellingen uit."
+
+#: includes/Settings/SettingsDebug.php:892
+msgid "Disable document preview"
+msgstr "Documentvoorbeeld uitschakelen"
+
+#: includes/Settings/SettingsDebug.php:999
+msgid "Required if you have .webp images in your documents"
+msgstr "Vereist als je afbeeldingen in je documenten hebt .webp"
+
+#: includes/Settings/SettingsDebug.php:996
+msgid "Required when using .webp images"
+msgstr "Vereist bij het gebruik van .webp afbeeldingen"
+
+#. Author of the plugin
+#: woocommerce-pdf-invoices-packingslips.php
+msgid "WP Overnight"
+msgstr "WP Overnight"
+
+#. Plugin URI of the plugin
+#: woocommerce-pdf-invoices-packingslips.php
+msgid "https://wpovernight.com/downloads/woocommerce-pdf-invoices-packing-slips-bundle/"
+msgstr "https://wpovernight.com/downloads/woocommerce-pdf-invoices-packing-slips-bundle/"
+
+#. translators: ★★★★★ (5-star)
+#: views/settings-page.php:7
+msgid "If you like <strong>PDF Invoices & Packing Slips for WooCommerce</strong> please leave us a %s rating. A huge thank you in advance!"
+msgstr "Als je <strong>PDF Invoices &amp; Packing Slips for WooCommerce</strong> leuk vindt, laat dan een %s beoordeling achter. Bij voorbaat enorm bedankt!"
+
+#: views/setup-wizard/shop-name.php:14
+msgid "Shop address"
+msgstr "Winkeladres"
+
+#: views/setup-wizard/shop-name.php:13
+msgid "Shop name"
+msgstr "Winkelnaam"
+
+#: views/advanced-status.php:36 views/advanced-status.php:43
+#: views/advanced-status.php:82 views/advanced-status.php:83
+#: views/advanced-status.php:148
+msgid "Yes"
+msgstr "Ja"
+
+#: includes/SetupWizard.php:163
+msgid "PDF Invoices & Packing Slips"
+msgstr "PDF Invoices & Packing Slips"
+
+#: woocommerce-pdf-invoices-packingslips.php:398
+msgid "Change MailPoet sending method to WordPress (default)"
+msgstr "Pas de MailPoet verzendmethode aan naar WordPress (standaard)"
+
+#: woocommerce-pdf-invoices-packingslips.php:397
+msgid "To fix this you should select <strong>The default WordPress sending method (default)</strong> on the <strong>Advanced tab</strong>."
+msgstr "Om dit te verhelpen moet je <strong>De standaard WordPress verzenden methode (standaard)</strong> selecteren op de tab <strong>Geavanceerd</strong>."
+
+#: woocommerce-pdf-invoices-packingslips.php:396
+msgid "When sending emails with MailPoet 3 and the active sending method is <strong>MailPoet Sending Service</strong> or <strong>Your web host / web server</strong>, MailPoet does not include the <strong>PDF Invoices & Packing Slips for WooCommerce</strong> attachments in the emails."
+msgstr "Wanneer e-mails met MailPoet 3 worden verzonden en de actieve verzendmethode is ingesteld op <strong>MailPoet verzendservice</strong> of <strong>Je webhost/webserver</strong>, dan neemt MailPoet de bijlages van <strong>PDF Invoices &amp; Packing Slips for WooCommerce</strong> niet mee in de e-mails."
+
+#: includes/Settings/SettingsDebug.php:1052
+msgid "base64_decode disabled"
+msgstr "base64_decode uitgeschakeld"
+
+#: includes/Settings/SettingsCallbacks.php:504
+msgid "The image resolution exceeds the recommended maximum of 600dpi. This will unnecessarily increase the size of your PDF files and could negatively affect performance."
+msgstr "De afbeeldingsresolutie overschrijdt het aanbevolen maximum van 600 dpi. Hierdoor worden je PDF bestanden onnodig groot en kunnen de prestaties nadelig worden beïnvloed."
+
+#: includes/Settings/SettingsGeneral.php:354
+msgid "Custom"
+msgstr "Aangepast"
+
+#: includes/Documents/PackingSlip.php:65
+msgid "Packing Slip Date:"
+msgstr "Pakbon datum:"
+
+#: includes/Documents/PackingSlip.php:53
+msgid "Packing Slip Number:"
+msgstr "Pakbonnummer:"
+
+#. translators: %s: document name
+#: includes/Documents/OrderDocument.php:910
+msgid "%s Date:"
+msgstr "%s datum:"
+
+#. translators: %s: document name
+#: includes/Documents/OrderDocument.php:902
+msgid "%s Number:"
+msgstr "%s nummer:"
+
+#: includes/Main.php:1458
+msgid "order document data (number and/or date set manually)"
+msgstr "bestel document gegevens (nummer en/of datum handmatig ingesteld)"
+
+#: includes/Settings/SettingsDebug.php:868
+msgid "Log to order notes"
+msgstr "Log naar bestelnotities"
+
+#. translators: directory path
+#: views/advanced-status.php:243
+msgid "If the temporary folders were not automatically created by the plugin, verify that all the font files (from %s) are copied to the fonts folder. Normally, this is fully automated, but if your server has strict security settings, this automated copying may have been prohibited. In that case, you also need to make sure these folders get synchronized on plugin updates!"
+msgstr "Als de tijdelijke mappen niet automatisch door de plugin zijn aangemaakt, controleer dan of alle font bestanden (van %s) naar de lettertypen-map zijn gekopieerd. Normaal gezien gebeurt dit volledig automatisch, maar als je server strikte veiligheidsinstellingen heeft, kan dit automatisch kopiëren verboden zijn. In dat geval moet je er ook voor zorgen dat deze mappen gesynchroniseerd worden bij plugin updates!"
+
+#. translators: 1,2. directory paths, 3. UPLOADS, 4. wpo_wcpdf_tmp_path, 5.
+#. attachments, 6. dompdf, 7. fonts
+#: views/advanced-status.php:227
+msgid "The central temp folder is %1$s. By default, this folder is created in the WordPress uploads folder (%2$s), which can be defined by setting %3$s in wp-config.php. Alternatively, you can control the specific folder for PDF invoices by using the %4$s filter. Make sure this folder is writable and that the subfolders %5$s, %6$s and %7$s are present (these will be created by the plugin if the central temp folder is writable)."
+msgstr "De centrale temp folder is %1$s. Standaard wordt deze map aangemaakt in de WordPress uploads map (%2$s), die kan worden gedefinieerd door %3$s in wp-config.php in te stellen. Als alternatief kun je de specifieke map voor PDF facturen bepalen door het %4$s filter te gebruiken. Zorg ervoor dat deze map schrijfbaar is en dat de submappen %5$s, %6$s en %7$s aanwezig zijn (deze zullen door de plugin worden aangemaakt als de centrale temp map schrijfbaar is)."
+
+#: views/advanced-status.php:196
+msgid "Write Permissions"
+msgstr "Schrijfrechten"
+
+#: views/advanced-status.php:183
+msgid "DOMPDF fonts folder (needs to be writable for custom/remote fonts)"
+msgstr "DOMPDF lettertypen map (moet schrijfbaar zijn voor aangepaste/remote lettertypen)"
+
+#: views/advanced-status.php:177
+msgid "Temporary DOMPDF folder"
+msgstr "Tijdelijke DOMPDF map"
+
+#: views/advanced-status.php:171
+msgid "Temporary attachments folder"
+msgstr "Tijdelijke bijlagen map"
+
+#: views/advanced-status.php:165
+msgid "Central temporary plugin folder"
+msgstr "Centrale tijdelijke plugin map"
+
+#: views/advanced-status.php:160
+msgid "Not writable"
+msgstr "Niet schrijfbaar"
+
+#: views/advanced-status.php:159
+msgid "Writable"
+msgstr "Schrijfbaar"
+
+#: views/advanced-status.php:17
+msgid "Present"
+msgstr "Aanwezig"
+
+#: views/advanced-status.php:16
+msgid "Required"
+msgstr "Verplicht"
+
+#: views/advanced-status.php:10
+msgid "System Configuration"
+msgstr "Systeem Configuratie"
+
+#: includes/Settings/SettingsDebug.php:1040
+msgid "allow_url_fopen disabled"
+msgstr "allow_url_fopen uitgeschakeld"
+
+#: includes/Settings/SettingsDebug.php:1037
+msgid "Allow remote stylesheets and images"
+msgstr "Sta remote stylesheets en afbeeldingen toe"
+
+#: includes/Settings/SettingsDebug.php:1023
+msgid "Check PHP disable_functions"
+msgstr "Controleer PHP disable_functions"
+
+#: includes/Settings/SettingsDebug.php:1020
+msgid "Required to detect custom templates and to clear the temp folder periodically"
+msgstr "Vereist om aangepaste templates te detecteren en om de temp map periodiek te wissen"
+
+#: includes/Settings/SettingsDebug.php:1014
+msgid "Better with transparent PNG images"
+msgstr "Beter voor transparante PNG-afbeeldingen"
+
+#: includes/Settings/SettingsDebug.php:1011
+#: includes/Settings/SettingsDebug.php:1017
+msgid "Recommended for better performances"
+msgstr "Aanbevolen voor betere prestaties"
+
+#: includes/Settings/SettingsDebug.php:1008
+msgid "For better performances"
+msgstr "Voor betere prestaties"
+
+#: includes/Settings/SettingsDebug.php:1005
+msgid "Recommended to compress PDF documents"
+msgstr "Aanbevolen om PDF documenten te comprimeren"
+
+#: includes/Settings/SettingsDebug.php:1002
+msgid "To compress PDF documents"
+msgstr "Om PDF documenten te comprimeren"
+
+#: includes/Settings/SettingsDebug.php:993
+msgid "Required if you have images in your documents"
+msgstr "Vereist als je afbeeldingen in je documenten hebt"
+
+#: includes/Settings/SettingsDebug.php:987
+msgid "Recommended, will use fallback functions"
+msgstr "Aanbevolen, zal fallback functies gebruiken"
+
+#: includes/Admin.php:1231
+msgid "Document is empty."
+msgstr "Document is leeg."
+
+#: includes/Admin.php:1217
+msgid "Document does not exist."
+msgstr "Document bestaat niet."
+
+#: includes/Admin.php:1161
+msgid "An error occurred while deleting the document!"
+msgstr "Er is een fout opgetreden bij het verwijderen van het document!"
+
+#: includes/Admin.php:1160
+msgid "Document deleted!"
+msgstr "Document verwijderd!"
+
+#: includes/Admin.php:1157
+msgid "An error occurred while regenerating the document!"
+msgstr "Er is een fout opgetreden bij het regenereren van het document!"
+
+#: includes/Admin.php:1156
+msgid "Document regenerated!"
+msgstr "Document geregenereerd!"
+
+#: includes/Admin.php:1153
+msgid "An error occurred while saving the document data!"
+msgstr "Er is een fout opgetreden bij het opslaan van de documentgegevens!"
+
+#: includes/Admin.php:1152
+msgid "Document data saved!"
+msgstr "Document gegevens opgeslagen!"
+
+#: includes/Admin.php:1128
+msgid "No permissions!"
+msgstr "Geen rechten!"
+
+#: includes/Admin.php:1122
+msgid "Incomplete request!"
+msgstr "Onvolledig aanvraag!"
+
+#: includes/Admin.php:1116
+msgid "Bad action!"
+msgstr "Slechte actie!"
+
+#: includes/Admin.php:1110
+msgid "Nonce expired!"
+msgstr "Nonce verlopen!"
+
+#: includes/Admin.php:940
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: includes/Admin.php:939
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+#. translators: 1. document title, 2. creation trigger
+#: includes/Main.php:1299
+msgid "PDF %1$s created via %2$s."
+msgstr "PDF %1$s gemaakt via %2$s."
+
+#: includes/Main.php:1462
+msgid "email attachment"
+msgstr "e-mailbijlage"
+
+#: includes/Main.php:1457
+msgid "my account"
+msgstr "mijn account"
+
+#: includes/Main.php:1455
+msgid "single order action"
+msgstr "enkele bestellingsactie"
+
+#: includes/Main.php:1456
+msgid "bulk order action"
+msgstr "bulk bestellingsactie"
+
+#: includes/Admin.php:523
+msgid "Choose an email to send&hellip;"
+msgstr "Kies een e-mail om te verzenden&hellip;"
+
+#. translators: document title
+#: includes/Admin.php:880
+msgid "Set %s number & date"
+msgstr "Stel %s nummer & datum in"
+
+#: includes/Admin.php:897
+msgid "unformatted!"
+msgstr "niet geformatteerd!"
+
+#. translators: <a> tags
+#: woocommerce-pdf-invoices-packingslips.php:245
+msgid "We strongly recommend to %1$supdate your PHP version%2$s."
+msgstr "We raden ten zeerste aan om %1$sje PHP versie te updaten%2$s."
+
+#. translators: document title
+#: includes/Main.php:1658
+msgid "Order %s Saved"
+msgstr "Bestelling %s opgeslagen"
+
+#: includes/Main.php:851
+msgid "Please check your directories write permissions or contact your hosting service provider."
+msgstr "Controleer je folder schrijfrechten of neem contact op met je hosting dienst aanbieder."
+
+#. translators: 1. plugin name, 2. directory path
+#: includes/Main.php:850
+msgid "The %1$s directory %2$s couldn't be created or is not writable!"
+msgstr "De %1$s folder %2$s kan niet worden gemaakt of kan niet worden beschreven!"
+
+#: includes/Admin.php:506
+msgid "PDF document data"
+msgstr "PDF document gegevens"
+
+#: woocommerce-pdf-invoices-packingslips.php:338
+msgid "To protect them, you must click the button below."
+msgstr "Klik op onderstaande knop deze te beschermen."
+
+#: includes/Settings/SettingsDebug.php:220
+msgid "Temporary folder moved to"
+msgstr "Tijdelijke map verplaatst naar"
+
+#: woocommerce-pdf-invoices-packingslips.php:339
+msgid "Generate random temporary folder name"
+msgstr "Genereer willekeurige naam voor tijdelijke bestanden map"
+
+#. translators: zero number
+#: includes/Documents/Invoice.php:497
+msgid "Disable document when the order total is %s"
+msgstr "Document uitschakelen wanneer het besteltotaal %s is"
+
+#: includes/Documents/Invoice.php:301 includes/Documents/PackingSlip.php:166
+msgid "Display customer notes"
+msgstr "Toon klantopmerkingen"
+
+#: includes/Admin.php:734
+msgid "Notes (printed in the invoice):"
+msgstr "Opmerkingen (geprint in de factuur):"
+
+#. translators: directory path
+#: woocommerce-pdf-invoices-packingslips.php:337
+msgid "The PDF files in %s are not currently protected due to your site running on <strong>NGINX</strong>."
+msgstr "De PDF bestanden in %s zijn momenteel niet beveiligd omdat je site draait op <strong>NGINX</strong>."
+
+#: includes/Documents/OrderDocument.php:947
+msgid "Notes:"
+msgstr "Opmerkingen:"
+
+#: includes/Documents/Invoice.php:270 views/setup-wizard/display-options.php:21
+msgid "Only when different from billing address"
+msgstr "Alleen indien afwijkend van factuuradres"
+
+#: includes/Documents/PackingSlip.php:135
+msgid "Only when different from shipping address"
+msgstr "Alleen indien afwijkend van verzendadres"
+
+#: includes/Settings/SettingsDebug.php:850
+msgid "You can also add <code>&output=html</code> to the URL to apply this on a per-order basis."
+msgstr "Je kunt ook <code>&output=html</code> toevoegen aan de URL om dit toe te passen op een per-bestelling basis."
+
+#: includes/Settings/SettingsDocuments.php:64 views/advanced-numbers.php:13
+msgid "untitled"
+msgstr "zonder titel"
+
+#: includes/Settings/SettingsGeneral.php:159
+msgid "Enter the total height of the logo in mm, cm or in and use a dot for decimals.<br/>For example: 1.15in or 40mm"
+msgstr "Geef de totale hoogte van het logo op in mm, cm of in, en gebruik een punt voor decimalen.<br/>Bijvoorbeeld:1.14in of 40mm"
+
+#: includes/Settings/SettingsGeneral.php:151
+msgid "Logo height"
+msgstr "Logo hoogte"
+
+#: includes/Assets.php:91
+msgid "Are you sure you want to regenerate this document? This will make the document reflect the most current settings (such as footer text, document name, etc.) rather than using historical settings."
+msgstr "Weet je zeker dat je dit document opnieuw wil genereren? Dit zal het document de meest recente instellingen laten weergeven (zoals footer tekst, document naam etc.) in plaats van historische instellingen te gebruiken."
+
+#. translators: 1. document title
+#: includes/Documents/OrderDocument.php:496
+msgid "%s was regenerated"
+msgstr "%s werd opnieuw gegenereerd"
+
+#. translators: 1. credit note title, 2. refund id
+#: includes/Documents/OrderDocument.php:491
+msgid "%1$s (refund #%2$s) was regenerated."
+msgstr "%1$s (terugbetaling #%2$s) is geregenereerd."
+
+#: includes/Documents/Invoice.php:361
+msgid "More information"
+msgstr "Meer informatie"
+
+#: includes/Documents/Invoice.php:360
+msgid "Using the Order Number as invoice number is not recommended as this may lead to gaps in the invoice number sequence (even when order numbers are sequential)."
+msgstr "Het bestelnummer als factuurnummer gebruiken wordt afgeraden omdat dit kan leiden tot gaten in de factuurnummer volgorde (zelfs wanneer bestelnummers opvolgend zijn)."
+
+#: includes/Documents/Invoice.php:359
+msgid "Warning!"
+msgstr "Waarschuwing!"
+
+#: includes/Documents/Invoice.php:355 views/setup-wizard/display-options.php:82
+msgid "Order Number"
+msgstr "Bestelnummer"
+
+#: includes/Documents/Invoice.php:323
+#: includes/Documents/OrderDocumentMethods.php:1301
+#: views/setup-wizard/display-options.php:61
+msgid "Order Date"
+msgstr "Besteldatum"
+
+#: includes/Documents/Invoice.php:269 includes/Documents/Invoice.php:321
+#: includes/Documents/Invoice.php:353 includes/Documents/PackingSlip.php:134
+#: views/advanced-status.php:47 views/advanced-status.php:51
+#: views/advanced-status.php:82 views/advanced-status.php:83
+#: views/setup-wizard/display-options.php:20
+#: views/setup-wizard/display-options.php:59
+#: views/setup-wizard/display-options.php:80
+msgid "No"
+msgstr "Nee"
+
+#: views/setup-wizard/show-action-buttons.php:18
+msgid "Show action buttons"
+msgstr "Laat actieknoppen zien"
+
+#: views/setup-wizard/show-action-buttons.php:5
+msgid "(You can always change this setting later via the Screen Options menu)"
+msgstr "(Je kunt deze instelling altijd later aanpassen via het Schermopties menu)"
+
+#: views/setup-wizard/show-action-buttons.php:4
+msgid "Would you like to display the action buttons in your WooCommerce order list? The action buttons allow you to manually create a PDF."
+msgstr "Wil je de actieknoppen weergeven in het WooCommerce bestellingen overzicht? Met de actieknoppen kun je handmatig een PDF maken."
+
+#: includes/Documents/Invoice.php:256
+msgid "Select one or more statuses"
+msgstr "Selecteer één of meer statussen"
+
+#: includes/Documents/Invoice.php:247
+msgid "Disable for:"
+msgstr "Uitschakelen voor:"
+
+#: includes/SetupWizard.php:78 views/setup-wizard/show-action-buttons.php:3
+msgid "Action buttons"
+msgstr "Actieknoppen"
+
+#: includes/Settings/SettingsGeneral.php:106
+msgid "<strong>Note:</strong> invoice numbers and dates are not affected by this setting and will still be generated."
+msgstr "<strong>Let op:</strong> in testmodus zullen factuurnummers en -datums nog steeds worden aangemaakt."
+
+#: includes/Settings/SettingsGeneral.php:106
+msgid "With test mode enabled, any document generated will always use the latest settings, rather than using the settings as configured at the time the document was first created."
+msgstr "Wanneer testmodus is ingeschakeld, zal een document dat wordt opgevraagd altijd de laatste instellingen gebruiken, in plaats van de instellingen zoals deze waren op het moment dat het document voor het eerst werd aangemaakt."
+
+#: includes/Settings/SettingsGeneral.php:100
+msgid "Test mode"
+msgstr "Testmodus"
+
+#: includes/Admin.php:1262
+msgid "DEBUG output enabled"
+msgstr "DEBUG weergave ingeschakeld"
+
+#: includes/Documents/Invoice.php:549
+msgid "<strong>Caution:</strong> enabling this will also mean that if you change your company name or address in the future, previously generated documents will also be affected."
+msgstr "<strong>Let op:</strong> wanneer deze optie is ingeschakeld zullen eerder gegenereerde documenten gewijzigd worden wanneer in de toekomst zaken als bedrijfsnaam of adres worden aangepast."
+
+#: includes/Documents/Invoice.php:547
+msgid "When enabled, the document will always reflect the most current settings (such as footer text, document name, etc.) rather than using historical settings."
+msgstr "Met deze optie zullen in het document altijd de meest recente instellingen worden gebruikt (zoals footer, bedrijfsnaam, enz.) in plaats van historische instellingen."
+
+#: includes/Documents/Invoice.php:541
+msgid "Always use most current settings"
+msgstr "Gebruik altijd de meest recente instellingen"
+
+#: wpo-ips-functions.php:372
+msgid "Error creating PDF, please contact the site owner."
+msgstr "Fout bij het maken van de PDF, neem contact op met de eigenaar van de site."
+
+#: includes/Assets.php:90
+msgid "Are you sure you want to delete this document? This cannot be undone."
+msgstr "Weet je zeker dat je dit document wilt verwijderen? Deze actie kan niet ongedaan gemaakt worden."
+
+#: includes/Admin.php:167
+msgid "I am the wizard"
+msgstr "Ik ben de wizard"
+
+#: includes/Admin.php:167 views/advanced-tools.php:150
+#: views/advanced-tools.php:152
+msgid "Run the Setup Wizard"
+msgstr "De installatie wizard uitvoeren"
+
+#: includes/Admin.php:166
+msgid "Jumpstart the plugin by following our wizard!"
+msgstr "Maak een vliegende start met de plugin door onze wizard te volgen!"
+
+#: includes/Admin.php:323 includes/Documents/Invoice.php:322
+#: includes/Documents/OrderDocumentMethods.php:1300 includes/Main.php:1237
+#: views/setup-wizard/display-options.php:60
+msgid "Invoice Date"
+msgstr "Factuurdatum"
+
+#: includes/Settings/SettingsDebug.php:837
+msgid "Automatically clean up PDF files stored in the temporary folder (used for email attachments)"
+msgstr "Ruim PDF bestanden uit de tijdelijke map (gebruikt voor e-mail bijlages) automatisch op"
+
+#. translators: number of days
+#: includes/Settings/SettingsDebug.php:833
+msgid "every %s days"
+msgstr "elke %s dagen"
+
+#: includes/Settings/SettingsDebug.php:826
+msgid "Enable automatic cleanup"
+msgstr "Schakel automatisch opruimen in"
+
+#. translators: %s: Document type
+#: includes/Frontend.php:140
+msgid "Download %s (PDF)"
+msgstr "Download %s (PDF)"
+
+#: views/setup-wizard/shop-name.php:4
+msgid "Lets quickly setup your invoice. Please enter the name and address of your shop in the fields on the right."
+msgstr "Laten we snel je factuur instellen. Voer de naam en het adres van je winkel in de velden aan de rechterkant in."
+
+#: views/setup-wizard/shop-name.php:3
+msgid "Enter your shop name"
+msgstr "Voer je winkelnaam in"
+
+#: views/setup-wizard/paper-format.php:4
+msgid "Select the paper format for your invoice."
+msgstr "Select the paper format for your invoice."
+
+#: views/setup-wizard/logo.php:4
+msgid "Set the header image that will display on your invoice."
+msgstr "Stel de koptekst afbeelding van de factuur in."
+
+#: views/setup-wizard/good-to-go.php:6
+msgid "Happy selling!"
+msgstr "Succes met je webshop!"
+
+#: views/setup-wizard/good-to-go.php:5
+msgid "Invoices & Packing Slips"
+msgstr "Facturen & Pakbonnen"
+
+#: views/setup-wizard/good-to-go.php:4
+msgid "If you have any questions please have a look at our documentation:"
+msgstr "Als je vragen hebt, bekijk dan onze documentatie hier:"
+
+#: views/setup-wizard/good-to-go.php:3
+msgid "You are good to go!"
+msgstr "Je bent klaar om te gaan!"
+
+#: views/setup-wizard/display-options.php:4
+msgid "Select some additional display options for your invoice."
+msgstr "Selecteer extra weergave opties voor je factuur."
+
+#: views/setup-wizard/attach-to.php:4
+msgid "Select to which emails you would like to attach your invoice."
+msgstr "Selecteer met welke e-mails je de factuur wilt meesturen als bijlage."
+
+#: views/setup-wizard/attach-to.php:3
+msgid "Attach to..."
+msgstr "Bevestigen aan..."
+
+#: includes/SetupWizard.php:203
+msgid "Finish"
+msgstr "Afronden"
+
+#: includes/SetupWizard.php:201
+msgid "Skip this step"
+msgstr "Sla deze stap over"
+
+#: includes/SetupWizard.php:200
+msgid "Next"
+msgstr "Volgende"
+
+#: includes/SetupWizard.php:195
+msgid "Previous"
+msgstr "Vorige"
+
+#: includes/SetupWizard.php:82
+msgid "Ready!"
+msgstr "Klaar!"
+
+#: includes/SetupWizard.php:74 views/setup-wizard/paper-format.php:3
+msgid "Paper format"
+msgstr "Papierformaat"
+
+#: includes/SetupWizard.php:70 views/setup-wizard/display-options.php:3
+msgid "Display options"
+msgstr "Weergaveopties"
+
+#: includes/SetupWizard.php:66
+msgid "Attachments"
+msgstr "Bijlages"
+
+#: includes/SetupWizard.php:62 views/setup-wizard/logo.php:3
+msgid "Your logo"
+msgstr "Je logo"
+
+#. translators: %s: email title
+#: includes/Admin.php:1062
+msgid "%s email notification manually sent."
+msgstr "%s e-mail handmatig verzonden."
+
+#: languages/strings.php:9
+msgid "Send email"
+msgstr "Verzend e-mail"
+
+#: includes/Admin.php:544
+msgid "Save order & send email"
+msgstr "Sla bestelling op & verzend e-mail"
+
+#: includes/Admin.php:472
+msgid "Send order email"
+msgstr "Verzend e-mail bestelling"
+
+#. translators: <a> tags
+#: views/attachment-settings-hint.php:11
+msgid "It looks like you haven't setup any email attachments yet, check the settings under <b>%1$sDocuments > Invoice%2$s</b>"
+msgstr "Het lijkt erop dat je nog geen e-mailbijlagen hebt ingesteld, controleer de instellingen onder <b>%1$sDocumenten > Factuur%2$s</b>"
+
+#: includes/Admin.php:125
+msgid "Actually, I have a complaint..."
+msgstr "Ik heb eigenlijk een klacht..."
+
+#: includes/Admin.php:124
+msgid "Already did!"
+msgstr "Heb ik al gedaan!"
+
+#: includes/Admin.php:123
+msgid "Yes you deserve it!"
+msgstr "Natuurlijk, je verdient het!"
+
+#: includes/Admin.php:121
+msgid "It would mean a lot to us if you would quickly give our plugin a 5-star rating. Help us spread the word and boost our motivation!"
+msgstr "Wij zouden er erg mee geholpen zijn als je onze plugin een 5-sterren beoordeling wilt geven. Help ons het woord te verspreiden en geef onze motivatie een boost!"
+
+#. translators: rounded count
+#: includes/Admin.php:120
+msgid "Wow, you have created more than %d invoices with our plugin!"
+msgstr "Wow, je hebt al meer dan %d facturen met onze plugin gemaakt!"
+
+#: includes/Settings/SettingsGeneral.php:130
+msgid "Font subsetting can reduce file size by only including the characters that are used in the PDF, but limits the ability to edit PDF files later. Recommended if you're using an Asian font."
+msgstr "Font subsetting kan bestandsgrootte verkleinen door enkel karakters die gebruikt worden op te nemen in de PDF, maar dit beperkt de mogelijkheid om PDF bestanden later te bewerken. Aanbevolen als je een Aziatisch lettertype gebruikt."
+
+#: includes/Settings/SettingsGeneral.php:124
+msgid "Enable font subsetting"
+msgstr "Lettertype subsetting inschakelen"
+
+#. translators: 1. AUTO_INCREMENT, 2. one
+#: includes/Settings/SettingsDebug.php:799
+msgid "Document numbers (such as invoice numbers) are generated using %1$s by default. Use this setting if your database auto increments with more than %2$s."
+msgstr "Documentnummers (zoals factuurnummers) worden standaard gegenereerd met behulp van %1$s. Gebruik deze instelling als je database automatisch toeneemt met meer dan %2$s."
+
+#: includes/Settings/SettingsDebug.php:791
+msgid "Calculate document numbers (slow)"
+msgstr "Bereken document nummers (langzaam)"
+
+#: includes/Main.php:1197
+msgid "Nothing to delete!"
+msgstr "Er is niets om te verwijderen!"
+
+#. translators: file count
+#: includes/Main.php:1193
+msgid "Successfully deleted %d files!"
+msgstr "%d bestanden successvol verwijderd!"
+
+#. translators: 1,2. file count
+#: includes/Main.php:1189
+msgid "Unable to delete %1$d files! (deleted %2$d)"
+msgstr "Kan %1$d bestanden niet verwijderen! (verwijderd %2$d)"
+
+#: views/advanced-tools.php:49 views/advanced-tools.php:53
+msgid "Remove temporary files"
+msgstr "Verwijder tijdelijke bestanden"
+
+#: includes/Admin.php:124 includes/Main.php:852
+#: includes/Settings/SettingsDebug.php:1153
+#: views/attachment-settings-hint.php:12 views/extensions.php:121
+#: views/promo.php:34 woocommerce-pdf-invoices-packingslips.php:340
+#: woocommerce-pdf-invoices-packingslips.php:399
+#: woocommerce-pdf-invoices-packingslips.php:437
+#: woocommerce-pdf-invoices-packingslips.php:571
+msgid "Hide this message"
+msgstr "Verberg dit bericht"
+
+#: views/extensions.php:74
+msgid "Get WooCommerce Smart Reminder Emails"
+msgstr "Neem WooCommerce Smart Reminder E-mails"
+
+#: views/extensions.php:72
+msgid "Integrates seamlessly with the PDF Invoices & Packing Slips plugin"
+msgstr "Integreert naadloos met de PDF Invoices & Packing Slips plugin"
+
+#: views/extensions.php:71
+msgid "<b>Super versatile!</b> Can be used for any kind of reminder email (review reminders, repeat purchases)"
+msgstr "<b>Super veelzijdig!</b> Kan worden gebruikt voor elke soort herinneringse-mail (review herinneringen, herhalende aankopen)"
+
+#: views/extensions.php:70
+msgid "Fully <b>WPML Compatible</b> – emails will be automatically sent in the order language."
+msgstr "Volledig <b>Compatibel met WPML</b> – e-mails worden automatisch verzonden in de taal van de bestelling."
+
+#: views/extensions.php:69
+msgid "Configure the exact requirements for sending an email (time after order, order status, payment method)"
+msgstr "Configureer exacte vereisten voor het verzenden van een e-mail (tijd na de bestelling, bestellingstatus, betaalmethode, enz.)"
+
+#: views/extensions.php:68
+msgid "<b>Rich text editor</b> for the email text, including placeholders for data from the order (name, order total, etc)"
+msgstr "<b>Rich text editor</b> voor de e-mail tekst, inclusief plaatshouders voor gegevens van de bestelling (naam, totaal bestelling, enz)"
+
+#: views/extensions.php:67
+msgid "<b>Completely automatic</b> scheduled emails"
+msgstr "<b>Volledig automatisch</b> ingeplande/verstuurde e-mails"
+
+#: views/extensions.php:65
+msgid "WooCommerce Smart Reminder emails"
+msgstr "WooCommerce Smart Reminder emails"
+
+#: views/extensions.php:63
+msgid "Automatically send payment reminders to your customers"
+msgstr "Verstuur automatisch betalingsherrinneringen naar je klanten"
+
+#: views/extensions.php:29 views/extensions.php:53
+msgid "Upload automatically to dropbox"
+msgstr "Automatisch uploaden naar dropbox"
+
+#: views/extensions.php:15
+msgid "Professional features:"
+msgstr "Professionele functies:"
+
+#: views/extensions.php:12
+msgid "Premium PDF Invoice bundle: Everything you need for a perfect invoicing system"
+msgstr "Premium PDF factuur bundel: alles wat je nodig hebt voor een perfect facturatie systeem"
+
+#. translators: link
+#: includes/Documents/Invoice.php:565
+msgid "Configure it <a href=\"%s\">here</a>."
+msgstr "Configureer het <a href=\"%s\">hier</a>."
+
+#: includes/Documents/Invoice.php:562
+msgid "Invoice numbers are created by a third-party extension."
+msgstr "Factuurnummers zijn gemaakt door een derde-partij uitbreiding."
+
+#: includes/Documents/Invoice.php:420
+msgid "Reset invoice number yearly"
+msgstr "Reset factuurnummer jaarlijks"
+
+#: includes/Documents/Invoice.php:380
+msgid "Number format"
+msgstr "Nummer format"
+
+#: includes/Documents/Invoice.php:374
+msgid "This is the number that will be used for the next document. By default, numbering starts from 1 and increases for every new document. Note that if you override this and set it lower than the current/highest number, this could create duplicate numbers!"
+msgstr "Dit is het nummer dat wordt gebruikt voor het volgende document. Standaard nummering begint vanaf 1 en wordt verhoogd voor elk nieuw document. Let op dat als je deze overschrijft en lager instelt dan het huidige/hoogste nummer, dit dubbele nummers kan opleveren!"
+
+#: includes/Documents/Invoice.php:346
+msgid "Display invoice number"
+msgstr "Geef factuurnummer weer"
+
+#: includes/Documents/Invoice.php:233 includes/Documents/Invoice.php:620
+#: includes/Documents/PackingSlip.php:191
+msgid "Attach to:"
+msgstr "Als bijlage toevoegen aan:"
+
+#: includes/Documents/Invoice.php:222 includes/Documents/Invoice.php:589
+#: includes/Documents/PackingSlip.php:116
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: includes/Documents/OrderDocument.php:1585
+msgid "Manual email"
+msgstr "Handmatige e-mail"
+
+#: includes/Documents/OrderDocument.php:1582
+msgid "Admin email"
+msgstr "Beheerder e-mail"
+
+#: includes/Documents/OrderDocumentMethods.php:950
+msgid "(includes %s)"
+msgstr "(inclusief %s)"
+
+#: includes/Settings.php:123
+msgid "Support Forum"
+msgstr "Support Forum"
+
+#: includes/Settings.php:122
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: includes/Settings/SettingsGeneral.php:118
+msgid "Enable this if your currency symbol is not displaying properly"
+msgstr "Schakel deze optie in wanneer het symbool van je valuta niet goed wordt weergegeven"
+
+#: includes/Settings/SettingsGeneral.php:112
+msgid "Extended currency symbol support"
+msgstr "Uitgebreide ondersteuning voor valuta symbolen"
+
+#: includes/Settings.php:167
+msgid "Documents"
+msgstr "Documenten"
+
+#: includes/Settings/SettingsDebug.php:815
+msgid "<b>Caution!</b> This setting may reveal errors (from other plugins) in other places on your site too, therefore this is not recommended to leave it enabled on live sites."
+msgstr "<b>Let op!</b> Deze instelling laat mogelijk tevens fouten (van andere plugins) op andere plekken op je site zien. Daarom is het niet aan te raden om deze instelling ingeschakeld te laten op live sites."
+
+#: includes/Settings/SettingsDebug.php:229
+msgid "Fonts reinstalled!"
+msgstr "Lettertypes opnieuw geinstalleerd!"
+
+#: views/advanced-tools.php:25
+msgid "Reinstall fonts"
+msgstr "Installeer lettertypes opnieuw"
+
+#: includes/Settings/SettingsCallbacks.php:552
+msgid "Save"
+msgstr "Opslaan"
+
+#. translators: document type
+#: includes/Main.php:533
+msgid "Document of type '%s' for the selected order(s) could not be generated"
+msgstr "Document van het type '%s' voor de geselecteerde bestelling(en) kon niet worden gegenereerd"
+
+#: includes/Main.php:382
+msgid "You haven't selected any orders"
+msgstr "Je hebt geen bestellingen geselecteerd"
+
+#. Description of the plugin
+#: woocommerce-pdf-invoices-packingslips.php
+msgid "Create, print & email PDF or UBL Invoices & PDF Packing Slips for WooCommerce orders."
+msgstr "Maak, print & e-mail PDF of UBL facturen en PDF pakbonnen voor WooCommerce bestellingen."
+
+#. Author URI of the plugin
+#: woocommerce-pdf-invoices-packingslips.php
+msgid "https://www.wpovernight.com"
+msgstr "https://www.wpovernight.com"
+
+#: includes/Documents/OrderDocumentMethods.php:1105 includes/Settings.php:425
+#: ubl/Settings/TaxesSettings.php:279
+msgid "Total"
+msgstr "Totaal"
+
+#: includes/Documents/OrderDocumentMethods.php:1102
+msgid "Total ex. VAT"
+msgstr "Totaal excl. BTW"
+
+#: languages/strings.php:4
+msgid "Tax rate"
+msgstr "Belasting tarief"
+
+#: languages/strings.php:3
+msgid "VAT"
+msgstr "BTW"
+
+#: includes/Documents/OrderDocumentMethods.php:1035
+msgid "Discount"
+msgstr "Korting"
+
+#: includes/Documents/OrderDocumentMethods.php:1004
+msgid "Shipping"
+msgstr "Verzendkosten"
+
+#: includes/Documents/OrderDocumentMethods.php:979
+msgid "Subtotal"
+msgstr "Subtotaal"
+
+#: languages/strings.php:8
+msgid "Shipping method"
+msgstr "Verzendmethode"
+
+#: languages/strings.php:7
+msgid "Payment method"
+msgstr "Betaalmethode"
+
+#: includes/Documents/OrderDocumentMethods.php:96
+#: includes/Documents/OrderDocumentMethods.php:206
+msgid "N/A"
+msgstr "N/A"
+
+#: includes/Documents/OrderDocument.php:938
+msgid "Shipping Method:"
+msgstr "Verzendmethode:"
+
+#: includes/Documents/OrderDocument.php:923
+msgid "Shipping Address:"
+msgstr "Verzendadres:"
+
+#: includes/Documents/OrderDocument.php:950
+msgid "Customer Notes:"
+msgstr "Opmerkingen klant:"
+
+#: includes/Documents/OrderDocument.php:944
+msgid "Weight:"
+msgstr "Gewicht:"
+
+#: includes/Documents/OrderDocument.php:941
+msgid "SKU:"
+msgstr "SKU:"
+
+#: languages/strings.php:11
+msgid "SKU"
+msgstr "Artikelnummer"
+
+#: languages/strings.php:10
+msgid "Description"
+msgstr "Beschrijving"
+
+#: wpo-ips-functions.php:988
+msgid "Price"
+msgstr "Prijs"
+
+#: wpo-ips-functions.php:987
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#: wpo-ips-functions.php:986
+msgid "Product"
+msgstr "Product"
+
+#: includes/Documents/OrderDocument.php:932
+msgid "Payment Method:"
+msgstr "Betaalmethode:"
+
+#: includes/Documents/OrderDocument.php:929
+msgid "Order Date:"
+msgstr "Besteldatum:"
+
+#: includes/Documents/OrderDocument.php:926
+msgid "Order Number:"
+msgstr "Bestelnummer:"
+
+#: includes/Documents/Invoice.php:68
+#: includes/Documents/OrderDocumentMethods.php:1319
+msgid "Invoice Number:"
+msgstr "Factuurnummer:"
+
+#: includes/Documents/Invoice.php:92
+msgid "Ship To:"
+msgstr "Verzenden naar:"
+
+#: includes/Documents/OrderDocument.php:920
+msgid "Billing Address:"
+msgstr "Factuuradres:"
+
+#. translators: email link
+#: views/extensions.php:112
+msgid "For custom templates, contact us at %s."
+msgstr "Neem voor aangepaste templates contact met ons op via %s."
+
+#. translators: Premium Templates link
+#: views/extensions.php:110
+msgid "Check out the Premium PDF Invoice & Packing Slips templates at %s."
+msgstr "Bekijk de Premium PDF Invoice & Packing Slips templates op %s."
+
+#: views/extensions.php:27 views/extensions.php:108
+msgid "Two extra stylish premade templates (Modern & Business)"
+msgstr "Twee extra stijlvolle kant-en-klare templates (Modern & bedrijf)"
+
+#: views/extensions.php:26 views/extensions.php:107
+msgid "Completely customize the invoice contents (prices, taxes, thumbnails) to your needs with a drag & drop customizer"
+msgstr "Past de inhoud van de factuur (prijzen, BTW, thumbnails) volledig naar je wensen aan met een eenvoudige drag & drop interface"
+
+#: views/extensions.php:24 views/extensions.php:104
+msgid "Advanced, customizable templates"
+msgstr "Geavanceerde, aanpasbare templates"
+
+#: views/extensions.php:90
+msgid "WooCommerce Automatic Order Printing"
+msgstr "WooCommerce Automatic Order Printing"
+
+#: views/extensions.php:89
+msgid "Check out the WooCommerce Automatic Order Printing extension from our partners at Simba Hosting"
+msgstr "Bekijk de WooCommerce Automatic Order Printing extensie van onze parters van Simba Hosting"
+
+#: views/extensions.php:83
+msgid "Automatically send new orders or packing slips to your printer, as soon as the customer orders!"
+msgstr "Verstuur nieuwe bestellingen of pakbonnen automatisch naar je printer, zodra een klant een bestelling plaatst!"
+
+#: views/extensions.php:31
+msgid "This extension conveniently uploads all the invoices (and other pdf documents from the professional extension) that are emailed to your customers to Dropbox. The best way to keep your invoice administration up to date!"
+msgstr "Deze extensie upload alle facturen (en andere pdf documenten van de professional extensie) die worden gemaild naar je klanten naar Dropbox. De beste manier om je factuur administratie up to date te houden!"
+
+#: views/extensions.php:22 views/extensions.php:52
+msgid "Use the plugin in multilingual <b>WPML</b> setups"
+msgstr "Gebruik de plugin in meertalige <b>WPML</b> setups"
+
+#: views/extensions.php:21 views/extensions.php:51
+msgid "<b>Customize</b> the <b>shipping & billing address</b> format to include additional custom fields, font sizes etc. without the need to create a custom template."
+msgstr "<b>Pas</b> het <b>van het verzend- & factuuradres</b> format aan met extra aangepaste velden, lettertypen, enz. Zonder dat je een aangepaste template hoeft te maken."
+
+#: views/extensions.php:20 views/extensions.php:50
+msgid "Use <b>separate numbering systems</b> and/or format for proforma invoices and credit notes or utilize the main invoice numbering system"
+msgstr "Gebruik <b>afzonderlijke nummersystemen</b> en/of opmaak voor proforma facturen en creditnota's, of maak gebruik van het hoofdnummer systeem voor facturen."
+
+#: views/extensions.php:19 views/extensions.php:49
+msgid "Attach <b>up to 3 static files</b> (for example a terms & conditions document) to the WooCommerce emails of your choice."
+msgstr "Voeg tot <b>3 vaste bestandsbijlagen</b> (bijvoorbeeld algemene voorwaarden) toe aan WooCommerce e-mails naar keuze."
+
+#: views/extensions.php:18 views/extensions.php:48
+msgid "Send out a separate <b>notification email</b> with (or without) PDF invoices/packing slips, for example to a drop-shipper or a supplier."
+msgstr "Verstuur een aparte <b>notificatie e-mail</b> met (of zonder) PDF facturen/pakbonnen, bijvoorbeeld naar een drop-shipper of een leverancier."
+
+#: views/extensions.php:17 views/extensions.php:47
+msgid "Email/print/download <b>PDF Credit Notes & Proforma invoices</b>"
+msgstr "E-mail/print/download <b>PDF Credit Nota's & Pro-forma facturen</b>"
+
+#: views/extensions.php:43
+msgid "Go Pro: Proforma invoices, credit notes (=refunds) & more!"
+msgstr "Go Pro: proforma facturen, credit nota's (=terugbetalingen) & meer!"
+
+#: views/extensions.php:7
+msgid "click items to read more"
+msgstr "Klik op de items om meer te lezen"
+
+#: views/extensions.php:6
+msgid "Check out these premium extensions!"
+msgstr "Bekijk deze premium uitbreidingen!"
+
+#: includes/Admin.php:903
+msgid "m"
+msgstr "m"
+
+#: includes/Admin.php:903
+msgid "h"
+msgstr "u"
+
+#: includes/Documents/Invoice.php:80
+msgid "Invoice Date:"
+msgstr "Factuurdatum:"
+
+#: includes/Admin.php:482
+msgid "Create PDF"
+msgstr "Maak PDF"
+
+#: includes/Admin.php:322 includes/Admin.php:1342 includes/Assets.php:235
+#: includes/Documents/Invoice.php:354 includes/Main.php:1236
+#: views/setup-wizard/display-options.php:81
+msgid "Invoice Number"
+msgstr "Factuurnummer"
+
+#: includes/Settings/SettingsCallbacks.php:46
+msgid "These are used for the (optional) footer columns in the <em>Modern (Premium)</em> template, but can also be used for other elements in your custom template"
+msgstr "Deze velden worden gebruikt voor de (optionele) footer kolommen in het <em>Modern (Premium)</em> template, maar kunnen ook gebruikt worden voor andere elementen in je eigen aangepaste template"
+
+#: includes/Settings/SettingsCallbacks.php:37
+msgid "<b>Warning!</b> The settings below are meant for debugging/development only. Do not use them on a live website!"
+msgstr "<b>Waarschuwing!</b> Onderstaande instellingen zijn enkel bedoeld om fouten op te sporen of om te testen. Gebruik ze niet op een live site!"
+
+#: includes/Settings/SettingsCallbacks.php:496
+msgid "Image resolution"
+msgstr "Afbeeldings resolutie"
+
+#: includes/Settings/SettingsDebug.php:849
+msgid "Send the template output as HTML to the browser instead of creating a PDF."
+msgstr "Stuur de uitvoer van de template als HTML naar de browser in plaats van een PDF."
+
+#: includes/Settings/SettingsDebug.php:843
+msgid "Output to HTML"
+msgstr "Uitvoer naar HTML"
+
+#: includes/Settings/SettingsDebug.php:814
+msgid "Enable this option to output plugin errors if you're getting a blank page or other PDF generation issues."
+msgstr "Schakel deze optie in om plugin fouten weer te geven, wanneer je een lege pagina krijgt of andere problemen hebt met het genereren van PDF"
+
+#: includes/Settings/SettingsDebug.php:808
+msgid "Enable debug output"
+msgstr "Debug weergave inschakelen"
+
+#: includes/Settings/SettingsGeneral.php:290
+msgid "This is footer column 3 in the <i>Modern (Premium)</i> template"
+msgstr "Dit is footer kolom 3 in het <i>Modern (Premium)</i> template"
+
+#: includes/Settings/SettingsGeneral.php:282
+msgid "Extra field 3"
+msgstr "Extra veld 3"
+
+#: includes/Settings/SettingsGeneral.php:275
+msgid "This is footer column 2 in the <i>Modern (Premium)</i> template"
+msgstr "Dit is footer kolom 2 in het <i>Modern (Premium)</i> template"
+
+#: includes/Settings/SettingsGeneral.php:267
+msgid "Extra field 2"
+msgstr "Extra veld 2"
+
+#: includes/Settings/SettingsGeneral.php:260
+msgid "This is footer column 1 in the <i>Modern (Premium)</i> template"
+msgstr "Dit is voettekst kolom 1 in het <i>Modern (Premium)</i> template"
+
+#: includes/Settings/SettingsGeneral.php:252
+msgid "Extra field 1"
+msgstr "Extra veld 1"
+
+#: includes/Settings/SettingsGeneral.php:246
+msgid "Extra template fields"
+msgstr "Extra templatevelden"
+
+#: includes/Documents/PackingSlip.php:127
+msgid "Display billing address"
+msgstr "Geef factuuradres weer"
+
+#: includes/Documents/PackingSlip.php:24 includes/Documents/PackingSlip.php:41
+msgid "Packing Slip"
+msgstr "Pakbon"
+
+#: includes/Documents/Invoice.php:406
+msgid "Padding"
+msgstr "Padding"
+
+#: includes/Documents/Invoice.php:397
+msgid "Suffix"
+msgstr "Achtervoegsel"
+
+#: includes/Documents/Invoice.php:388
+msgid "Prefix"
+msgstr "Voorvoegsel"
+
+#: includes/Documents/Invoice.php:368
+msgid "Next invoice number (without prefix/suffix etc.)"
+msgstr "Volgend factuurnummer (zonder voor- of achtervoegsel enz.)"
+
+#: includes/Documents/Invoice.php:314
+msgid "Display invoice date"
+msgstr "Geef factuurdatum weer"
+
+#: includes/Documents/Invoice.php:290 includes/Documents/PackingSlip.php:155
+msgid "Display phone number"
+msgstr "Geef telefoonnummer weer"
+
+#: includes/Documents/Invoice.php:279 includes/Documents/PackingSlip.php:144
+msgid "Display email address"
+msgstr "Geef e-mailadres weer"
+
+#: includes/Documents/Invoice.php:262
+msgid "Display shipping address"
+msgstr "Geef verzendadres weer"
+
+#: includes/Documents/Invoice.php:24 includes/Documents/Invoice.php:56
+#: views/settings-page.php:127
+msgid "Invoice"
+msgstr "Factuur"
+
+#: includes/Settings/SettingsGeneral.php:231
+msgid "Footer: terms & conditions, policies, etc."
+msgstr "Footer: voorwaarden & condities, beleid, enz."
+
+#: includes/Settings/SettingsGeneral.php:216
+msgid "Shop Address"
+msgstr "Shop Adres"
+
+#: includes/Settings/SettingsGeneral.php:165 includes/SetupWizard.php:58
+msgid "Shop Name"
+msgstr "Shop Naam"
+
+#: includes/Settings/SettingsGeneral.php:144 views/setup-wizard/logo.php:15
+msgid "Remove image"
+msgstr "Verwijder afbeelding"
+
+#: includes/Settings/SettingsGeneral.php:143 views/setup-wizard/logo.php:14
+msgid "Set image"
+msgstr "Stel afbeelding in"
+
+#: includes/Settings/SettingsGeneral.php:142 views/setup-wizard/logo.php:13
+msgid "Select or upload your invoice header/logo"
+msgstr "Selecteer of upload je factuur header/logo"
+
+#: includes/Settings/SettingsGeneral.php:136
+msgid "Shop header/logo"
+msgstr "Shop header/logo"
+
+#: includes/Settings/SettingsGeneral.php:93
+#: views/setup-wizard/paper-format.php:14
+msgid "Letter"
+msgstr "Letter (US)"
+
+#: includes/Settings/SettingsGeneral.php:92
+#: views/setup-wizard/paper-format.php:13
+msgid "A4"
+msgstr "A4"
+
+#: includes/Settings/SettingsGeneral.php:85
+msgid "Paper size"
+msgstr "Papierformaat"
+
+#: includes/Settings/SettingsGeneral.php:71
+msgid "Choose a template"
+msgstr "Kies een template"
+
+#: includes/Documents/Invoice.php:456
+msgid "Enable invoice number column in the orders list"
+msgstr "Schakel factuurnummer kolom in het bestellingen overzicht in"
+
+#: includes/Documents/Invoice.php:441
+msgid "Never"
+msgstr "Nooit"
+
+#: includes/Documents/Invoice.php:271 includes/Documents/Invoice.php:440
+#: includes/Documents/PackingSlip.php:136
+#: views/setup-wizard/display-options.php:22
+msgid "Always"
+msgstr "Altijd"
+
+#: includes/Documents/Invoice.php:439
+msgid "Only for specific order statuses (define below)"
+msgstr "Alleen voor specifieke order statussen (hieronder gedefinieerd)"
+
+#: includes/Documents/Invoice.php:438
+msgid "Only when an invoice is already created/emailed"
+msgstr "Alleen wanneer een factuur al is aangemaakt/gemaild"
+
+#: includes/Documents/Invoice.php:431
+msgid "Allow My Account invoice download"
+msgstr "Sta downloaden factuur vanaf Mijn Account toe"
+
+#: includes/Documents/Invoice.php:490
+msgid "Disable for free orders"
+msgstr "Uitschakelen voor gratis producten"
+
+#. translators: directory path
+#: includes/Documents/Invoice.php:241 includes/Documents/Invoice.php:628
+msgid "It looks like the temp folder (<code>%s</code>) is not writable, check the permissions for this folder! Without having write access to this folder, the plugin will not be able to email invoices."
+msgstr "Het lijkt erop dat de temp folder (<code>%s</code>) niet schrijfbaar is, controleer de rechten op deze folder! Zonder schrijfrechten kan de plugin geen facturen mailen."
+
+#: includes/Settings/SettingsGeneral.php:64
+msgid "Open the PDF in a new browser tab/window"
+msgstr "Open de PDF in een nieuwe browser tab/venster"
+
+#: includes/Settings/SettingsGeneral.php:63
+msgid "Download the PDF"
+msgstr "Download de PDF"
+
+#: includes/Settings/SettingsGeneral.php:56
+msgid "How do you want to view the PDF?"
+msgstr "Hoe wil je de PDF bekijken?"
+
+#: includes/Settings/SettingsGeneral.php:50
+#: includes/Settings/SettingsUbl.php:111
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+#: includes/Settings/SettingsDebug.php:1162 views/advanced-status.php:203
+msgid "Status"
+msgstr "Status"
+
+#: includes/Documents/Invoice.php:663 includes/Documents/Invoice.php:707
+#: includes/Documents/PackingSlip.php:230 includes/Settings.php:163
+#: includes/Settings/SettingsDebug.php:682
+msgid "General"
+msgstr "Algemeen"
+
+#: includes/Assets.php:123 includes/Settings.php:109
+#: includes/Settings/SettingsDebug.php:1161
+msgid "Settings"
+msgstr "Instellingen"
+
+#: includes/Settings.php:96 includes/Settings.php:97
+msgid "PDF Invoices"
+msgstr "PDF facturen"
+
+#: includes/Documents/PackingSlip.php:73
+msgid "packing-slip"
+msgid_plural "packing-slips"
+msgstr[0] "pakbon"
+msgstr[1] "pakbonnen"
+
+#. translators: document type
+#: includes/Documents/Invoice.php:131 includes/Documents/Invoice.php:393
+#: includes/Documents/Invoice.php:402 includes/Documents/Invoice.php:410
+#: includes/Documents/Invoice.php:414
+msgid "invoice"
+msgid_plural "invoices"
+msgstr[0] "factuur"
+msgstr[1] "facturen"
+
+#: includes/Main.php:387
+msgid "Some of the export parameters are missing."
+msgstr "Sommige export parameters ontbreken."
+
+#: includes/Main.php:478 includes/Settings.php:218 includes/Settings.php:366
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Je hebt onvoldoende rechten voor deze pagina."

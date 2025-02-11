@@ -1,0 +1,18 @@
+{
+    "name": "indrukwekkend/navigatie",
+    "description": "",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/indrukwekkend/navigatie",
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "HP Hioolen",
+        "email": "hans-peter@indrukwekkend.nl",
+        "homepage": "https://indrukwekkend.nl"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.1"
+    }
+}
