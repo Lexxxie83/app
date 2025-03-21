@@ -1,4 +1,8 @@
 <?php
+define( 'SBI_ENCRYPTION_KEY', '4EhNMXSoZg1OaxFEG0QpcAawT%grX22p!LpA8IV$tp@D%*ehXL7C7wr8bbyN^q' );
+
+define( 'SBI_ENCRYPTION_SALT', 'BCwDx8Lop@u9x^r#XDzQ(&YX2P6TsJ@^GT2J7xh^D15qR1MNW2^y@7o8wzns$aFo' );
+
 /**
  * The base configuration for WordPress
  *
