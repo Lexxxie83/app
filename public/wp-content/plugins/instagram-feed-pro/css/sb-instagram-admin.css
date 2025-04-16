@@ -3392,7 +3392,8 @@ body .sbi_review_step1_notice .sbi-btn-link:not(:last-child) {
   text-decoration: none;
 }
 .sbi-admin-notices .license-action-btns .sbi-notice-btn:not(:last-child),
-#database_create .sbi-notice-btn:not(:last-child) {
+#database_create .sbi-notice-btn:not(:last-child),
+#database_error .sbi-notice-btn:not(:last-child) {
 	margin-right: 8px;
 }
 .sbi-admin-notices .license-action-btns .sbi-notice-btn {
@@ -4352,4 +4353,13 @@ li:not(.wp-first-item) [href="admin.php?page=smash_sbi_tool"] {
 }
 .sbi-notice-body {
 	flex:1;
+}
+#sbi-clicksocial-notice .sbi-notice-btns{
+	display: flex;
+	gap: 8px;
+}
+.sbi-notice-btns #sbi_install_op_btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

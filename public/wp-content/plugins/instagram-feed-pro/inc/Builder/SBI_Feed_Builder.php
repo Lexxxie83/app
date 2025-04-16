@@ -269,11 +269,7 @@ class SBI_Feed_Builder {
 						'updateHeading'          => __( 'Update Feed Type', 'instagram-feed' ),
 						'anotherFeedTypeHeading' => __( 'Add Another Source Type', 'instagram-feed' ),
 					),
-					'mainFooterScreen'     => array(
-						'heading'     => sprintf( __( 'Upgrade to the %1$sAll Access Bundle%2$s to get all of our Pro Plugins', 'instagram-feed' ), '<strong>', '</strong>' ),
-						'description' => __( 'Includes all Smash Balloon plugins for one low price: Instagram, Facebook, Twitter, YouTube, and Social Wall', 'instagram-feed' ),
-						'promo'       => sprintf( __( '%1$sBonus%2$s Lite users get %3$s50&#37; Off%4$s automatically applied at checkout', 'instagram-feed' ), '<span class="sbi-bld-ft-bns">', '</span>', '<strong>', '</strong>' ),
-					),
+					'mainFooterScreen'     => $this->getFooterUpsellContent(),
 					'embedPopupScreen'     => array(
 						'heading'       => __( 'Embed Feed', 'instagram-feed' ),
 						'description'   => __( 'Add the unique shortcode to any page, post, or widget:', 'instagram-feed' ),
@@ -421,6 +417,35 @@ class SBI_Feed_Builder {
 				wp_enqueue_media();
 			endif;
 		endif;
+	}
+
+	/**
+	 * Get Footer heading and description
+	 *
+	 * @return array
+	 */
+	public function getFooterUpsellContent() {
+		$clicksocial_link = is_plugin_active('click-social/click-social.php') ? admin_url('admin.php?page=click-social') : 'https://clicksocial.com/?utm_campaign=instagram-pro&utm_source=all-feeds&utm_medium=footer-banner&utm_content=tryfree';
+		$footers = [
+			'social_wall' => [
+				'heading'     => __('Upgrade to the All Access Bundle to get all of our Pro Plugins', 'instagram-feed'),
+				'description' => __('Includes all Smash Balloon plugins for one low price: Instagram, Facebook, Twitter, YouTube, Reviews, TikTok, Feed Analytics, and Social Wall', 'instagram-feed'),
+				'promo'       => sprintf(__('%1$sBonus%2$s Lite users get %3$s50&#37; Off%4$s automatically applied at checkout', 'instagram-feed'), '<span class="sbi-bld-ft-bns">', '</span>', '<strong>', '</strong>'),
+				'image'       => SBI_BUILDER_URL . 'assets/img/all-plugins-upsell.png',
+				'learnMore'   => __('Buy the All Access Bundle', 'instagram-feed'),
+			],
+			'click_social' => [
+				'heading'     => __('Schedule Posts for Social Media Effortlessly', 'instagram-feed'),
+				'description' => __('Promote your blog and schedule posts for Twitter, Instagram, and Facebook right from within WordPress with ClickSocial', 'instagram-feed'),
+				'promo'       => '',
+				'image'       => SBI_BUILDER_URL . 'assets/img/click-social-upsell.png',
+				'learnMore'   => __('Try ClickSocial for Free', 'instagram-feed'),
+				'link'        => $clicksocial_link,
+			]
+		];
+
+		$random_key = array_rand($footers);
+		return $footers[$random_key];
 	}
 
 	/**
@@ -731,6 +756,7 @@ class SBI_Feed_Builder {
 			'error'                             => __( 'Error:', 'instagram-feed' ),
 			'errorNotice'                       => __( 'There was an error when trying to connect to Instagram.', 'instagram-feed' ),
 			'errorDirections'                   => '<a href="https://smashballoon.com/instagram-feed/docs/errors/" target="_blank" rel="noopener">' . __( 'Directions on How to Resolve This Issue', 'instagram-feed' ) . '</a>',
+			'dbErrorNotice'                     => __('There was an error when trying to update the database.', 'instagram-feed'),
 			'errorSource'                       => __( 'Source Invalid', 'instagram-feed' ),
 			'errorEncryption'                   => __( 'Encryption Error', 'instagram-feed' ),
 			'invalid'                           => __( 'Invalid', 'instagram-feed' ),
@@ -1256,6 +1282,18 @@ class SBI_Feed_Builder {
 		$active_sb_plugins = Util::get_sb_active_plugins_info();
 
 		return array(
+			'reviews' => array(
+				'displayName'         => __('Reviews', 'instagram-feed'),
+				'name'                => __('Reviews Feed', 'instagram-feed'),
+				'author'              => __('By Smash Balloon', 'instagram-feed'),
+				'description'         => __('To display a Reviews feed, our Reviews plugin is required. </br> Increase conversions and build positive brand trust through Google and Yelp reviews from your customers. Provide social proof needed to turn visitors into customers.', 'instagram-feed'),
+				'dashboard_permalink' => admin_url('admin.php?page=sbr'),
+				'svgIcon'             => self::builder_svg_icons('install-plugins-popup.reviews'),
+				'installed'           => $active_sb_plugins['is_reviews_installed'],
+				'activated'           => is_plugin_active($active_sb_plugins['reviews_plugin']),
+				'plugin'              => $active_sb_plugins['reviews_plugin'],
+				'download_plugin'     => 'https://downloads.wordpress.org/plugin/reviews-feed.zip',
+			),
 			'facebook' => array(
 				'displayName'         => __( 'Facebook', 'instagram-feed' ),
 				'name'                => __( 'Facebook Feed', 'instagram-feed' ),
@@ -1292,6 +1330,18 @@ class SBI_Feed_Builder {
 				'plugin'              => $active_sb_plugins['youtube_plugin'],
 				'download_plugin'     => 'https://downloads.wordpress.org/plugin/feeds-for-youtube.zip',
 			),
+			'tiktok' => array(
+				'displayName'         => __('TikTok', 'instagram-feed'),
+				'name'                => __('Feeds for TikTok', 'instagram-feed'),
+				'author'              => __('By Smash Balloon', 'instagram-feed'),
+				'description'         => __("To display a TikTok feed, our TikTok plugin is required. It allows you to seamlessly integrate your TikTok account’s videos into your WordPress website.", 'instagram-feed'),
+				'dashboard_permalink' => admin_url('admin.php?page=sbtt'),
+				'svgIcon'             => self::builder_svg_icons('install-plugins-popup.tiktok'),
+				'installed'           => $active_sb_plugins['is_tiktok_installed'],
+				'activated'           => is_plugin_active($active_sb_plugins['tiktok_plugin']),
+				'plugin'              => $active_sb_plugins['tiktok_plugin'],
+				'download_plugin'     => "https://downloads.wordpress.org/plugin/feeds-for-tiktok.zip",
+			)
 		);
 	}
 
@@ -2069,7 +2119,7 @@ class SBI_Feed_Builder {
 		$onboarding_statuses = get_user_meta( get_current_user_id(), 'sbi_onboarding', true );
 		$status              = false;
 		if ( ! empty( $onboarding_statuses ) ) {
-			$statuses = maybe_unserialize( $onboarding_statuses );
+			$statuses = Util::safe_unserialize( $onboarding_statuses );
 			$status   = isset( $statuses[ $type ] ) ? $statuses[ $type ] : false;
 		}
 
@@ -2084,7 +2134,7 @@ class SBI_Feed_Builder {
 	public static function update_onboarding_meta( $value, $type = 'newuser' ) {
 		$onboarding_statuses = get_user_meta( get_current_user_id(), 'sbi_onboarding', true );
 		if ( ! empty( $onboarding_statuses ) ) {
-			$statuses          = maybe_unserialize( $onboarding_statuses );
+			$statuses          = Util::safe_unserialize( $onboarding_statuses );
 			$statuses[ $type ] = $value;
 		} else {
 			$statuses = array(
@@ -2213,6 +2263,8 @@ class SBI_Feed_Builder {
                 'icon' => self::builder_svg_icons('install-plugins-popup.facebook'),
                 'description' => __('Custom Facebook Feeds is a highly customizable way to display tweets from your Facebook account. Promote your latest content and update your site content automatically.', 'instagram-feed'),
 				'download_plugin' => 'https://downloads.wordpress.org/plugin/custom-facebook-feed.zip',
+				'dashboard_link' => admin_url('admin.php?page=cff-feed-builder'),
+				'active' => is_plugin_active($active_sb_plugins['facebook_plugin'])
             ],
             'instagram' => [
                 'installed' => $active_sb_plugins['is_instagram_installed'],
@@ -2221,6 +2273,8 @@ class SBI_Feed_Builder {
                 'icon' => self::builder_svg_icons('install-plugins-popup.instagram'),
                 'description' => __('Instagram Feeds is a highly customizable way to display tweets from your Instagram account. Promote your latest content and update your site content automatically.', 'instagram-feed'),
 				'download_plugin' => 'https://downloads.wordpress.org/plugin/instagram-feed.zip',
+				'dashboard_link' => admin_url('admin.php?page=sbi-feed-builder'),
+				'active' => is_plugin_active($active_sb_plugins['instagram_plugin'])
             ],
             'twitter' => [
                 'installed' => $active_sb_plugins['is_twitter_installed'],
@@ -2229,6 +2283,8 @@ class SBI_Feed_Builder {
                 'icon' => self::builder_svg_icons('install-plugins-popup.twitter'),
                 'description' => __('Custom Twitter Feeds is a highly customizable way to display tweets from your Twitter account. Promote your latest content and update your site content automatically.', 'instagram-feed'),
 				'download_plugin' => 'https://downloads.wordpress.org/plugin/custom-twitter-feeds.zip',
+				'dashboard_link' => admin_url('admin.php?page=ctf-feed-builder'),
+				'active' => is_plugin_active($active_sb_plugins['twitter_plugin'])
             ],
             'youtube' => [
                 'installed' => $active_sb_plugins['is_youtube_installed'],
@@ -2237,6 +2293,8 @@ class SBI_Feed_Builder {
                 'icon' => self::builder_svg_icons('install-plugins-popup.youtube'),
                 'description' => __('YouTube Feeds is a highly customizable way to display tweets from your YouTube account. Promote your latest content and update your site content automatically.', 'instagram-feed'),
 				'download_plugin' => 'https://downloads.wordpress.org/plugin/feeds-for-youtube.zip',
+				'dashboard_link' => admin_url('admin.php?page=sby-feed-builder'),
+				'active' => is_plugin_active($active_sb_plugins['youtube_plugin'])
             ]
         ];
 	}

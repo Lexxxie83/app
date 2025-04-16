@@ -676,7 +676,7 @@ class SBI_Support_Tool
 			$me_endpoint_url = self::$graph_api . $user_id . '?fields=biography,id,username,website,followers_count,media_count,profile_picture_url,name&access_token=' . $access_token;
 		}
 
-		return wp_remote_get($me_endpoint_url);
+		return wp_safe_remote_get($me_endpoint_url);
 	}
 
 	/**
@@ -710,7 +710,7 @@ class SBI_Support_Tool
 			$api_url = self::$graph_api . $user_id . '/media?fields=' . $media_fields . '&limit=' . $post_limit . '&access_token=' . $access_token;
 		}
 
-		return wp_remote_get($api_url, array( 'timeout' => 120 ));
+		return wp_safe_remote_get($api_url, array( 'timeout' => 120 ));
 	}
 
 	/**
@@ -734,7 +734,7 @@ class SBI_Support_Tool
 
 		$api_url = self::$graph_api . $user_id . '/tags?fields=' . $media_fields . '&access_token=' . $access_token;
 
-		return wp_remote_get($api_url, array( 'timeout' => 60 ));
+		return wp_safe_remote_get($api_url, array( 'timeout' => 60 ));
 	}
 
 	/**
@@ -757,7 +757,7 @@ class SBI_Support_Tool
 
 		$api_url = self::$graph_api . $user_id . '/recently_searched_hashtags?limit=40&access_token=' . $access_token;
 
-		$api_response = wp_remote_get($api_url, array( 'timeout' => 60 ));
+		$api_response = wp_safe_remote_get($api_url, array( 'timeout' => 60 ));
 
 		if (is_wp_error($api_response)) {
 			return $api_response;
@@ -784,7 +784,7 @@ class SBI_Support_Tool
 
 		$api_url = self::$graph_api . '?fields=id,name&ids=' . $hashtag_ids . '&access_token=' . $access_token;
 
-		return wp_remote_get($api_url, array( 'timeout' => 60 ));
+		return wp_safe_remote_get($api_url, array( 'timeout' => 60 ));
 	}
 
 	/**
@@ -809,7 +809,7 @@ class SBI_Support_Tool
 
 		$api_url = self::$graph_api . 'ig_hashtag_search?user_id=' . $user_id . '&q=' . $hashtag . '&access_token=' . $access_token;
 
-		$api_response = wp_remote_get($api_url, array( 'timeout' => 60 ));
+		$api_response = wp_safe_remote_get($api_url, array( 'timeout' => 60 ));
 
 		if (is_wp_error($api_response)) {
 			return $api_response;
@@ -829,7 +829,7 @@ class SBI_Support_Tool
 				$api_url = self::$graph_api . $hashtag_id . '/recent_media?user_id=' . $user_id . '&fields=id,media_type,comments_count,like_count,permalink,timestamp,caption,media_url&limit=8&access_token=' . $access_token;
 			}
 
-			return wp_remote_get($api_url, array( 'timeout' => 100 ));
+			return wp_safe_remote_get($api_url, array( 'timeout' => 100 ));
 		}
 	}
 
@@ -860,7 +860,7 @@ class SBI_Support_Tool
 			$api_url = self::$graph_api . $hashtag_id . '/recent_media?user_id=' . $user_id . '&fields=id,media_type,comments_count,like_count,permalink,timestamp,media_url,caption&limit=8&access_token=' . $access_token;
 		}
 
-		return wp_remote_get($api_url, array( 'timeout' => 100 ));
+		return wp_safe_remote_get($api_url, array( 'timeout' => 100 ));
 	}
 
 	/**
@@ -885,6 +885,6 @@ class SBI_Support_Tool
 
 		$api_url = self::$graph_api . $user_id . '/stories?fields=' . $media_fields . '&limit=' . $post_limit . '&access_token=' . $access_token;
 
-		return wp_remote_get($api_url, array( 'timeout' => 60 ));
+		return wp_safe_remote_get($api_url, array( 'timeout' => 60 ));
 	}
 }

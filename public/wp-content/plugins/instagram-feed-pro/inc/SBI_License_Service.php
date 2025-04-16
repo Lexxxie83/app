@@ -268,7 +268,7 @@ class SBI_License_Service {
 			'timeout' => 60,
 		);
 		// Call the remore license request.
-		$request = wp_remote_get( $api_url, $args );
+		$request = wp_safe_remote_get( $api_url, $args );
 		if ( is_wp_error( $request ) ) {
 			return;
 		}
@@ -309,7 +309,7 @@ class SBI_License_Service {
 		$license_key = self::$instance->get_license_key;
 		$url         = sprintf(
 			'https://smashballoon.com/checkout/?edd_license_key=%s&download_id=%s&utm_campaign=instagram-pro&utm_source=expired-notice&utm_medium=renew-license',
-			$license_key,
+			esc_attr($license_key),
 			$sbi_download_id
 		);
 

@@ -494,11 +494,11 @@ class SB_Instagram_Feed
 				if ( !empty( $results ) && is_array( $results ) ) {
 
 					foreach ( $results as $result ) {
-						$sizes = maybe_unserialize( $result['sizes'] );
+						$sizes = Util::safe_unserialize( $result['sizes'] );
 						if ( ! is_array( $sizes ) ) {
 							$sizes = array( 'full' => 640 );
 						}
-						$extension = isset( $result['mime_type'] ) &&  $result['mime_type'] === 'image/webp' 
+						$extension = isset( $result['mime_type'] ) &&  $result['mime_type'] === 'image/webp'
 							? '.webp' : '.jpg';
 						$return[ $result['instagram_id'] ] = array(
 							'id' => $result['media_id'],
@@ -526,11 +526,11 @@ class SB_Instagram_Feed
 				if ( !empty( $results ) && is_array( $results ) ) {
 
 					foreach ( $results as $result ) {
-						$sizes = maybe_unserialize( $result['sizes'] );
+						$sizes = Util::safe_unserialize( $result['sizes'] );
 						if ( ! is_array( $sizes ) ) {
 							$sizes = array( 'full' => 640 );
 						}
-						$extension = isset( $result['mime_type'] ) &&  $result['mime_type'] === 'image/webp' 
+						$extension = isset( $result['mime_type'] ) &&  $result['mime_type'] === 'image/webp'
 							? '.webp' : '.jpg';
 						$return[ $result['instagram_id'] ] = array(
 							'id' => $result['media_id'],

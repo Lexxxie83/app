@@ -3,14 +3,14 @@
 Plugin Name: Instagram Feed Pro Business
 Plugin URI: https://smashballoon.com/instagram-feed
 Description: Display beautifully clean, customizable, and responsive Instagram feeds
-Version: 6.5.1
+Version: 6.7.0
 Author: Smash Balloon
 Author URI: https://smashballoon.com/
 License: GPLv2 or later
 Text Domain: instagram-feed
 */
 /*
-Copyright 2024  Smash Balloon  (email: hey@smashballoon.com)
+Copyright 2025  Smash Balloon  (email: hey@smashballoon.com)
 This program is paid software; you may not redistribute it under any
 circumstances without the expressed written consent of the plugin author.
 This program is distributed in the hope that it will be useful,
@@ -27,9 +27,13 @@ require_once trailingslashit(plugin_dir_path(__FILE__)) . 'activation.php';
 if ( ! defined( 'SBI_STORE_URL' ) ) {
 	define( 'SBI_STORE_URL', 'https://smashballoon.com/' );
 }
+
+$sbi_download_name = "Instagram Feed Pro Business";
+
 if ( ! defined( 'SBI_PLUGIN_NAME' ) ) {
-	define( 'SBI_PLUGIN_NAME', 'Instagram Feed Pro Business' );
+	define( 'SBI_PLUGIN_NAME',  $sbi_download_name );
 }
+
 // The ID of the legacy product. Used for renewals
 $sbi_download_id = 33748; // 33604, 33748, 33751
 
@@ -42,7 +46,7 @@ if ( ! class_exists( '\InstagramFeed\EDD_SL_Plugin_Updater' ) ) {
 }
 
 if ( ! defined( 'SBIVER' ) ) {
-	define( 'SBIVER', '6.5.1' );
+	define( 'SBIVER', '6.7.0' );
 }
 // Db version.
 if ( ! defined( 'SBI_DBVERSION' ) ) {
@@ -431,9 +435,7 @@ if ( function_exists( 'sb_instagram_feed_init' ) || function_exists( 'display_in
 			$charset_collate = $wpdb->get_charset_collate();
 		}
 
-		global $wpdb;
 		global $sb_instagram_posts_manager;
-
 		$had_error = false;
 
 		if ( ! isset( $sb_instagram_posts_manager ) ) {
@@ -503,6 +505,54 @@ if ( function_exists( 'sb_instagram_feed_init' ) || function_exists( 'display_in
 
 		if ( ! $had_error ) {
 			$sb_instagram_posts_manager->remove_error( 'database_create' );
+		}
+
+		$sources_table_name = esc_sql($wpdb->prefix . 'sbi_sources');
+
+		// Safely check if the table exists.
+		$table_exists = $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $sources_table_name));
+		if ($table_exists === $sources_table_name) {
+			// Get the list of columns in the table.
+			$columns = $wpdb->get_col("DESC $sources_table_name", 0);
+			// If the 'connect_type' column does not exist, add it.
+			if (! in_array('connect_type', $columns, true)) {
+				$alter_result = $wpdb->query(
+					"ALTER TABLE $sources_table_name
+					ADD COLUMN connect_type VARCHAR(100) DEFAULT '' NOT NULL"
+				);
+				// If the ALTER query was successful, update existing rows with appropriate values.
+				if (false !== $alter_result) {
+					$update_result = $wpdb->query(
+						"UPDATE $sources_table_name
+						SET connect_type = CASE
+							WHEN account_type = 'business' THEN 'business_advanced'
+							ELSE 'personal'
+						END"
+					);
+					// If updating rows fails, log an error; otherwise, clear notices and errors.
+					if (false === $update_result) {
+						$sb_instagram_posts_manager->add_error(
+							'database_error',
+							sprintf(
+								__('<strong>There was an error when trying to update the database for connected accounts:</strong><br><br><code>%s</code><br>', 'instagram-feed'),
+								$wpdb->last_error
+							)
+						);
+					} else {
+						delete_option('sb_instagram_feed_notices');
+						$sb_instagram_posts_manager->remove_error('database_error');
+					}
+				} else {
+					// If ALTER TABLE failed, log the error.
+					$sb_instagram_posts_manager->add_error(
+						'database_error',
+						sprintf(
+							__('<strong>There was an error when trying to update the database for connected accounts:</strong><br><br><code>%s</code><br>', 'instagram-feed'),
+							$wpdb->last_error
+						)
+					);
+				}
+			}
 		}
 	}
 
@@ -877,10 +927,10 @@ if ( function_exists( 'sb_instagram_feed_init' ) || function_exists( 'display_in
 				if (empty($column_exists)) {
 					$wpdb->query("ALTER TABLE $table_name ADD COLUMN connect_type VARCHAR(100) DEFAULT '' NOT NULL");
 					$wpdb->query("
-						UPDATE $table_name 
-						SET connect_type = CASE 
-							WHEN account_type = 'business' THEN 'business_advanced' 
-							ELSE 'personal' 
+						UPDATE $table_name
+						SET connect_type = CASE
+							WHEN account_type = 'business' THEN 'business_advanced'
+							ELSE 'personal'
 						END
 					");
 				}

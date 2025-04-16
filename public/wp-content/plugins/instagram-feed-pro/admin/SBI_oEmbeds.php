@@ -330,7 +330,7 @@ class SBI_oEmbeds {
 			$post_id    = $value->post_id;
 			$meta_key   = $value->meta_key;
 			$meta_value = $value->meta_value;
-			$meta_value = maybe_unserialize( $meta_value );
+			$meta_value = Util::safe_unserialize( $meta_value );
 
 			delete_post_meta( $post_id, $meta_key );
 
@@ -386,7 +386,7 @@ class SBI_oEmbeds {
 		if ( $screen->id !== 'instagram-feed_page_sbi-oembeds-manager' ) {
 			return false;
 		}
-		
+
 		global $sbi_notices;
 		$oembed_success_notice = $sbi_notices->get_notice('oembed_api_change_reconnect');
 		if ( $oembed_success_notice ) {
@@ -404,7 +404,7 @@ class SBI_oEmbeds {
 				return $return;
 			}
 		}
-		
+
 		if ( isset( $_GET['sbi_access_token'] ) ) {
 			$access_token = $_GET['sbi_access_token'];
 
@@ -549,6 +549,6 @@ class SBI_oEmbeds {
 	 * @since 6.0
 	 */
 	public function oembeds_manager() {
-		\InstagramFeed\SBI_View::render( 'oembeds.index' );
+		\InstagramFeed\SBI_View::render( 'oembeds.page' );
 	}
 }

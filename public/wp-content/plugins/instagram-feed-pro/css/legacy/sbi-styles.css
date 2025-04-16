@@ -2654,14 +2654,14 @@ body:after {
 /*
 Elementor / DIVI / Widgets CTA
 */
-.sb-elementor-cta{
+.sbi-feed-block-cta{
   width: 100%;
   border: 1px solid #E8E8EB;
   border-radius: 2px;
   position: relative;
   text-align: center;
 }
-.sb-elementor-cta-img-ctn{
+.sbi-feed-block-cta-img-ctn{
   width: 100%;
   position: relative;
   float: left;
@@ -2671,7 +2671,7 @@ Elementor / DIVI / Widgets CTA
   margin-top: 50px;
   margin-bottom: 35px;
 }
-.sb-elementor-cta-img{
+.sbi-feed-block-cta-img{
   width: 65px;
   height: 65px;
   position: relative;
@@ -2683,20 +2683,20 @@ Elementor / DIVI / Widgets CTA
   justify-content: center;
   align-items: center;
 }
-.sb-elementor-cta-img span svg{
+.sbi-feed-block-cta-img span svg{
   float: left;
 }
-.sb-elementor-cta-img > *{
+.sbi-feed-block-cta-img > *{
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-.sb-elementor-cta-logo{
+.sbi-feed-block-cta-logo{
   position: absolute;
   right: -15px;
   bottom: -19px;
   z-index: 1;
 }
-.sb-elementor-cta-heading{
+.sbi-feed-block-cta-heading{
   font-size: 19px;
   padding: 0px;
   margin: 0px;
@@ -2706,7 +2706,7 @@ Elementor / DIVI / Widgets CTA
   line-height: 1.4em;
   margin-bottom: 30px;
 }
-.sb-elementor-cta-btn{
+.sbi-feed-block-cta-btn{
   background: #0068A0;
   border-radius: 2px;
   padding: 8px 20px 8px 38px;
@@ -2715,8 +2715,8 @@ Elementor / DIVI / Widgets CTA
   position: relative;
   margin-bottom: 30px;
 }
-.sb-elementor-cta-btn:before,
-.sb-elementor-cta-btn:after{
+.sbi-feed-block-cta-btn:before,
+.sbi-feed-block-cta-btn:after{
   content: '';
     position: absolute;
     width: 2px;
@@ -2725,11 +2725,11 @@ Elementor / DIVI / Widgets CTA
     left: 20px;
     top: 14px;
 }
-.sb-elementor-cta-btn:after{
+.sbi-feed-block-cta-btn:after{
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.sb-elementor-cta-desc{
+.sbi-feed-block-cta-desc{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2739,20 +2739,20 @@ Elementor / DIVI / Widgets CTA
   margin-top: 35px;
   flex-direction: column;
 }
-.sb-elementor-cta-desc strong{
+.sbi-feed-block-cta-desc strong{
   color: #141B38;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 8px;
 }
-.sb-elementor-cta-desc span{
+.sbi-feed-block-cta-desc span{
   color: #434960;
   font-size: 14px;
   line-height: 1.5em;
   padding: 0 20%;
 }
 
-.sb-elementor-cta-selector{
+.sbi-feed-block-cta-selector{
   width: 100%;
   padding: 0 20%;
   display: flex;
@@ -2761,35 +2761,35 @@ Elementor / DIVI / Widgets CTA
   flex-direction: column;
   margin-bottom: 45px;
 }
-.sb-elementor-cta-feedselector{
+.sbi-feed-block-cta-feedselector{
   border: 1px solid #D0D1D7;
   padding: 8px 16px 8px 16px;
   margin-bottom: 15px;
   max-width: 100%;
     min-width: 400px;
 }
-.sb-elementor-cta-selector span{
+.sbi-feed-block-cta-selector span{
   color: #2C324C;
 }
-.sb-elementor-cta-selector span a{
+.sbi-feed-block-cta-selector span a{
   text-transform: capitalize;
   text-decoration: underline;
   font-weight: 600;
 }
-.sb-elementor-cta-selector span a:after{
+.sbi-feed-block-cta-selector span a:after{
   color: #2C324C;
   margin-left: 2px;
   font-weight:400;
     text-decoration-color: #fff;
 }
-.sb-elementor-cta-selector span a:first-of-type:after{
+.sbi-feed-block-cta-selector span a:first-of-type:after{
   content: ',';
 }
-.sb-elementor-cta-selector span a:nth-of-type(2):after{
+.sbi-feed-block-cta-selector span a:nth-of-type(2):after{
   content: 'or';
 
 }
-.sb-elementor-cta-selector span a:nth-of-type(2):after{
+.sbi-feed-block-cta-selector span a:nth-of-type(2):after{
   margin-left: 5px;
   margin-right: 2px;
 }

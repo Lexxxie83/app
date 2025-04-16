@@ -166,6 +166,26 @@ Buttons
     fill: #141B38;
 }
 
+.sbi-btn-green{
+    background: #4A9F36!important;
+    color: #fff!important;
+    border: 1px solid #4A9F36!important;
+    position: relative;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22.4px;
+    padding: 8px 20px 8px 20px;
+    border-radius: 4px;
+    gap: 8px;
+}
+.sbi-btn-green:hover{
+    background: #367D26!important;
+}
+.sbi-btn-green:focus{
+    background: #26631D!important;
+}
+
 /*disabled*/
 .sbi-btn-orange[data-active="false"],
 .sbi-btn-blue[data-active="false"],
@@ -1747,62 +1767,43 @@ Source Screen
 }
 .sbi-bld-ft-content{
     display: flex;
-    align-items: center;
-    max-width: 1200px;
+    align-items: normal;
+    gap: 20px;
 }
-.sbi-bld-ft-img{
-    float: left;
-    width: 15%;
-    margin-right: 5%;
-    /*height: 158px;*/
-}
-.sbi-bld-ft-img svg{
-    margin-bottom: -4px;
+.sbi-bld-ft-img img {
+    height: 100%;
+    width: 100%;
 }
 .sbi-bld-ft-txt{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 59%;
-    margin-right: 5%;
+    flex-direction: column;
+    gap: 8px;
+    width: 60%;
 }
 .sbi-bld-ft-txt strong,
 .sbi-fb-mr-fd-heading span{
     color: var(--cl-orange);
 }
 #sbi-builder-app .sbi-bld-ft-info{
-    width: 44%;
     color: #434960;
 }
-#sb-footer-banner .sbi-bld-ft-title,
-#sbi-builder-app #sb-footer-banner h3.sbi-bld-ft-title:not(#sb_instagram h3){
-    width: 63%;
-    margin-right: 6%;
+.sbi-txt-btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 .sbi-bld-ft-action{
-    width: 17%;
     display: flex;
     justify-content: left;
     align-items: center;
 }
-.sbi-bld-ft-action svg{
-    top: 14px;
-    height: 10px;
-}
 @media all and (max-width: 1130px) {
-    #sb-footer-banner .sbi-bld-ft-img{
-        width: 17%;
-        margin-right: 3%;
-    }
-    #sb-footer-banner .sbi-bld-ft-txt{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 61%;
-        margin-right: 3%;
+    .sbi-bld-ft-txt {
+        width: auto;
     }
     #sbi-builder-app #sb-footer-banner h3 {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     #sbi-builder-app #sb-footer-banner .sb-small-p {
         font-size: 13px;
@@ -4218,25 +4219,22 @@ width: calc(100% - 20px);
     }
     .sbi-bld-ft-content {
         flex-wrap: wrap;
-    }
-    #sb-footer-banner .sbi-bld-ft-img {
-        width: 100%;
-        height: 140px;
-    }
-    #sb-footer-banner .sbi-bld-ft-img img {
-        height: 100%;
-        width: auto;
+        gap: 0px;
     }
     #sb-footer-banner .sbi-bld-ft-txt {
         justify-content: center;
         align-items: center;
-        width: 100%;
-        margin-right: 3%;
-        padding: 20px;
+        width: auto;
     }
     .sbi-bld-ft-action {
         width: 100%;
-        padding: 0 20px 20px;
+    }
+    .sbi-bld-ft-img {
+        width: 100%;
+        padding-top: 20px;
+    }
+    .sbi-bld-ft-img svg{
+        width: 100%;
     }
     .sbi-bld-footer > div {
         margin-bottom: 60px;

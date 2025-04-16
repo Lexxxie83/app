@@ -4,7 +4,7 @@
 
 $loader = (static function () {
     // Backup the autoloaded Composer files
-    $existingComposerAutoloadFiles = $GLOBALS['__composer_autoload_files'] ?? [];
+    $existingComposerAutoloadFiles = isset($GLOBALS['__composer_autoload_files']) ? $GLOBALS['__composer_autoload_files'] : [];
 
     $loader = require_once __DIR__.'/autoload.php';
     // Ensure InstalledVersions is available
@@ -29,7 +29,7 @@ if (!function_exists('humbug_phpscoper_expose_class')) {
         }
     }
 }
-humbug_phpscoper_expose_class('ComposerAutoloaderInit8c7a84a587a6a61c843c02c88a0c0a1b', 'InstagramFeed\Vendor\ComposerAutoloaderInit8c7a84a587a6a61c843c02c88a0c0a1b');
+humbug_phpscoper_expose_class('ComposerAutoloaderInitdbb68ff74e4a6c461e441f534eb40a30', 'InstagramFeed\Vendor\ComposerAutoloaderInitdbb68ff74e4a6c461e441f534eb40a30');
 
 // Function aliases. For more information see:
 // https://github.com/humbug/php-scoper/blob/master/docs/further-reading.md#function-aliases

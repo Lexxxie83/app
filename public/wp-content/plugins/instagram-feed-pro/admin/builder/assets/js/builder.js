@@ -2057,7 +2057,6 @@ sbiBuilder = new Vue({
 				}, 200)
 			}
 
-
 		},
 
 

@@ -220,6 +220,7 @@ class SBI_Feed_Saver_Manager {
 				$args = array( 'username' => $username );
 
 				$source_query = SBI_Db::source_query( $args );
+
 				if (!empty($source_query) && isset($source_query[0]['username'])) {
 					$source_username = sanitize_text_field($source_query[0]['username']);
 					\SB_Instagram_Connected_Account::delete_local_avatar( $source_username );

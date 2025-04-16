@@ -42,7 +42,7 @@ class SBInstagramFeed extends ET_Builder_Module {
 	 * @return array
 	 */
 	public function get_fields() {
-        $feeds_list = SBI_Db::elementor_feeds_query();
+        $feeds_list = SBI_Db::elementor_feeds_query($custom = true);
 
 
         return [

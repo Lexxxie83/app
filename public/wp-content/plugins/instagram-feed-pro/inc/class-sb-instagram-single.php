@@ -147,7 +147,7 @@ class SB_Instagram_Single {
 			$url
 		);
 
-		$result = wp_remote_get( esc_url_raw( $fetch_url ) );
+		$result = wp_safe_remote_get( esc_url_raw( $fetch_url ) );
 
 		$data = false;
 		if ( ! is_wp_error( $result ) ) {

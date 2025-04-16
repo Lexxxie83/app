@@ -60,6 +60,7 @@ trait SBI_Feed_Template_Settings {
 		$settings['colstablet'] 		= '3';
 		$settings['colsmobile'] 		= '1';
 		$settings['imagepadding'] 		= '6';
+		$settings['imageaspectratio'] 	= '1:1';
 
 		// Load More Button
 		$settings['showbutton'] 			= true;

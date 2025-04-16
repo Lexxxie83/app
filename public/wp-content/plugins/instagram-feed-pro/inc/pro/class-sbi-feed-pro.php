@@ -1072,6 +1072,10 @@ class SB_Instagram_Feed_Pro extends SB_Instagram_Feed {
 			$options_att_arr['feedtheme'] = $settings['feedtheme'];
 		}
 
+		if ( ! empty( $settings['imageaspectratio'] ) ) {
+			$options_att_arr['imageaspectratio'] = $settings['imageaspectratio'];
+		}
+
 		$other_atts .= ' data-options="' . esc_attr( sbi_json_encode( $options_att_arr ) ) . '"';
 
 		return $other_atts;

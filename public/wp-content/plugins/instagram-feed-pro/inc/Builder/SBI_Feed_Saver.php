@@ -518,6 +518,7 @@ class SBI_Feed_Saver {
 				'widthresp'                 => true,
 				'height'                    => '',
 				'heightunit'                => '',
+				'imageaspectratio'          => '1:1',
 				'sortby'                    => 'none',
 				'disablelightbox'           => false,
 				'captionlinks'              => false,

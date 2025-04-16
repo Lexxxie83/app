@@ -4800,7 +4800,7 @@ if(!sbi_js_exists) {
 						locator_nonce: locatorNonce
 					};
 					var onSuccess = function(data) {
-						var response = data;
+						var response = data?.data;
 
 						if (typeof data !== 'object' && data.trim().indexOf('{') === 0) {
 							response = JSON.parse(data.trim());
@@ -4869,7 +4869,7 @@ if(!sbi_js_exists) {
 						locator_nonce: locatorNonce
 					};
 				var onSuccess = function (data) {
-					var response = data;
+					var response = data?.data;
 
 					if (typeof data !== 'object' && data.trim().indexOf('{') === 0) {
 						response = JSON.parse(data.trim());
@@ -4927,7 +4927,23 @@ if(!sbi_js_exists) {
 				//If the width is less than it should be then set it manually
 				//if( sbi_photo_width <= (sbi_photo_width_manual) ) sbi_photo_width = sbi_photo_width_manual;
 
-				$self.find('.sbi_photo').css('height', sbi_photo_width);
+				// Get the selected aspect ratio from settings
+				var aspectRatio = '1:1'; // Default to square
+				if (typeof this.settings.general.imageaspectratio !== 'undefined') {
+					aspectRatio = this.settings.general.imageaspectratio;
+				}
+
+				// Calculate height based on aspect ratio
+				var height;
+				if (aspectRatio === '4:5') {
+					height = sbi_photo_width * 1.25; // 4:5 ratio (1.25)
+				} else if (aspectRatio === '3:4') {
+					height = sbi_photo_width * 1.33; // 3:4 ratio (1.33)
+				} else {
+					height = sbi_photo_width; // 1:1 ratio (square)
+				}
+
+				$self.find('.sbi_photo').css('height', height);
 
 				//Set the position of the carousel arrows
 				if ($self.find('.sbi-owl-nav').length) {
@@ -5336,7 +5352,19 @@ if(!sbi_js_exists) {
 				if (this.settings.consentGiven || !this.settings.gdpr) {
 					return true;
 				}
-				if (typeof window.cookieyes !== "undefined") { // CookieYes | GDPR Cookie Consent by CookieYes
+				if (typeof window.WPConsent !== 'undefined') {
+					if (window.WPConsent.hasConsent('marketing')) {
+						try {
+							this.settings.consentGiven = true;
+						} catch(e) {
+							// Fallback to window object if cookie parsing fails
+							this.settings.consentGiven = false;
+						}
+					} else {
+						// Fallback to window object if cookie not found
+						this.settings.consentGiven = false;
+					}
+				} else if (typeof window.cookieyes !== "undefined") { // CookieYes | GDPR Cookie Consent by CookieYes
 					if (typeof window.cookieyes._ckyConsentStore.get !== 'undefined') {
 						this.settings.consentGiven = window.cookieyes._ckyConsentStore.get('functional') === 'yes';
 					}
@@ -5716,7 +5744,24 @@ if(!sbi_js_exists) {
 
 					var itemPadding = typeof $self.attr('data-item-padding') !== 	'undefined' && $self.attr('data-item-padding') !== '' ? parseInt($self.attr('data-item-padding')) : 6;
 					imagepadding = imagepadding == 0 ? itemPadding : imagepadding;
-					$self.find('.sbi_photo').css('height', sbi_photo_width);
+
+					// Get the selected aspect ratio from settings
+					var aspectRatio = '1:1'; // Default to square
+					if (typeof this.settings.general.imageaspectratio !== 'undefined') {
+						aspectRatio = this.settings.general.imageaspectratio;
+					}
+
+					// Calculate height based on aspect ratio
+					var height;
+					if (aspectRatio === '4:5') {
+						height = sbi_photo_width * 1.25; // 4:5 ratio (1.25)
+					} else if (aspectRatio === '3:4') {
+						height = sbi_photo_width * 1.33; // 3:4 ratio (1.33)
+					} else {
+						height = sbi_photo_width; // 1:1 ratio (square)
+					}
+
+					$self.find('.sbi_photo').css('height', height);
 
 					//Set the position of the carousel arrows
 					if ($self.find('.sbi-owl-nav').length) {
@@ -6965,6 +7010,20 @@ if(!sbi_js_exists) {
 				}
 			});
 		})
+
+
+		// WPConsent
+		window.addEventListener('wpconsent_consent_saved', function(event) {
+			$.each(window.sbi.feeds, function (index) {
+				window.sbi.feeds[index].afterConsentToggled();
+			});
+		});
+
+		window.addEventListener('wpconsent_consent_updated', function(event) {
+			$.each(window.sbi.feeds, function (index) {
+				window.sbi.feeds[index].afterConsentToggled();
+			});
+		});
 	});
 
 } // if sbi_js_exists

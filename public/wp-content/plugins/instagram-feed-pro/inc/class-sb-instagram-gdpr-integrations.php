@@ -46,6 +46,9 @@ class SB_Instagram_GDPR_Integrations {
 	 * @return bool|string
 	 */
 	public static function gdpr_plugins_active() {
+		if ( function_exists( 'WPConsent' ) ) {
+			return 'WPConsent by the WPConsent team';
+		}
 		if ( defined( 'RCB_ROOT_SLUG' ) ) {
 			return 'Real Cookie Banner by devowl.io';
 		}

@@ -50,7 +50,7 @@ class SBI_Elementor_Widget  extends Widget_Base {
                 'type' => 'sbi_feed_control',
                 'label_block' => true,
                 'dynamic' => ['active' => true],
-                'options' =>  SBI_Db::elementor_feeds_query(),
+                'options' =>  SBI_Db::elementor_feeds_query($custom = true),
             ]
         );
         $this->end_controls_section();

@@ -2,6 +2,7 @@
 
 namespace InstagramFeed\Helpers;
 
+use InstagramFeed\Vendor\Brumann\Polyfill\Unserialize;
 use InstagramFeed\SBI_HTTP_Request;
 
 /**
@@ -23,7 +24,7 @@ class Util {
 
 	/**
 	 * Get other active plugins of Smash Balloon
-	 * 
+	 *
 	 * @since 6.2.0
 	 */
 	public static function get_sb_active_plugins_info() {
@@ -32,6 +33,24 @@ class Util {
 			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
 		$installed_plugins = get_plugins();
+
+		$is_tiktok_installed = false;
+		$tiktok_plugin       = 'feeds-for-tiktok/feeds-for-tiktok.php';
+		if (isset($installed_plugins['tiktok-feeds-pro/tiktok-feeds-pro.php'])) {
+			$is_tiktok_installed = true;
+			$tiktok_plugin       = 'tiktok-feeds-pro/tiktok-feeds-pro.php';
+		} elseif (isset($installed_plugins['feeds-for-tiktok/feeds-for-tiktok.php'])) {
+			$is_tiktok_installed = true;
+		}
+
+		$is_reviews_installed = false;
+		$reviews_plugin       = 'reviews-feed/sb-reviews.php';
+		if (isset($installed_plugins['reviews-feed-pro/sb-reviews-pro.php'])) {
+			$is_reviews_installed = true;
+			$reviews_plugin       = 'reviews-feed-pro/sb-reviews-pro.php';
+		} elseif (isset($installed_plugins['reviews-feed/sb-reviews.php'])) {
+			$is_reviews_installed = true;
+		}
 
 		$is_facebook_installed = false;
 		$facebook_plugin = 'custom-facebook-feed/custom-facebook-feed.php';
@@ -72,11 +91,10 @@ class Util {
 		$is_social_wall_installed = isset( $installed_plugins['social-wall/social-wall.php'] ) ? true : false;
 		$social_wall_plugin = 'social-wall/social-wall.php';
 
-		// Uncanny Automator plugin
-		$is_uncanny_automator_installed = isset( $installed_plugins['uncanny-automator/uncanny-automator.php'] ) ? true : false;
-		$uncanny_automator_plugin = 'uncanny-automator/uncanny-automator.php';
-		$uncanny_automator_download_plugin = 'https://downloads.wordpress.org/plugin/uncanny-automator.zip';
-
+		// ClickSocial plugin
+		$is_clicksocial_installed = isset( $installed_plugins['click-social/click-social.php'] ) ? true : false;
+		$clicksocial_plugin = 'click-social/click-social.php';
+		$clicksocial_path = 'https://downloads.wordpress.org/plugin/click-social.zip';
 
 		return array(
 			'is_facebook_installed' => $is_facebook_installed,
@@ -84,21 +102,25 @@ class Util {
 			'is_twitter_installed' => $is_twitter_installed,
 			'is_youtube_installed' => $is_youtube_installed,
 			'is_social_wall_installed' => $is_social_wall_installed,
-			'is_uncanny_automator_installed' => $is_uncanny_automator_installed,
+			'is_clicksocial_installed' => $is_clicksocial_installed,
+			'is_tiktok_installed' => $is_tiktok_installed,
+			'is_reviews_installed' => $is_reviews_installed,
+			'tiktok_plugin' => $tiktok_plugin,
+			'reviews_plugin' => $reviews_plugin,
 			'facebook_plugin' => $facebook_plugin,
 			'instagram_plugin' => $instagram_plugin,
 			'twitter_plugin' => $twitter_plugin,
 			'youtube_plugin' => $youtube_plugin,
 			'social_wall_plugin' => $social_wall_plugin,
-			'uncanny_automator_plugin' => $uncanny_automator_plugin,
-			'uncanny_automator_download_plugin' => $uncanny_automator_download_plugin,
+			'clicksocial_plugin' => $clicksocial_plugin,
+			'clicksocial_path' => $clicksocial_path,
 			'installed_plugins' => $installed_plugins,
 		);
 	}
 
 	/**
 	 * Checks if sb_instagram_posts_manager errors and license errors exists
-	 * 
+	 *
 	 * @return bool
 	 */
 	public static function sbi_has_admin_errors() {
@@ -108,11 +130,11 @@ class Util {
 		if ( $are_critical_errors ) {
 			return true;
 		}
-		
+
 		$errors = $sb_instagram_posts_manager->get_errors();
 		if( ! empty( $errors ) ) {
 			foreach ( $errors as $type => $error ) {
-				if ( in_array( $type, array( 'database_create', 'upload_dir', 'unused_feed', 'platform_data_deleted' ) ) 
+				if ( in_array( $type, array( 'database_create', 'upload_dir', 'unused_feed', 'platform_data_deleted', 'database_error' ) )
 					&& ! empty( $error ) ) {
 					return true;
 				}
@@ -127,7 +149,7 @@ class Util {
 
 	/**
 	 * Checks if license error exists
-	 * 
+	 *
 	 * @return bool
 	 */
 	public static function sbi_has_license_error() {
@@ -154,7 +176,7 @@ class Util {
 
 	/**
 	 * Get a valid timestamp to avoid Year 2038 problem.
-	 * 
+	 *
 	 * @param mixed $timestamp
 	 * @return int
 	 */
@@ -167,7 +189,7 @@ class Util {
 		if( is_numeric( $timestamp ) ) {
 			$timestamp = (int) $timestamp;
 			return $timestamp;
-		} 
+		}
 
 		$new_timestamp = new \DateTime( $timestamp );
 		$year = $new_timestamp->format( 'Y' );
@@ -183,7 +205,7 @@ class Util {
 
 	/**
 	 * Checks if the user has custom templates, CSS or JS added
-	 * 
+	 *
 	 * @return bool
 	 * @since 6.3
 	 */
@@ -216,17 +238,17 @@ class Util {
 		return false;
 	}
 
-	/** 
+	/**
 	 * Checks if the user has custom templates, CSS or JS added and if they have dismissed the notice
-	 * 
+	 *
 	 * @return bool
 	 * @since 6.3
 	 */
 	public static function sbi_show_legacy_css_settings() {
 		$show_legacy_css_settings = false;
 		$sbi_statuses = get_option( 'sbi_statuses', array() );
-		
-		if ( ( isset( $sbi_statuses['custom_templates_notice'] ) 
+
+		if ( ( isset( $sbi_statuses['custom_templates_notice'] )
 			&& self::sbi_has_custom_templates() )
 			|| self::sbi_legacy_css_enabled() ) {
 			$show_legacy_css_settings = true;
@@ -238,15 +260,15 @@ class Util {
 	}
 
 	/**
-	 * Checks if the user has legacy CSS enabled 
-	 * 
+	 * Checks if the user has legacy CSS enabled
+	 *
 	 * @return bool
 	 * @since 6.3
 	 */
 	public static function sbi_legacy_css_enabled() {
 		$legacy_css_enabled = false;
 		$settings = get_option( 'sb_instagram_settings', array() );
-		if ( isset( $settings['enqueue_legacy_css'] ) 
+		if ( isset( $settings['enqueue_legacy_css'] )
 			&& $settings['enqueue_legacy_css'] ) {
 			$legacy_css_enabled = true;
 		}
@@ -254,6 +276,21 @@ class Util {
 		$legacy_css_enabled = apply_filters( 'sbi_legacy_css_enabled', $legacy_css_enabled );
 
 		return $legacy_css_enabled;
+	}
+
+	/**
+	 * Safely unserialize data
+	 *
+	 * @param $data
+	 * @return mixed
+	 */
+	public static function safe_unserialize($data) {
+		if(!is_string($data)) {
+			return $data;
+		}
+
+		$data = Unserialize::unserialize($data, ['allowed_classes' => false]);
+		return $data;
 	}
 
 }

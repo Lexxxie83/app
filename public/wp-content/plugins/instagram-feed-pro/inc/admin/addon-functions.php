@@ -220,9 +220,9 @@ function sbi_encrypt_decrypt( $action, $string ) {
 }
 
 /**
- * AJAX dismiss Uncanny Automator notice
+ * AJAX dismiss ClickSocial notice
  */
-function sbi_dismiss_automator_notice() {
+function sbi_dismiss_clicksocial_notice() {
 	// Run a security check.
 	check_ajax_referer( 'sbi-admin', 'nonce' );
 
@@ -231,18 +231,16 @@ function sbi_dismiss_automator_notice() {
 	}
 
 	$user_id = get_current_user_id();
-
-	// update the source for the automator plugin
-	update_user_meta( $user_id, 'sbi_dismiss_automator_notice', strtotime( 'now' ) );
+	update_user_meta( $user_id, 'sbi_dismiss_clicksocial_notice', strtotime( 'now' ) );
 
 	wp_send_json_success();
 }
-add_action( 'wp_ajax_sbi_dismiss_automator_notice', 'sbi_dismiss_automator_notice');
+add_action( 'wp_ajax_sbi_dismiss_clicksocial_notice', 'sbi_dismiss_clicksocial_notice');
 
 /**
- * AJAX setup for the automator plugin to store the source information of Uncanny Automator
+ * AJAX setup for the ClickSocial plugin to store the source information of Instagram Feed
  */
-function sbi_automator_setup_source() {
+function sbi_clicksocial_setup_source() {
 	// Run a security check.
 	check_ajax_referer( 'sbi-admin', 'nonce' );
 
@@ -250,12 +248,11 @@ function sbi_automator_setup_source() {
 		wp_send_json_error();
 	}
 
-	// update the source for the automator plugin
-	update_option( 'uncannyautomator_source', 'sb' );
+	update_option( 'clicksocial_source', 'sb' );
 
 	wp_send_json_success();
 }
-add_action( 'wp_ajax_sbi_automator_setup_source', 'sbi_automator_setup_source');
+add_action( 'wp_ajax_sbi_clicksocial_setup_source', 'sbi_clicksocial_setup_source');
 
 /**
  * Ajax function to migrate Custom CSS and JS to WPCode Snippets

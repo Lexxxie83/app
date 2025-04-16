@@ -113,7 +113,7 @@ class LicenseNotification {
 
 		$url = sprintf(
 			'https://smashballoon.com/checkout/?edd_license_key=%s&download_id=%s&utm_campaign=instagram-pro&utm_source=expired-notice&utm_medium=renew-license',
-			$license_key,
+			esc_attr($license_key),
 			$sbi_download_id
 		);
 

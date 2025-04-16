@@ -138,7 +138,7 @@ class SBI_Notifications {
 	 * @return array
 	 */
 	public function fetch_feed() {
-		$res = wp_remote_get( $this->source_url() );
+		$res = wp_safe_remote_get( $this->source_url() );
 
 		if ( is_wp_error( $res ) ) {
 			return array();
@@ -174,6 +174,16 @@ class SBI_Notifications {
 		foreach ( $notifications as $notification ) {
 			// Ignore if not a targeted plugin
 			if ( ! empty( $notification['plugin'] ) && is_array( $notification['plugin'] ) && ! in_array( self::PLUGIN, $notification['plugin'], true ) ) {
+				continue;
+			}
+
+			// Ignore if PHP version requirement not met
+			if ( ! empty( $notification['minphpver'] ) && version_compare( PHP_VERSION, $notification['minphpver'], '<' ) ) {
+				continue;
+			}
+
+			// Ignore if PHP version is too high
+			if ( ! empty( $notification['maxphpver'] ) && version_compare( PHP_VERSION, $notification['maxphpver'], '>' ) ) {
 				continue;
 			}
 

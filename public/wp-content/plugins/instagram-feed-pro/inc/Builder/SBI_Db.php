@@ -29,23 +29,6 @@ class SBI_Db {
 		$sources_table_name = $wpdb->prefix . 'sbi_sources';
 		$feeds_table_name   = $wpdb->prefix . 'sbi_feeds';
 
-		$sbi_statuses = get_option('sbi_statuses', array());
-		if (empty($sbi_statuses['database']['connect_type_column'])) {
-			$column_exists = $wpdb->get_results("SHOW COLUMNS FROM $sources_table_name LIKE 'connect_type'");
-			if (empty($column_exists)) {
-				$wpdb->query("ALTER TABLE $sources_table_name ADD COLUMN connect_type VARCHAR(100) DEFAULT '' NOT NULL");
-				$wpdb->query("
-					UPDATE $sources_table_name 
-					SET connect_type = CASE 
-						WHEN account_type = 'business' THEN 'business_advanced' 
-						ELSE 'personal' 
-					END
-				");
-			}
-			$sbi_statuses['database']['connect_type_column'] = true;
-			update_option('sbi_statuses', $sbi_statuses);
-		}
-
 		$page = 0;
 		if ( isset( $args['page'] ) ) {
 			$page = (int) $args['page'] - 1;
@@ -238,6 +221,8 @@ class SBI_Db {
 	 */
 	public static function source_update( $to_update, $where_data ) {
 		global $wpdb;
+		global $sb_instagram_posts_manager;
+
 		$sources_table_name = $wpdb->prefix . 'sbi_sources';
 		$encryption         = new SB_Instagram_Data_Encryption();
 
@@ -324,8 +309,15 @@ class SBI_Db {
 		}
 		$affected = $wpdb->update( $sources_table_name, $data, $where, $format, $where_format );
 
-		// Clear cache.
-		self::clear_sources_cache();
+		if ($affected === false) {
+			$sb_instagram_posts_manager->add_error(
+				'database_error',
+				'<strong>' . __('There was an error when trying to update the part of the database that stores connected accounts:', 'instagram-feed') . '</strong><br><br><code>' . $wpdb->last_error . '</code><br>'
+			);
+		} else{
+			// Clear cache.
+			self::clear_sources_cache();
+		}
 
 		return $affected;
 	}
@@ -342,6 +334,8 @@ class SBI_Db {
 	 */
 	public static function source_insert( $to_insert ) {
 		global $wpdb;
+		global $sb_instagram_posts_manager;
+
 		$sources_table_name = $wpdb->prefix . 'sbi_sources';
 		$encryption         = new SB_Instagram_Data_Encryption();
 
@@ -400,10 +394,17 @@ class SBI_Db {
 			$data['connect_type'] = $to_insert['connect_type'];
 			$format[]        = '%s';
 		}
-		$affected = $wpdb->insert( $sources_table_name, $data, $format );
+		$affected = $wpdb->insert($sources_table_name, $data, $format);
 
-		// Clear cache.
-		self::clear_sources_cache();
+		if ($affected === false) {
+			$sb_instagram_posts_manager->add_error(
+				'database_error',
+				'<strong>' . __('There was an error when trying to update the part of the database that stores connected accounts:', 'instagram-feed') . '</strong><br><br><code>' . $wpdb->last_error . '</code><br>'
+			);
+		} else {
+			// Clear cache.
+			self::clear_sources_cache();
+		}
 
 		return $affected;
 	}
@@ -448,11 +449,12 @@ class SBI_Db {
 	/**
 	 * Query the to get feeds list for Elementor
 	 *
+	 * @param bool $custom - if true, add a custom option
 	 * @return array
 	 *
 	 * @since 6.0
 	 */
-	public static function elementor_feeds_query() {
+	public static function elementor_feeds_query($custom = false) {
 		global $wpdb;
 		$feeds_elementor  = array();
 		$feeds_table_name = $wpdb->prefix . 'sbi_feeds';
@@ -466,7 +468,12 @@ class SBI_Db {
 				$feeds_elementor[ $feed->id ] = $feed->feed_name;
 			}
 		}
-		return [ 0 => __('Choose a Feed', 'instagram-feed')] + $feeds_elementor;
+
+		if ($custom) {
+			$feeds_elementor[0] = esc_html__('Choose a Feed', 'instagram-feed');
+		}
+
+		return $feeds_elementor;
 	}
 
 

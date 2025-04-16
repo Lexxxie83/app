@@ -1017,7 +1017,6 @@ class SB_Instagram_Settings_Pro extends SB_Instagram_Settings{
 			if ( ! empty( $hashtag ) ) {
 				$saved_user_id = isset( $saved_hashtag_ids[ $hashtag ]['connected_account']['user_id'] ) && ! empty( $saved_hashtag_ids[ $hashtag ]['connected_account']['user_id'] ) ? $saved_hashtag_ids[ $hashtag ]['connected_account']['user_id'] : false;
 				$account_exists = $saved_user_id ? SB_Instagram_Connected_Account::lookup( (int) $saved_user_id, 'business' ) : false;
-
 				if ( $account_exists && isset( $saved_hashtag_ids[ $hashtag ] ) && isset( $saved_hashtag_ids[ $hashtag ]['connected_account'] ) ) {
 					$hashtag_id = isset( $saved_hashtag_ids[ $hashtag ]['id'] ) ? $saved_hashtag_ids[ $hashtag ]['id'] : $saved_hashtag_ids[ $hashtag ];
 					$connected_account = $account_exists ? $account_exists : $connected_business_accounts[0];
@@ -1044,7 +1043,11 @@ class SB_Instagram_Settings_Pro extends SB_Instagram_Settings{
 
 							if ( ! $sb_instagram_posts_manager->hashtag_has_error( $hashtag ) ) {
 								$connected_business_account = $connected_business_accounts[ $i ];
-								$new_hashtag_id = SB_Instagram_Settings_Pro::get_remote_hashtag_id_from_hashtag_name( $hashtag, $connected_business_account );
+								if ( ! empty( $saved_hashtag_ids[ $hashtag ] ) ) {
+									$new_hashtag_id = $saved_hashtag_ids[ $hashtag ]['id'];
+								} else {
+									$new_hashtag_id = SB_Instagram_Settings_Pro::get_remote_hashtag_id_from_hashtag_name( $hashtag, $connected_business_account );
+								}
 
 								if ( $new_hashtag_id ) {
 									$hashtag_id = $new_hashtag_id;

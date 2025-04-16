@@ -154,7 +154,7 @@ class SBI_About_Us {
 				'title'        => __( 'About Us', 'instagram-feed' ),
 				'title2'       => __( 'Our Other Social Media Feed Plugins', 'instagram-feed' ),
 				'title3'       => __( 'Plugins we recommend', 'instagram-feed' ),
-				'description2' => __( 'We’re more than just an Instagram plugin! Check out our other plugins and add more content to your site.', 'instagram-feed' ),
+				'description2' => sprintf(__('We’re more than just an Instagram plugin! %s Check out our other plugins and add more content to your site.', 'instagram-feed'), '<br>'),
 				'notification'                      => array(
 					'licenseActivated'   => array(
 						'type' => 'success',
@@ -178,13 +178,14 @@ class SBI_About_Us {
 					'plugin'          => $active_sb_plugins['instagram_plugin'],
 					'download_plugin' => 'https://downloads.wordpress.org/plugin/instagram-feed.zip',
 					'title'           => __( 'Instagram Feed', 'instagram-feed' ),
-					'description'     => __( 'A quick and elegant way to add your Instagram posts to your website. ', 'instagram-feed' ),
+					'description'     => __( 'An elegant way to add your Instagram posts to your website. ', 'instagram-feed' ),
 					'icon'            => SBI_PLUGIN_URL . 'admin/assets/img/insta-icon.svg',
 					'installed'       => $active_sb_plugins['is_instagram_installed'],
 					'activated'       => is_plugin_active( $active_sb_plugins['instagram_plugin'] ),
 				),
 				'facebook'  => array(
 					'plugin'      => $active_sb_plugins['facebook_plugin'],
+					'download_plugin' => 'https://downloads.wordpress.org/plugin/custom-facebook-feed.zip',
 					'title'       => __( 'Custom Facebook Feed', 'instagram-feed' ),
 					'description' => __( 'Add Facebook posts from your timeline, albums and much more.', 'instagram-feed' ),
 					'icon'        => SBI_PLUGIN_URL . 'admin/assets/img/fb-icon.svg',
@@ -209,15 +210,44 @@ class SBI_About_Us {
 					'installed'       => $active_sb_plugins['is_youtube_installed'],
 					'activated'       => is_plugin_active( $active_sb_plugins['youtube_plugin'] ),
 				),
+				'tiktok'  => array(
+					'plugin' => $active_sb_plugins['tiktok_plugin'],
+					'download_plugin' => 'https://downloads.wordpress.org/plugin/feeds-for-tiktok.zip',
+					'title' => __('TikTok Feeds', 'instagram-feed'),
+					'description' => __('Display customizable TikTok feeds in WordPress', 'instagram-feed'),
+					'icon' => SBI_PLUGIN_URL . 'admin/assets/img/tiktok-icon.svg',
+					'installed' => $active_sb_plugins['is_tiktok_installed'],
+					'activated' => is_plugin_active($active_sb_plugins['tiktok_plugin']),
+				),
+				'reviews'  => array(
+					'plugin' => $active_sb_plugins['reviews_plugin'],
+					'download_plugin' => 'https://downloads.wordpress.org/plugin/reviews-feed.zip',
+					'title' => __('Reviews Feed', 'instagram-feed'),
+					'description' => __('Display reviews from Google, Facebook, Yelp, and more', 'instagram-feed'),
+					'icon' => SBI_PLUGIN_URL . 'admin/assets/img/reviews-icon.svg',
+					'installed' => $active_sb_plugins['is_reviews_installed'],
+					'activated' => is_plugin_active($active_sb_plugins['reviews_plugin']),
+				),
 			),
-			'social_wall'         => array(
-				'plugin'      => $active_sb_plugins['social_wall_plugin'],
-				'title'       => __( 'Social Wall', 'instagram-feed' ),
-				'description' => __( 'Combine feeds from all of our plugins into a single wall', 'instagram-feed' ),
-				'graphic'     => SBI_PLUGIN_URL . 'admin/assets/img/social-wall-graphic.png',
-				'permalink'   => sprintf( 'https://smashballoon.com/social-wall/demo?edd_license_key=%s&upgrade=true&utm_campaign=instagram-pro&utm_source=about&utm_medium=social-wall', $license_key ),
-				'installed'   => is_plugin_active( $active_sb_plugins['is_social_wall_installed'] ),
-				'activated'   => is_plugin_active( $active_sb_plugins['social_wall_plugin'] ),
+			'proPluginsInfo' => array(
+				'social_wall'  => array(
+					'plugin' => $active_sb_plugins['social_wall_plugin'],
+					'title' => __('Social Wall', 'instagram-feed'),
+					'description' => __('Combine feeds from all of our plugins into a single wall', 'instagram-feed'),
+					'icon' => SBI_PLUGIN_URL . 'admin/assets/img/social-wall-icon.svg',
+					'permalink' => sprintf('https://smashballoon.com/social-wall/demo?edd_license_key=%s&upgrade=true&utm_campaign=instagram-pro&utm_source=about&utm_medium=social-wall', $license_key),
+					'installed' => is_plugin_active($active_sb_plugins['is_social_wall_installed']),
+					'activated' => is_plugin_active($active_sb_plugins['social_wall_plugin']),
+				),
+				'feed_analytics'   => array(
+					'plugin'          => 'sb-analytics/sb-analytics-pro.php',
+					'title'           => __('Feed Analytics', 'instagram-feed'),
+					'description'     => __('Get in depth analytics on all your social feeds in a single place', 'instagram-feed'),
+					'icon' => SBI_PLUGIN_URL . 'admin/assets/img/feed-analytics-icon.svg',
+					'permalink' => sprintf('https://smashballoon.com/feed-analytics?license_key=%s&upgrade=true&utm_campaign=instagram-pro&utm_source=about&utm_medium=feed-analytics', $license_key),
+					'installed' => isset($installed_plugins['sb-analytics/sb-analytics-pro.php']) ? true : false,
+					'activated' => is_plugin_active('sb-analytics/sb-analytics-pro.php'),
+				),
 			),
 			'recommendedPlugins'  => array(
 				'wpforms'         => array(
@@ -289,6 +319,7 @@ class SBI_About_Us {
 				'loaderSVG'    => '<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#fff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path></svg>',
 				'checkmarkSVG' => '<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.13112 6.88917L11.4951 0.525204L12.9093 1.93942L5.13112 9.71759L0.888482 5.47495L2.3027 4.06074L5.13112 6.88917Z" fill="#8C8F9A"/></svg>',
 				'link'         => '<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.333374 9.22668L7.39338 2.16668H3.00004V0.833344H9.66671V7.50001H8.33338V3.10668L1.27337 10.1667L0.333374 9.22668Z" fill="#141B38"/></svg>',
+				'installIcon' => '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.213 2.84015C11.2019 2.01003 9.96799 1.49743 8.66634 1.36682V2.71349C9.63967 2.83349 10.5263 3.22015 11.2663 3.79349L12.213 2.84015ZM13.2863 7.33349H14.633C14.4997 5.99349 13.9663 4.77349 13.1597 3.78682L12.2063 4.73349C12.7944 5.48679 13.1676 6.38523 13.2863 7.33349ZM12.2063 11.2668L13.1597 12.2202C13.9887 11.2084 14.5012 9.97482 14.633 8.67349H13.2863C13.1663 9.61938 12.7932 10.5153 12.2063 11.2668ZM8.66634 13.2868V14.6335C10.0063 14.5002 11.2263 13.9668 12.213 13.1602L11.2597 12.2068C10.5263 12.7802 9.63967 13.1668 8.66634 13.2868ZM10.393 7.06015L8.66634 8.78015V4.66682H7.33301V8.78015L5.60634 7.05349L4.66634 8.00015L7.99967 11.3335L11.333 8.00015L10.393 7.06015ZM7.33301 13.2868V14.6335C3.96634 14.3002 1.33301 11.4602 1.33301 8.00015C1.33301 4.54015 3.96634 1.70015 7.33301 1.36682V2.71349C4.69967 3.04015 2.66634 5.28015 2.66634 8.00015C2.66634 10.7202 4.69967 12.9602 7.33301 13.2868Z" fill="#141B38"/></svg>',
 			),
 		);
 
@@ -301,6 +332,6 @@ class SBI_About_Us {
 	 * @since 6.0
 	 */
 	public function about_us() {
-		SBI_View::render( 'about.index' );
+		SBI_View::render( 'about.page' );
 	}
 }

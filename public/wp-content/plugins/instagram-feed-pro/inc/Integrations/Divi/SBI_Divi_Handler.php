@@ -29,17 +29,14 @@ class SBI_Divi_Handler{
 	 * @return bool
 	 */
 	public function allow_load() {
-
-		if ( function_exists( 'et_divi_builder_init_plugin' ) ) {
+		if (function_exists('et_divi_builder_init_plugin')) {
 			return true;
 		}
 
-		$allow_themes = [ 'Divi' ];
-		$theme        = wp_get_theme();
-		$theme_name   = $theme->get_template();
-		$theme_parent = $theme->parent();
+		$allow_themes = ['Divi'];
+		$theme_name   = get_template();
 
-		return (bool) array_intersect( [ $theme_name, $theme_parent ], $allow_themes );
+		return in_array($theme_name, $allow_themes, true);
 	}
 
 

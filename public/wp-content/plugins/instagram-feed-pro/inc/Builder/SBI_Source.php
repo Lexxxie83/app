@@ -372,22 +372,31 @@ class SBI_Source {
 		$already_connected_as_business_account = isset($results[0]) && $results[0]['account_type'] === 'business';
 		$matches_existing_personal             = isset($results[0]) && $results[0]['account_type'] !== 'business';
 
-		if ( $already_connected_as_business_account ) {
-			$return['matchingExistingAccounts']           = $results[0];
-			$instagram_account_data                       = json_decode( $encryption->decrypt( $results[0]['info'] ), true );
-			$return['matchingExistingAccounts']['avatar'] = isset( $instagram_account_data['profile_picture_url'] ) ? $instagram_account_data['profile_picture_url'] : false;
-
-			$return['notice'] = __( 'The Instagram account you are logged into is already connected as a "business" account. Remove the business account if you\'d like to connect as a basic account instead (not recommended).', 'instagram-feed' );
-		} elseif ( $matches_existing_personal ) {
+		if ($already_connected_as_business_account) {
 			$return['matchingExistingAccounts'] = $results[0];
-			SBI_Db::delete_source( $results[0]['id'] );
-			self::update_or_insert( $source_data );
-			$return['notice']         = '';
-			$return['didQuickUpdate'] = true;
-			sbi_clear_caches(); // clear caches to allow api errors to reset
+			$instagram_account_data = json_decode($encryption->decrypt($results[0]['info']), true);
+			$return['matchingExistingAccounts']['avatar'] = isset($instagram_account_data['profile_picture_url']) ? $instagram_account_data['profile_picture_url'] : false;
+
+			$return['notice'] = __('The Instagram account you are logged into is already connected as a "business" account. Remove the business account if you\'d like to connect as a basic account instead (not recommended).', 'instagram-feed');
 		} else {
-			self::update_or_insert( $source_data );
+			if ($matches_existing_personal) {
+				$return['matchingExistingAccounts'] = $results[0];
+				SBI_Db::delete_source($results[0]['id']);
+			}
+
+			$update_result = self::update_or_insert($source_data);
+			if ($update_result === false) {
+				return array(
+					'error' => array(
+						'code'    => 'Database Error',
+						'message' => __('Failed to update or insert the source data.', 'instagram-feed'),
+						'details' => __('Failed to update or insert the source data.', 'instagram-feed'),
+					),
+				);
+			}
+
 			$return['didQuickUpdate'] = true;
+			$return['notice'] = isset($return['notice']) ? $return['notice'] : '';
 		}
 
 		$personal_accounts = SBI_Db::source_query(array('type' => 'basic'));
@@ -427,7 +436,7 @@ class SBI_Source {
 		$args       = array(
 			'timeout'   => 60,
 		);
-		$result     = wp_remote_get( $url, $args );
+		$result     = wp_safe_remote_get( $url, $args );
 		$pages_data = '{}';
 		if ( ! is_wp_error( $result ) ) {
 			$pages_data = $result['body'];
@@ -464,7 +473,7 @@ class SBI_Source {
 		$args     = array(
 			'timeout'   => 60,
 		);
-		$result   = wp_remote_get( $user_url, $args );
+		$result   = wp_safe_remote_get( $user_url, $args );
 		if ( ! is_wp_error( $result ) ) {
 			$user_data     = $result['body'];
 			$user_data_arr = json_decode( $user_data, true );
@@ -482,7 +491,7 @@ class SBI_Source {
 				$args   = array(
 					'timeout'   => 60,
 				);
-				$result = wp_remote_get( $instagram_account_url, $args );
+				$result = wp_safe_remote_get( $instagram_account_url, $args );
 				if ( ! is_wp_error( $result ) ) {
 					$instagram_account_info = $result['body'];
 
@@ -550,29 +559,25 @@ class SBI_Source {
 	 * @since 6.0
 	 */
 	public static function update_or_insert( $source_data ) {
-		if ( ! isset( $source_data['id'] ) ) {
-			return false;
-		}
+		$result = false;
 
-		if ( isset( $source_data['info'] ) ) {
-			// data from an API request related to the source is saved as a JSON string
-			if ( is_object( $source_data['info'] ) || is_array( $source_data['info'] ) ) {
-				$source_data['info'] = sbi_json_encode( $source_data['info'] );
+		if (isset($source_data['id'])) {
+			if (isset($source_data['info'])) {
+				// data from an API request related to the source is saved as a JSON string
+				if (is_object($source_data['info']) || is_array($source_data['info'])) {
+					$source_data['info'] = sbi_json_encode($source_data['info']);
+				}
+			}
+
+			if (self::exists_in_database($source_data)) {
+				$source_data['last_updated'] = date('Y-m-d H:i:s');
+				$result = self::update($source_data, false) !== false;
+			} elseif (isset($source_data['access_token'])) {
+				$result = self::insert($source_data) !== false;
 			}
 		}
 
-		if ( self::exists_in_database( $source_data ) ) {
-			$source_data['last_updated'] = date( 'Y-m-d H:i:s' );
-			self::update( $source_data, false );
-		} else {
-			if ( ! isset( $source_data['access_token'] ) ) {
-				return false;
-			}
-
-			self::insert( $source_data );
-		}
-
-		return true;
+		return $result;
 	}
 
 	/**

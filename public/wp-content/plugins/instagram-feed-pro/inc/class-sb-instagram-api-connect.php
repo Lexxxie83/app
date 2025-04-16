@@ -191,7 +191,7 @@ class SB_Instagram_API_Connect
 		$args = array(
 			'timeout' => 20
 		);
-		$response = wp_remote_get( $this->url, $args );
+		$response = wp_safe_remote_get( $this->url, $args );
 
 		if ( ! $bypass_connect_response ) {
 			/**

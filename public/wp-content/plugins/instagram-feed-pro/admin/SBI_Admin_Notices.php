@@ -1,12 +1,14 @@
 <?php
+
 /**
  * CFF Admin Notices.
  *
  * @since 6.0
  */
+
 namespace InstagramFeed\Admin;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 
@@ -14,7 +16,8 @@ use InstagramFeed\SBI_Response;
 use InstagramFeed\Helpers\Util;
 use InstagramFeed\SBI_HTTP_Request;
 
-class SBI_Admin_Notices {
+class SBI_Admin_Notices
+{
 
 
 	/**
@@ -22,7 +25,8 @@ class SBI_Admin_Notices {
 	 */
 	public $sbi_license;
 
-	public function __construct() {
+	public function __construct()
+	{
 		$this->init();
 	}
 
@@ -31,18 +35,21 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.0
 	 */
-	public function init() {
-		if ( ! is_admin() ) {
+	public function init()
+	{
+		if (! is_admin()) {
 			return;
 		}
-		add_action( 'in_admin_header', array( $this, 'remove_admin_notices' ) );
-		add_action( 'sbi_admin_header_notices', array( $this, 'sbi_license_header_notices' ) );
-		add_action( 'admin_init', array( $this, 'sbi_license_notices' ) );
-		add_action( 'admin_init', array( $this, 'sbi_admin_notices' ) );
-		add_action( 'wp_ajax_sbi_check_license', array( $this, 'sbi_check_license' ) );
-		add_action( 'wp_ajax_sbi_dismiss_license_notice', array( $this, 'sbi_dismiss_license_notice' ) );
-		add_action( 'wp_ajax_sbi_license_activation', array( $this, 'ajax_activate_license' ) );
-		add_action( 'sb_notice_custom_feed_templates_dismissed', array( $this, 'sbi_dismiss_notice' ) );
+		add_action('in_admin_header', array($this, 'remove_admin_notices'));
+		add_action('sbi_admin_header_notices', array($this, 'sbi_license_header_notices'));
+		add_action('admin_init', array($this, 'sbi_license_notices'));
+		add_action('admin_init', array($this, 'sbi_admin_notices'));
+		add_action('wp_ajax_sbi_check_license', array($this, 'sbi_check_license'));
+		add_action('wp_ajax_sbi_dismiss_license_notice', array($this, 'sbi_dismiss_license_notice'));
+		add_action('wp_ajax_sbi_license_activation', array($this, 'ajax_activate_license'));
+		add_action('sb_notice_custom_feed_templates_dismissed', array($this, 'sbi_dismiss_notice'));
+		add_action('admin_notices', array($this, 'clicksocial_upsell_notice'));
+		add_action('wp_ajax_sbi_dismiss_clicksocial_upsell', array($this, 'sbi_dismiss_clicksocial_upsell'));
 	}
 
 	/**
@@ -50,7 +57,8 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.0
 	 */
-	public function remove_admin_notices() {
+	public function remove_admin_notices()
+	{
 		$current_screen      = get_current_screen();
 		$not_allowed_screens = array(
 			'instagram-feed_page_sbi-feed-builder',
@@ -61,9 +69,9 @@ class SBI_Admin_Notices {
 			'instagram-feed_page_sbi-support',
 		);
 
-		if ( in_array( $current_screen->base, $not_allowed_screens, true ) || strpos( $current_screen->base, 'sbi-' ) !== false ) {
-			remove_all_actions( 'admin_notices' );
-			remove_all_actions( 'all_admin_notices' );
+		if (in_array($current_screen->base, $not_allowed_screens, true) || strpos($current_screen->base, 'sbi-') !== false) {
+			remove_all_actions('admin_notices');
+			remove_all_actions('all_admin_notices');
 		}
 	}
 
@@ -74,17 +82,18 @@ class SBI_Admin_Notices {
 	 *
 	 * @return string $url
 	 */
-	public static function get_renew_url( $license_state = 'expired' ) {
+	public static function get_renew_url($license_state = 'expired')
+	{
 		global $sbi_download_id;
-		if ( $license_state == 'inactive' ) {
-			return admin_url( 'admin.php?page=sbi-settings&focus=license' );
+		if ($license_state == 'inactive') {
+			return admin_url('admin.php?page=sbi-settings&focus=license');
 		}
 
-		$license_key = get_option( 'sbi_license_key' ) ? get_option( 'sbi_license_key' ) : null;
+		$license_key = get_option('sbi_license_key') ? get_option('sbi_license_key') : null;
 
 		$url = sprintf(
 			'https://smashballoon.com/checkout/?edd_license_key=%s&download_id=%s&utm_campaign=instagram-pro&utm_source=expired-notice&utm_medium=renew-license',
-			$license_key,
+			esc_attr($license_key),
 			$sbi_download_id
 		);
 
@@ -96,11 +105,12 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.0
 	 */
-	public function sbi_check_license() {
-		$sbi_license_key = trim( get_option( 'sbi_license_key' ) );
-		check_ajax_referer( 'sbi_nonce', 'sbi_nonce' );
+	public function sbi_check_license()
+	{
+		$sbi_license_key = trim(get_option('sbi_license_key'));
+		check_ajax_referer('sbi_nonce', 'sbi_nonce');
 
-		if ( ! sbi_current_user_can( 'manage_instagram_feed_options' ) ) {
+		if (! sbi_current_user_can('manage_instagram_feed_options')) {
 			wp_send_json_error(); // This auto-dies.
 		}
 
@@ -108,23 +118,23 @@ class SBI_Admin_Notices {
 		$sbi_api_params   = array(
 			'edd_action' => 'check_license',
 			'license'    => $sbi_license_key,
-			'item_name'  => urlencode( SBI_PLUGIN_NAME ), // the name of our product in EDD
+			'item_name'  => urlencode(SBI_PLUGIN_NAME), // the name of our product in EDD
 		);
-		$sbi_response     = wp_remote_get(
+		$sbi_response     = wp_safe_remote_get(
 			add_query_arg( $sbi_api_params, SBI_STORE_URL ),
 			array(
 				'timeout' => 60,
 			)
 		);
-		$sbi_license_data = (array) json_decode( wp_remote_retrieve_body( $sbi_response ) );
+		$sbi_license_data = (array) json_decode(wp_remote_retrieve_body($sbi_response));
 		// Update the updated license data
-		update_option( 'sbi_license_data', $sbi_license_data );
+		update_option('sbi_license_data', $sbi_license_data);
 
-		$sbi_todays_date = gmdate( 'Y-m-d' );
+		$sbi_todays_date = gmdate('Y-m-d');
 		// Check whether it's active
-		if ( $sbi_license_data['license'] !== 'expired' && ( strtotime( $sbi_license_data['expires'] ) > strtotime( $sbi_todays_date ) ) ) {
+		if ($sbi_license_data['license'] !== 'expired' && (strtotime($sbi_license_data['expires']) > strtotime($sbi_todays_date))) {
 			// if the license is active then lets remove the ignore check for dashboard so next time it will show the expired notice in dashboard screen
-			update_user_meta( get_current_user_id(), 'sbi_ignore_dashboard_license_notice', false );
+			update_user_meta(get_current_user_id(), 'sbi_ignore_dashboard_license_notice', false);
 
 			$response = new SBI_Response(
 				true,
@@ -136,7 +146,7 @@ class SBI_Admin_Notices {
 			$response->send();
 		} else {
 			$content  = $this->get_recheck_expired_license_notice_content();
-			$content  = str_replace( 'Your Instagram Feed Pro license key has expired', 'We rechecked but your license key is still expired', $content );
+			$content  = str_replace('Your Instagram Feed Pro license key has expired', 'We rechecked but your license key is still expired', $content);
 			$response = new SBI_Response(
 				false,
 				array(
@@ -153,15 +163,16 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.0
 	 */
-	public function sbi_dismiss_license_notice() {
-		check_ajax_referer( 'sbi_nonce', 'sbi_nonce' );
+	public function sbi_dismiss_license_notice()
+	{
+		check_ajax_referer('sbi_nonce', 'sbi_nonce');
 
-		if ( ! sbi_current_user_can( 'manage_instagram_feed_options' ) ) {
+		if (! sbi_current_user_can('manage_instagram_feed_options')) {
 			wp_send_json_error(); // This auto-dies.
 		}
 		global $current_user;
 		$user_id = $current_user->ID;
-		update_user_meta( $user_id, 'sbi_ignore_dashboard_license_notice', true );
+		update_user_meta($user_id, 'sbi_ignore_dashboard_license_notice', true);
 	}
 
 	/**
@@ -169,37 +180,38 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.2.0
 	 */
-	public function sbi_license_header_notices() {
+	public function sbi_license_header_notices()
+	{
 		$current_screen = sbi_builder_pro()->license_service->is_current_screen_allowed();
 		// Only display notice to admins.
-		if ( ! current_user_can( sbi_builder_pro()->license_service->capability_check ) ) {
+		if (! current_user_can(sbi_builder_pro()->license_service->capability_check)) {
 			return;
 		}
 		// We will display the license notice only on those allowed screens.
-		if ( ! $current_screen || ( isset( $current_screen['is_allowed'] ) && $current_screen['is_allowed'] === false ) ) {
+		if (! $current_screen || (isset($current_screen['is_allowed']) && $current_screen['is_allowed'] === false)) {
 			return;
 		}
 		// get the license key.
 		$sbi_license_key = sbi_builder_pro()->license_service->get_license_key;
 		/* Check that the license exists and */
-		if ( empty( $sbi_license_key ) || ! isset( $sbi_license_key ) ) {
-			if ( $current_screen['base'] == 'instagram-feed_page_sbi-feed-builder' ) {
-				echo $this->get_post_grace_period_header_notice( 'sbi-license-inactive-state' );
+		if (empty($sbi_license_key) || ! isset($sbi_license_key)) {
+			if ($current_screen['base'] == 'instagram-feed_page_sbi-feed-builder') {
+				echo $this->get_post_grace_period_header_notice('sbi-license-inactive-state');
 			}
 			return;
 		}
 
 		// Number of days until license expires.
 		$sbi_license_expired = sbi_builder_pro()->license_service->is_license_expired;
-		if ( ! $sbi_license_expired ) {
+		if (! $sbi_license_expired) {
 			return;
 		}
 		// Grace period ended?
-		if ( sbi_builder_pro()->license_service->is_license_grace_period_ended( true ) ) {
-			if ( get_option( 'sbi_check_license_api_post_grace_period' ) !== 'false' ) {
-				$sbi_license_expired = sbi_builder_pro()->license_service->sbi_check_license( sbi_builder_pro()->license_service->get_license_key, true, true );
+		if (sbi_builder_pro()->license_service->is_license_grace_period_ended(true)) {
+			if (get_option('sbi_check_license_api_post_grace_period') !== 'false') {
+				$sbi_license_expired = sbi_builder_pro()->license_service->sbi_check_license(sbi_builder_pro()->license_service->get_license_key, true, true);
 			}
-			if ( $sbi_license_expired ) {
+			if ($sbi_license_expired) {
 				echo $this->get_post_grace_period_header_notice();
 			}
 		}
@@ -210,7 +222,8 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.2.0
 	 */
-	public function sbi_license_notices() {
+	public function sbi_license_notices()
+	{
 		$allowed_screens = array(
 			'sbi-feed-builder',
 			'sbi-settings',
@@ -219,40 +232,40 @@ class SBI_Admin_Notices {
 			'sbi-about-us',
 			'sbi-support',
 		);
-		$current_screen  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-		$is_allowed      = in_array( $current_screen, $allowed_screens );
+		$current_screen  = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
+		$is_allowed      = in_array($current_screen, $allowed_screens);
 
 		// We will display the license notice only on those allowed screens.
-		if ( ! $current_screen || ! $is_allowed ) {
+		if (! $current_screen || ! $is_allowed) {
 			return;
 		}
 
 		// Only display notice to admins.
-		if ( ! current_user_can( sbi_builder_pro()->license_service->capability_check ) ) {
+		if (! current_user_can(sbi_builder_pro()->license_service->capability_check)) {
 			return;
 		}
 
 		// get the license key.
 		$sbi_license_key = sbi_builder_pro()->license_service->get_license_key;
 		/* Check that the license exists and the user hasn't already clicked to ignore the message */
-		if ( empty( $sbi_license_key ) || ! isset( $sbi_license_key ) ) {
-			if ( $current_screen !== 'sbi-feed-builder' ) {
+		if (empty($sbi_license_key) || ! isset($sbi_license_key)) {
+			if ($current_screen !== 'sbi-feed-builder') {
 				$this->get_inactive_license_notice_content();
 			}
 			return;
 		}
 		// If license not expired then return;
 		$sbi_license_expired = sbi_builder_pro()->license_service->is_license_expired;
-		if ( ! $sbi_license_expired ) {
+		if (! $sbi_license_expired) {
 			return;
 		}
 		// Grace period ended?
-		if ( sbi_builder_pro()->license_service->is_license_grace_period_ended ) {
+		if (sbi_builder_pro()->license_service->is_license_grace_period_ended) {
 			return;
 		}
 		// So, license has expired and grace period active.
 		// Lets display the error notice.
-		if ( $current_screen !== 'sbi-settings' ) {
+		if ($current_screen !== 'sbi-settings') {
 			$this->get_expired_license_notice_content();
 		}
 	}
@@ -264,7 +277,8 @@ class SBI_Admin_Notices {
 	 *
 	 * @return string $output
 	 */
-	public function get_recheck_expired_license_notice_content() {
+	public function get_recheck_expired_license_notice_content()
+	{
 		global $current_user;
 		$current_screen = get_current_screen();
 
@@ -279,7 +293,7 @@ class SBI_Admin_Notices {
 				<svg class="sb-notice-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 15H9V13H11V15ZM11 11H9V5H11V11Z" fill="#D72C2C"/></svg>
 			</div>';
 
-		if ( ! empty( $current_screen->base ) && $current_screen->base == 'dashboard' ) {
+		if (! empty($current_screen->base) && $current_screen->base == 'dashboard') {
 			$output .= '<button id="sb-dismiss-notice">
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.66683 1.27325L8.72683 0.333252L5.00016 4.05992L1.2735 0.333252L0.333496 1.27325L4.06016 4.99992L0.333496 8.72659L1.2735 9.66659L5.00016 5.93992L8.72683 9.66659L9.66683 8.72659L5.94016 4.99992L9.66683 1.27325Z" fill="white"/>
@@ -295,9 +309,10 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.2.0
 	 */
-	public function get_post_grace_period_header_notice( $license_status = 'expired' ) {
+	public function get_post_grace_period_header_notice($license_status = 'expired')
+	{
 		$notice_text = 'Your Instagram Feed Pro License has expired. Renew to keep using PRO features.';
-		if ( $license_status == 'sbi-license-inactive-state' ) {
+		if ($license_status == 'sbi-license-inactive-state') {
 			$notice_text = 'Your license key is inactive. Please add license key to enable PRO features.';
 		}
 		return '<div id="sbi-license-expired-agp" class="sbi-license-expired-agp sbi-le-flow-1 ' . $license_status . '">
@@ -317,7 +332,8 @@ class SBI_Admin_Notices {
 	 *
 	 * @return string $output
 	 */
-	public function get_renewed_license_notice_content() {
+	public function get_renewed_license_notice_content()
+	{
 		$output = '<span class="sb-notice-icon sb-error-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#59AB46"/>
@@ -339,10 +355,11 @@ class SBI_Admin_Notices {
 		return $output;
 	}
 
-	public function get_inactive_license_notice_content() {
+	public function get_inactive_license_notice_content()
+	{
 		global $sbi_notices;
-		$title   = __( 'Your license key is inactive', 'instagram-feed' );
-		$message = '<p>' . __( 'No license key detected. Please activate your license key to enable Pro features.', 'instagram-feed' ) . '</p>';
+		$title   = __('Your license key is inactive', 'instagram-feed');
+		$message = '<p>' . __('No license key detected. Please activate your license key to enable Pro features.', 'instagram-feed') . '</p>';
 
 		$error_args = array(
 			'version'            => 'pro',
@@ -362,10 +379,10 @@ class SBI_Admin_Notices {
 				'sbi-about-us',
 				'sbi-support',
 			),
-			'capability'         => array( 'manage_instagram_feed_options', 'manage_options' ),
+			'capability'         => array('manage_instagram_feed_options', 'manage_options'),
 			'buttons'            => array(
 				array(
-					'text'      => __( 'Activate License Key', 'instagram-feed' ),
+					'text'      => __('Activate License Key', 'instagram-feed'),
 					'class'     => 'sb-btn sb-btn-blue',
 					'id'        => 'sbFocusLicenseSection',
 					'tag'       => 'a',
@@ -376,8 +393,8 @@ class SBI_Admin_Notices {
 					),
 				),
 				array(
-					'text'      => __( 'Activate License Key', 'instagram-feed' ),
-					'url'       => admin_url( 'admin.php?page=sbi-settings&focus=license' ),
+					'text'      => __('Activate License Key', 'instagram-feed'),
+					'url'       => admin_url('admin.php?page=sbi-settings&focus=license'),
 					'class'     => 'sb-btn sb-btn-blue',
 					'tag'       => 'a',
 					'condition' => array(
@@ -387,7 +404,7 @@ class SBI_Admin_Notices {
 					),
 				),
 				array(
-					'text'  => __( 'Learn More', 'instagram-feed' ),
+					'text'  => __('Learn More', 'instagram-feed'),
 					'class' => 'sb-btn sb-btn-grey',
 					'vue'   => 'v-on:click="activateView(\'licenseLearnMore\')"',
 					'tag'   => 'a',
@@ -403,13 +420,14 @@ class SBI_Admin_Notices {
 
 		);
 
-		$sbi_notices->add_notice( 'license_inactive', 'error', $error_args );
+		$sbi_notices->add_notice('license_inactive', 'error', $error_args);
 	}
 
-	public function get_expired_license_notice_content() {
+	public function get_expired_license_notice_content()
+	{
 		global $sbi_notices;
-		$title   = __( 'Your license key has expired', 'instagram-feed' );
-		$message = '<p>' . __( 'You are no longer receiving updates that protect you against upcoming Facebook changes. There’s a <strong>14 day</strong> grace period before access to some Pro features in the plugin will be limited.', 'instagram-feed' ) . '</p>';
+		$title   = __('Your license key has expired', 'instagram-feed');
+		$message = '<p>' . __('You are no longer receiving updates that protect you against upcoming Facebook changes. There’s a <strong>14 day</strong> grace period before access to some Pro features in the plugin will be limited.', 'instagram-feed') . '</p>';
 
 		$error_args = array(
 			'version'            => 'pro',
@@ -428,17 +446,17 @@ class SBI_Admin_Notices {
 				'sbi-about-us',
 				'sbi-support',
 			),
-			'capability'         => array( 'manage_instagram_feed_options', 'manage_options' ),
+			'capability'         => array('manage_instagram_feed_options', 'manage_options'),
 			'buttons'            => array(
 				array(
-					'text'   => __( 'Renew License', 'instagram-feed' ),
+					'text'   => __('Renew License', 'instagram-feed'),
 					'url'    => $this->get_renew_url(),
 					'class'  => 'sb-btn sb-btn-blue',
 					'tag'    => 'a',
 					'target' => '_blank',
 				),
 				array(
-					'text'  => __( 'Why Renew?', 'instagram-feed' ),
+					'text'  => __('Why Renew?', 'instagram-feed'),
 					'class' => 'sb-btn',
 					'url'   => '#',
 					'vue'   => 'v-on:click="activateView(\'whyRenewLicense\')"',
@@ -460,7 +478,7 @@ class SBI_Admin_Notices {
 			'wrap_schema'        => '<div {class}>{title}{message}{buttons}{icon}</div>',
 		);
 
-		$sbi_notices->add_notice( 'license_expired', 'error', $error_args );
+		$sbi_notices->add_notice('license_expired', 'error', $error_args);
 	}
 
 	/**
@@ -468,21 +486,22 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.2.0
 	 */
-	public function ajax_activate_license() {
-		check_ajax_referer( 'sbi-admin', 'nonce' );
+	public function ajax_activate_license()
+	{
+		check_ajax_referer('sbi-admin', 'nonce');
 
-		if ( ! sbi_builder_pro()->license_service->capability_check ) {
-			return;
+		if ( ! current_user_can('manage_instagram_feed_options') ) {
+			wp_send_json_error( array( 'message' => 'You do not have permission to perform this action.' ) );
 		}
 
-		$license_key = sanitize_text_field( $_POST['license_key'] );
+		$license_key = sanitize_text_field($_POST['license_key']);
 
-		$response = $this->sbi_activate_license( $license_key );
+		$response = $this->sbi_activate_license($license_key);
 
-		if ( $response === true ) {
+		if ($response === true) {
 			// Remove the license notice
 			global $sbi_notices;
-			$sbi_notices->remove_notice( 'license_inactive' );
+			$sbi_notices->remove_notice('license_inactive');
 			wp_send_json_success();
 		}
 
@@ -494,20 +513,21 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.2.0
 	 */
-	public function sbi_activate_license( $license_key ) {
+	public function sbi_activate_license($license_key)
+	{
 		// retrieve the license from the database
-		$sbi_license_key = trim( $license_key );
+		$sbi_license_key = trim($license_key);
 
 		// data to send in our API request
 		$api_params = array(
 			'edd_action' => 'activate_license',
 			'license'    => $sbi_license_key,
-			'item_name'  => urlencode( SBI_PLUGIN_NAME ), // the name of our product in EDD
+			'item_name'  => urlencode(SBI_PLUGIN_NAME), // the name of our product in EDD
 			'url'        => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_get(
+		$response = wp_safe_remote_get(
 			add_query_arg( $api_params, SBI_STORE_URL ),
 			array(
 				'timeout'   => 15,
@@ -516,12 +536,12 @@ class SBI_Admin_Notices {
 		);
 
 		// make sure the response came back okay
-		if ( is_wp_error( $response ) ) {
+		if (is_wp_error($response)) {
 			return false;
 		}
 
 		// decode the license data
-		$sbi_license_data = (array) json_decode( wp_remote_retrieve_body( $response ) );
+		$sbi_license_data = (array) json_decode(wp_remote_retrieve_body($response));
 
 		if (
 			$sbi_license_data['success'] == false ||
@@ -529,19 +549,20 @@ class SBI_Admin_Notices {
 			$sbi_license_data['license'] == 'invalid_item_id' ||
 			$sbi_license_data['license'] == 'invalid' ||
 			$sbi_license_data['license'] == 'expired' ||
-			$sbi_license_data['error'] == 'missing' ) {
+			$sbi_license_data['error'] == 'missing'
+		) {
 			return false;
 		}
 
 		// only store the license key
-		update_option( 'sbi_license_key', $license_key );
+		update_option('sbi_license_key', $license_key);
 		// store the license data in an option
-		update_option( 'sbi_license_data', $sbi_license_data );
+		update_option('sbi_license_data', $sbi_license_data);
 		// $license_data->license will be either "valid" or "invalid"
-		update_option( 'sbi_license_status', $sbi_license_data['license'] );
+		update_option('sbi_license_status', $sbi_license_data['license']);
 		// make license check_api true so next time it expires it checks again
-		update_option( 'sbi_check_license_api_when_expires', 'true' );
-		update_option( 'sbi_check_license_api_post_grace_period', 'true' );
+		update_option('sbi_check_license_api_when_expires', 'true');
+		update_option('sbi_check_license_api_post_grace_period', 'true');
 
 		return true;
 	}
@@ -551,7 +572,8 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.3
 	 */
-	public function sbi_admin_notices() {
+	public function sbi_admin_notices()
+	{
 		$allowed_screens = array(
 			'sbi-feed-builder',
 			'sbi-settings',
@@ -560,16 +582,16 @@ class SBI_Admin_Notices {
 			'sbi-about-us',
 			'sbi-support',
 		);
-		$current_screen  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-		$is_allowed      = in_array( $current_screen, $allowed_screens );
+		$current_screen  = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
+		$is_allowed      = in_array($current_screen, $allowed_screens);
 
 		// We will display the notice only on those allowed screens.
-		if ( ! $current_screen || ! $is_allowed ) {
+		if (! $current_screen || ! $is_allowed) {
 			return;
 		}
 
 		// Only display notice to admins.
-		if ( ! current_user_can( sbi_builder_pro()->license_service->capability_check ) ) {
+		if (! current_user_can(sbi_builder_pro()->license_service->capability_check)) {
 			return;
 		}
 
@@ -579,10 +601,11 @@ class SBI_Admin_Notices {
 
 	/**
 	 * Custom Feed Templates Notice
-	 * 
+	 *
 	 * @since 6.3
 	 */
-	public function sbi_custom_feed_templates_notice() {
+	public function sbi_custom_feed_templates_notice()
+	{
 		$has_custom_templates = Util::sbi_has_custom_templates();
 		$sbi_statuses = get_option('sbi_statuses', array());
 
@@ -676,12 +699,13 @@ class SBI_Admin_Notices {
 
 	/**
 	 * Dismiss custom feeds template admin notices
-	 * 
+	 *
 	 * @since 6.3
 	 */
-	public function sbi_dismiss_notice( $notice_id ) {
-		if ( 'custom_feed_templates' === $notice_id ) {
-			update_option( 'sbi_custom_templates_notice_dismissed', true );
+	public function sbi_dismiss_notice($notice_id)
+	{
+		if ('custom_feed_templates' === $notice_id) {
+			update_option('sbi_custom_templates_notice_dismissed', true);
 		}
 	}
 
@@ -690,7 +714,8 @@ class SBI_Admin_Notices {
 	 *
 	 * @since 6.3
 	 */
-	public function sbi_personal_api_deprecation_notice() {
+	public function sbi_personal_api_deprecation_notice()
+	{
 		global $sbi_notices;
 		$personal_accounts = \InstagramFeed\Builder\SBI_Db::source_query(array('type' => 'basic'));
 		if (empty($personal_accounts)) {
@@ -705,7 +730,7 @@ class SBI_Admin_Notices {
 		$message = '<p>' . __('Due to changes by Instagram, all “Personal” accounts will stop working as of December 2024. To continue to use the plugin, reconnect all personal accounts as a “Business” account.', 'instagram-feed') . '</p>';
 
 		$notice_args = array(
-			'class'       =>'sbi-admin-notices',
+			'class'       => 'sbi-admin-notices',
 			'title'       => array(
 				'text' => $title,
 				'class' => 'sb-notice-title',
@@ -754,7 +779,74 @@ class SBI_Admin_Notices {
 			),
 			'wrap_schema' => '<div {id} {class}>{icon}<div class="sbi-notice-wrap" {styles}><div class="sbi-notice-body">{title}{message}</div>{buttons}</div></div>',
 		);
-		
+
 		$sbi_notices->add_notice('personal_api_deprecation', 'information', $notice_args);
+	}
+
+	/**
+	 * Display upsell notice
+	 *
+	 * @since 6.6.0
+	 */
+	public function clicksocial_upsell_notice()
+	{
+		if (! current_user_can('manage_options') || ! current_user_can('manage_instagram_feed_options')) {
+			return;
+		}
+
+		$screen = get_current_screen();
+		if (! in_array($screen->id, array('edit-page', 'edit-post'), true)) {
+			return;
+		}
+
+		if(is_plugin_active('click-social/click-social.php') || true == get_option('sbi_clicksocial_upsell_dismissed')) {
+			return;
+		}
+
+		$sb_plugins_info = Util::get_sb_active_plugins_info();
+		$clicksocial_installed = $sb_plugins_info['is_clicksocial_installed'] ? true : false;
+
+		$plugin_data = array(
+			'step' => $clicksocial_installed ? 'activate' : 'install',
+			'action' => $clicksocial_installed ? 'sbi_activate_addon' : 'sbi_install_addon',
+			'nonce' => wp_create_nonce('sbi-admin'),
+			'plugin' => 'click-social/click-social.php',
+			'download_plugin' => 'https://downloads.wordpress.org/plugin/click-social.zip',
+			'redirect' => admin_url('admin.php?page=click-social'),
+		);
+
+		?>
+		<div class="notice notice-info is-dismissible" id="sbi-clicksocial-notice">
+			<p>
+				<strong><?php esc_html_e('Schedule social media posts to promote your blog with ClickSocial', 'instagram-feed'); ?></strong><br>
+				<?php esc_html_e('ClickSocial allows you to auto-schedule posts on Instagram, Facebook, Twitter and more with just a click.', 'instagram-feed'); ?>
+			</p>
+			<p class="sbi-notice-btns">
+				<button class="button button-primary sbi-install-plugin-btn" id='sbi_install_op_btn' data-plugin-atts="<?php echo esc_attr(sbi_json_encode($plugin_data)); ?>">
+					<?php echo esc_html__($clicksocial_installed ? 'Activate ClickSocial' : 'Install ClickSocial', 'instagram-feed'); ?>
+				</button>
+				<a href="https://clicksocial.com/?utm_campaign=instagram-pro&utm_source=all-feeds&utm_medium=footer-banner&utm_content=tryfree" target="_blank" class="button button-secondary">
+					<?php esc_html_e('Learn More', 'instagram-feed'); ?>
+				</a>
+			</p>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Dismiss ClickSocial upsell notice
+	 *
+	 * @since 6.6.0
+	 */
+	public function sbi_dismiss_clicksocial_upsell()
+	{
+		check_ajax_referer('sbi_nonce', 'sbi_nonce');
+
+		if (! current_user_can('manage_options') || ! current_user_can('manage_instagram_feed_options')) {
+			wp_send_json_error();
+		}
+
+		update_option('sbi_clicksocial_upsell_dismissed', true);
+		wp_send_json_success();
 	}
 }
