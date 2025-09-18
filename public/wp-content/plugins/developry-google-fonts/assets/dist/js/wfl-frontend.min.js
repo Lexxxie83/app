@@ -1,0 +1,1 @@
+var WFL=WFL||{};void 0===WFL.webFonts&&(WFL.webFonts=new Array),WFL.loadWebFonts=function(){WFL.webFonts.length&&WebFont.load({google:{families:WFL.webFonts}})},document.addEventListener("DOMContentLoaded",function(){WFL.loadWebFonts()});

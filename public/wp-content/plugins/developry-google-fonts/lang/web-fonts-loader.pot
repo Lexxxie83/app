@@ -1,0 +1,458 @@
+# Web Fonts Loader - Elevate your WordPress site with access to the complete range of Google Fonts for enhanced typography and design.
+# Copyright (c) 2024 Developry
+# This file is distributed under the same license as the plugin, GPLv3 or later.
+# Krasen Slavov <contact@developry.com.com>, 2024.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.1\n"
+"Report-Msgid-Bugs-To: Web Fonts Loader <contact@developry.com.com>\n"
+"POT-Creation-Date: 2023-12-21 10:03+0200\n"
+"PO-Revision-Date: 2024-12-13 10:03+0200\n"
+"Last-Translator: Krasen Slavov <contact@developry.com.com>\n"
+"Language-Team: WFL <contact@developry.com.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Eazy Po 1.0.0.0\n"
+
+#: web-fonts-loader.php:41 inc/admin/settings/settings-main-page.php:124
+#: inc/admin/settings/settings-menu.php:23
+#: inc/admin/settings/settings-menu.php:24
+#: inc/admin/settings/settings-menu.php:34
+#: inc/admin/settings/settings-menu.php:35
+msgid "Web Fonts Loader"
+msgstr ""
+
+#: inc/admin/requirements/action-links.php:23
+msgid "Settings"
+msgstr ""
+
+#: inc/admin/requirements/action-links.php:26
+#: inc/admin/requirements/pro-plugin.php:69
+msgid "Go Pro"
+msgstr ""
+
+#: inc/admin/requirements/check-requirements.php:52
+#, php-format
+msgid "%1$s requires a minimum of PHP %2$s and WordPress %3$s"
+msgstr ""
+
+#: inc/admin/requirements/check-requirements.php:64
+#, php-format
+msgid "You are currently running PHP %1$s and WordPress %2$s."
+msgstr ""
+
+#: inc/admin/requirements/notice-rating.php:31
+#, php-format
+msgid "✨💪🔌 Could you kindly support the plugin by %1$s? Thank you in advance!"
+msgstr ""
+
+#: inc/admin/requirements/notice-rating.php:34
+msgid "by giving it 5 stars rating"
+msgstr ""
+
+#: inc/admin/requirements/notice-rating.php:40
+msgid "Rate us @ WordPress.org"
+msgstr ""
+
+#: inc/admin/requirements/notice-rating.php:44
+#: inc/admin/requirements/pro-plugin.php:73
+msgid "I already did"
+msgstr ""
+
+#: inc/admin/requirements/notice-rating.php:47
+#: inc/admin/requirements/pro-plugin.php:76
+msgid "Don't show this notice again!"
+msgstr ""
+
+#: inc/admin/requirements/pro-plugin.php:39
+msgid "Web Fonts Loader PRO 🚀"
+msgstr ""
+
+#: inc/admin/requirements/pro-plugin.php:46
+#, php-format
+msgid ""
+"✨🎉📢 %1$s? Would you like to learn more about the benefits of upgrading to "
+"%2$s?"
+msgstr ""
+
+#: inc/admin/requirements/pro-plugin.php:49
+msgid "Found the free version helpful"
+msgstr ""
+
+#: inc/admin/requirements/pro-plugin.php:50
+msgid "Web Fonts Loader Pro"
+msgstr ""
+
+#: inc/admin/settings/body-font-family-weight.php:42
+msgid ""
+"Add the body font family and weight settings in the global space for "
+"consistency across your design."
+msgstr ""
+
+#: inc/admin/settings/body-font-family-weight.php:70
+msgid "Body font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/body-font-family-weight.php:103
+msgid "Body font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/compact-mode.php:38
+msgid "Compact mode moves the plugin access link under Appearance."
+msgstr ""
+
+#: inc/admin/settings/compact-mode.php:66
+msgid "Compact mode option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-1-font-family-weight.php:42
+msgid ""
+"Add the Heading 1 font family and weight settings in the global space for "
+"unified typography."
+msgstr ""
+
+#: inc/admin/settings/heading-1-font-family-weight.php:70
+msgid "Heading 1 font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-1-font-family-weight.php:103
+msgid "Heading 1 font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-2-font-family-weight.php:42
+msgid ""
+"Add the Heading 2 font family and weight settings in the global space for "
+"unified typography."
+msgstr ""
+
+#: inc/admin/settings/heading-2-font-family-weight.php:70
+msgid "Heading 2 font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-2-font-family-weight.php:103
+msgid "Heading 2 font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-3-font-family-weight.php:42
+msgid ""
+"Add the Heading 3 font family and weight settings in the global space for "
+"unified typography."
+msgstr ""
+
+#: inc/admin/settings/heading-3-font-family-weight.php:70
+msgid "Heading 3 font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-3-font-family-weight.php:103
+msgid "Heading 3 font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-4-font-family-weight.php:42
+msgid ""
+"Add the Heading 4 font family and weight settings in the global space for "
+"unified typography."
+msgstr ""
+
+#: inc/admin/settings/heading-4-font-family-weight.php:70
+msgid "Heading 4 font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-4-font-family-weight.php:103
+msgid "Heading 4 font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-5-font-family-weight.php:42
+msgid ""
+"Add the Heading 5 font family and weight settings in the global space for "
+"unified typography."
+msgstr ""
+
+#: inc/admin/settings/heading-5-font-family-weight.php:70
+msgid "Heading 5 font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-5-font-family-weight.php:103
+msgid "Heading 5 font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-6-font-family-weight.php:42
+msgid ""
+"Add the Heading 6 font family and weight settings in the global space for "
+"unified typography."
+msgstr ""
+
+#: inc/admin/settings/heading-6-font-family-weight.php:70
+msgid "Heading 6 font family option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/heading-6-font-family-weight.php:103
+msgid "Heading 6 font weight option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/settings-actions.php:44
+msgid "All options have been successfully reset to their default values."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:25
+msgid "Get the PRO version today!"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:29
+msgid ""
+"The PRO version will unlock more features, including Google API and Block "
+"Editor integrations."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:34
+msgid "Feature"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:35
+msgid "Free"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:36
+msgid "PRO"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:39
+msgid "Use Google Developer API\t"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:40
+#: inc/admin/settings/settings-main-page.php:45
+#: inc/admin/settings/settings-main-page.php:50
+#: inc/admin/settings/settings-main-page.php:60
+#: inc/admin/settings/settings-main-page.php:65
+#: inc/admin/settings/settings-main-page.php:70
+#: inc/admin/settings/settings-main-page.php:75
+#: inc/admin/settings/settings-main-page.php:80
+#: inc/admin/settings/settings-main-page.php:85
+#: inc/admin/settings/settings-main-page.php:95
+msgid "no"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:41
+#: inc/admin/settings/settings-main-page.php:51
+#: inc/admin/settings/settings-main-page.php:55
+#: inc/admin/settings/settings-main-page.php:56
+#: inc/admin/settings/settings-main-page.php:61
+#: inc/admin/settings/settings-main-page.php:66
+#: inc/admin/settings/settings-main-page.php:71
+#: inc/admin/settings/settings-main-page.php:76
+#: inc/admin/settings/settings-main-page.php:81
+#: inc/admin/settings/settings-main-page.php:86
+#: inc/admin/settings/settings-main-page.php:90
+#: inc/admin/settings/settings-main-page.php:91
+#: inc/admin/settings/settings-main-page.php:96
+msgid "yes"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:44
+msgid "Manage Global fonts\t"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:46
+msgid "yes w/ custom rules"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:49
+msgid "Font manager (delete, download, & @import)\t"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:54
+msgid "Classic editor support\t"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:59
+msgid "Block editor support"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:64
+msgid "Load any custom fonts locally (EU/GDPR)"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:69
+msgid "User-defined Google & system fonts"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:74
+msgid "User-defined Gutenberg blocks"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:79
+msgid "Include Google italic fonts"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:84
+msgid "Select from supported subsets"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:89
+msgid "Font usage summary & report"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:94
+msgid "Priority email support"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:99
+msgid "Regular plugin updates"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:100
+msgid "delayed"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:101
+msgid "first release"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:111
+msgid "GET PRO VERSION"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:118
+msgid "Watch Video"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:131
+msgid ""
+"Elevate your WordPress site with access to the complete range of Google "
+"Fonts for enhanced typography and design."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:143
+#, php-format
+msgid ""
+"Set or add global font styles across your site. Style content directly in "
+"the %1$s editor, overriding the global font options."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:146
+msgid "Classic"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:158
+#, php-format
+msgid ""
+"%1$s: Use the form below to assign global font options to a specific tag or "
+"class name for your entire site."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:161
+msgid "Note"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:182
+msgid "Save"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:190
+msgid "Reset"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:206
+msgid ""
+"* All styles applied via the Classic or Block editors will override the "
+"Global font options; some of the default classes are Bootstrap specific so "
+"if you have the framework loaded it will apply the selected fonts as well."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:209
+msgid "Support Forum"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:214
+msgid "Please rate us"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:220
+msgid "Having issues?"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:222
+msgid "Create a Support Ticket"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:226
+msgid "Developed by"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:228
+msgid "Krasen Slavov @ Developry"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:233
+msgid ""
+"* Styles applied through the Classic or Block editors will override the "
+"Global font options. Some default classes are Bootstrap-specific, so if the "
+"framework is loaded, the selected fonts will also be applied."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:246
+#, php-format
+msgid ""
+"* For the price of a cup of coffee per month, you can %1$s to support the "
+"development and maintenance of my free WordPress plugins. Every bit helps "
+"and is greatly appreciated!"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:249
+msgid "help and support me on Patreon"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:34
+msgid "Body (p, ul, ol, etc.)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:45
+msgid "Heading 1 (h1, .h1, .display-1)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:56
+msgid "Heading 2 (h2, .h2, .display-2)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:67
+msgid "Heading 3 (h3, .h3, .display-3)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:78
+msgid "Heading 4 (h4, .h4, .display-4)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:89
+msgid "Heading 5 (h5, .h5, .display-5)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:100
+msgid "Heading 6 (h6, .h6, .display-6)"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:111
+msgid "Compact Mode"
+msgstr ""
+
+#: inc/library/class-wfl-admin.php:81
+#, php-format
+msgid "%1$s! Contact us @ %2$s."
+msgstr ""
+
+#: inc/library/class-wfl-admin.php:83
+msgid "Invalid security token"
+msgstr ""
+
+#: inc/library/class-wfl-admin.php:114
+#, php-format
+msgid ""
+"%1$s! Current user does not have the capabilities to access this function."
+msgstr ""
+
+#: inc/library/class-wfl-admin.php:115
+msgid "Access denied"
+msgstr ""
