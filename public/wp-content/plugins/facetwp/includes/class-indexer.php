@@ -446,7 +446,11 @@ class FacetWP_Indexer
                 }
                 $used_terms[ $term->term_id ] = true;
 
-                // Handle hierarchical taxonomies
+                // Handle hierarchical taxonomies (skip if term missing from hierarchy — e.g. stale term ref, different get_terms scope).
+                if ( ! isset( $hierarchy[ $term->term_id ] ) ) {
+                    continue;
+                }
+
                 $term_info = $hierarchy[ $term->term_id ];
                 $depth = $term_info['depth'];
 
@@ -470,6 +474,9 @@ class FacetWP_Indexer
                 if ( 'hierarchy' == $facet['type'] || FWP()->helper->facet_is( $facet, 'hierarchical', 'yes' ) ) {
                     while ( $depth > 0 ) {
                         $term_id = $term_info['parent_id'];
+                        if ( ! isset( $hierarchy[ $term_id ] ) ) {
+                            break;
+                        }
                         $term_info = $hierarchy[ $term_id ];
                         $depth = $depth - 1;
 
